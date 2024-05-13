@@ -1,9 +1,9 @@
---CREACIÓ DE LA BASE DE DADES "Db_Y"
+-- CREACIÓ DE LA BASE DE DADES "Db_Y"
 DROP DATABASE IF EXISTS Db_Y;
 CREATE DATABASE Db_Y;
 USE Db_Y;
 
---CREACIÓ DE LES TRES TAULES  "Usuari", "Publicacio" i "Comentari"
+-- CREACIÓ DE LES TRES TAULES  "Usuari", "Publicacio" i "Comentari"
 CREATE OR REPLACE TABLE Usuari(
     user_id int NOT NULL AUTO_INCREMENT,
     username varchar(20) NOT NULL,
@@ -39,7 +39,7 @@ CREATE OR REPLACE TABLE Comentari(
 );
 
 
---INSERT INICIAL A LA TAULA "usuari"
+-- INSERT INICIAL A LA TAULA "usuari"
 INSERT INTO usuari (username, contrasenya, nom, cognom, correu, telefon)
 	VALUES('rger9', 'rogerp', 'Roger', 'Palmada', 'roger.palmada@gmail.com', '633556238');
 INSERT INTO usuari (username, contrasenya, nom, cognom, correu, telefon)
@@ -49,10 +49,10 @@ INSERT INTO usuari (username, contrasenya, nom, cognom, correu, telefon)
 INSERT INTO usuari (username, contrasenya, nom, cognom, correu, telefon)
 	VALUES('cparra', 'claudiap', 'Claudia', 'Parra', 'claudia.parra@gmail.com', '655222111');
 
---INSERT INICIAL A LA TAULA "publicacio"
+-- INSERT INICIAL A LA TAULA "publicacio"
 INSERT INTO publicacio (user_id, data_p, titol, contingut, tags)
 	VALUES('4', '20240513', 'Quina desgracia!', "Avui se m'ha caigut el suc de prèssec dins el portàtil i ja no em funciona, algun consell gent? :(", "Terror, Pregunta");
 
---INSERT INICIAL A LA TAULA "comentari"
+-- INSERT INICIAL A LA TAULA "comentari"
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
 	VALUES('1', '1', '20240513', 'Radical');
