@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Y;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Y.Model
         public string? cognom { get; set; }
         public string correu { get; set; }
         public string? telefon { get; set; }
-        public virtual ICollection<publicacio> publicacio { get; set; } = new List<publicacio>();
+        public virtual ICollection<Publicacio> publicacio { get; set; } = new List<Publicacio>();
 
     }
 }
