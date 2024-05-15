@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Y.Model;
 
 namespace Y
 {
@@ -19,6 +20,7 @@ namespace Y
         public MainWindow()
         {
             InitializeComponent();
+            Usuari usuari = new Usuari();
         }
     }
 }
