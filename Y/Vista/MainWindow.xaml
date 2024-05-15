@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Y"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+        Title="Y" Height="720" Width="1080">
+    <Grid x:Name="MainGrid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
+                <GradientStop Color="#FF070028" Offset="1"/>
+                <GradientStop Color="#FF5A4D92" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Button x:Name="Btn_Perfil" Content="Iniciar Sessió" HorizontalAlignment="Left" Margin="818,38,0,0" VerticalAlignment="Top" Height="71" Width="233" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontFamily="Dubai Medium" FontSize="36"/>
     </Grid>
 </Window>
