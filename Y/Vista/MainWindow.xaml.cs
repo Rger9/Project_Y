@@ -11,7 +11,9 @@ namespace Y
         public MainWindow()
         {
             InitializeComponent();
-            Connexio.Connectar();
+            Connexio connexio = new Connexio();
+            connexio.Connectar();
+            connexio.Desconnectar();
         }
     }
 }
