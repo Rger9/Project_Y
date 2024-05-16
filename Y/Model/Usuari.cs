@@ -18,6 +18,6 @@ namespace Y.Model
         public string correu { get; set; }
         public string? telefon { get; set; }
         public virtual ICollection<Publicacio> publicacio { get; set; } = new List<Publicacio>();
-
+        public virtual ICollection<Comentari> comentari { get; set; } = new List<Comentari>();
     }
 }
