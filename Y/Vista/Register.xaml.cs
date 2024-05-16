@@ -15,23 +15,13 @@ using System.Windows.Shapes;
 namespace Y.Vista
 {
     /// <summary>
-    /// Lógica de interacción para Login.xaml
+    /// Lógica de interacción para Register.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class Register : Window
     {
-        public Login()
+        public Register()
         {
             InitializeComponent();
         }
-
-        private void TxtBoxUser_GotFocus(object sender, RoutedEventArgs e)
-        {
-            TxtBoxUser.Text = "";
-        }
-
-        private void PsswdLogIn_GotFocus(object sender, RoutedEventArgs e)
-        {
-            PsswdLogIn.Password = "";
-        }        
     }
 }
