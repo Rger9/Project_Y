@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Vista\" />
 	 <Folder Include="Model\" />
   </ItemGroup>
 
