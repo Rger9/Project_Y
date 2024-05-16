@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Y.Acces_a_dades;
 
 namespace Y
 {
@@ -10,6 +11,7 @@ namespace Y
         public MainWindow()
         {
             InitializeComponent();
+            Connexio.Connectar();
         }
     }
 }
