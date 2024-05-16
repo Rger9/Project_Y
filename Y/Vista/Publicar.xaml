@@ -6,15 +6,24 @@
         xmlns:local="clr-namespace:Y.Vista"
         mc:Ignorable="d"
         Title="Publicar" Height="300" Width="600">
-    <Grid Background="#FF000531">
+    <Grid Background="#FF000531" Margin="0,0,0,-16">
         <Label Content="PUBL" HorizontalAlignment="Left" Margin="64,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Arial Black" FontSize="22"/>
         <Grid Margin="55,64,55,46">
-            <TextBox Name="TxtBoxTitol" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" FontSize="20" FontWeight="Bold"/>
-            <TextBox Name="TxtBoxCos" HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="470" Height="94"/>
-            <TextBox Name="TxtBoxEtiqueta" HorizontalAlignment="Center" Margin="0,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="470"/>
+            <TextBox Name="TxtBoxTitol" HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" FontSize="20" FontWeight="Bold" Text="TÍTOL" GotFocus="TxtBoxTitol_GotFocus" Foreground="#FFA4A4A4"/>
+            <TextBox Name="TxtBoxCos" HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="Cos" VerticalAlignment="Top" Width="470" Height="94"/>
+            <TextBox Name="TxtBoxEtiqueta" HorizontalAlignment="Center" Margin="0,146,0,0" TextWrapping="Wrap" Text="Etiquetes" VerticalAlignment="Top" Width="470"/>
         </Grid>
-        <Image Margin="127,20,428,220" Source="/logoBlanc_Y.png" Stretch="Fill"/>
         <Label Content="CAR" HorizontalAlignment="Left" Margin="162,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Arial Black" FontSize="22"/>
         <Button Name="BtnPublicar" Content="AFEGIR PUBLICACIÓ" Margin="0,238,0,0" Click="BtnPublicar_Click"/>
+        <Image HorizontalAlignment="Left" Height="38" Margin="131,27,0,0" VerticalAlignment="Top" Width="38" Source="/Vista/logoBlanc_Y.png" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
     </Grid>
 </Window>

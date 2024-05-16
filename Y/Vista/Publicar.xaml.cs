@@ -28,5 +28,11 @@ namespace Y.Vista
         {
 
         }
+
+        private void TxtBoxTitol_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TxtBoxTitol.Text = string.Empty;
+            TxtBoxTitol.Foreground = Brushes.Black;
+        }
     }
 }

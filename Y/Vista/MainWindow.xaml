@@ -32,5 +32,6 @@
                 <ScrollBar Margin="756,26,4,26"/>
             </Border>
         </Grid>
+        <Button Name="BtnPublicar" Content="PUBLICAR" HorizontalAlignment="Left" Margin="818,529,0,0" VerticalAlignment="Top" Height="155" Width="233" FontSize="36" Click="BtnPublicar_Click"/>
     </Grid>
 </Window>

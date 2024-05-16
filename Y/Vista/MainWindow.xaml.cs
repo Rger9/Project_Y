@@ -11,14 +11,20 @@ namespace Y
     {
         public MainWindow()
         {
+            Connexio c = new Connexio();
             InitializeComponent();
-            Connexio.Connectar();
         }
 
         private void Btn_Perfil_Click(object sender, RoutedEventArgs e)
         {
             Vista.Login login = new();
             login.Show();
+        }
+
+        private void BtnPublicar_Click(object sender, RoutedEventArgs e)
+        {
+            Vista.Publicar publicar = new Vista.Publicar();
+            publicar.Show();
         }
     }
 }
