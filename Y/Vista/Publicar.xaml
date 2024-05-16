@@ -1,0 +1,17 @@
+﻿<Window x:Class="Y.Vista.Publicar"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Y.Vista"
+        mc:Ignorable="d"
+        Title="Publicar" Height="300" Width="600">
+    <Grid Background="#FF000531">
+        <Label Content="PUBLICAR" HorizontalAlignment="Left" Margin="55,33,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White"/>
+        <Grid Margin="55,64,55,46">
+            <TextBox HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="470" TextChanged="TextBox_TextChanged" FontSize="20" FontWeight="Bold"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,47,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="470" Height="99"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,146,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="470"/>
+        </Grid>
+    </Grid>
+</Window>
