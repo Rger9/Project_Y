@@ -35,14 +35,14 @@ namespace Y.Acces_a_dades
             {
                 MessageBox.Show("Error al obrir la BD: " + ex.Message);
             }
-            finally
-            {
-                if (connection != null)
-                {
-                    connection.Close();
-                    MessageBox.Show("Connexio tancada OK");
-                }
-            }
+            //finally
+            //{
+            //    if (connection != null)
+            //    {
+            //        connection.Close();
+            //        MessageBox.Show("Connexio tancada OK");
+            //    }
+            //}
             return connection;
         }
         public void Desconnectar()
@@ -50,8 +50,9 @@ namespace Y.Acces_a_dades
             if (!this.connection.IsDisposed)
             {
                 this.connection.Close();
-                MessageBox.Show("La connexio sha tancat de forma mena");
+                MessageBox.Show("La connexio sha desconnectat");
             }
+            else
             MessageBox.Show("La connexio no sha tancat pq no estava oberta burro");
                 
             
