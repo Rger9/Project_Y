@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Y;
 
 namespace Y
 {
@@ -10,6 +11,12 @@ namespace Y
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Btn_Perfil_Click(object sender, RoutedEventArgs e)
+        {
+            Vista.Login login = new();
+            login.Show();
         }
     }
 }

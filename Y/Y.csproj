@@ -9,8 +9,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Vista\" />
+    <None Remove="Vista\logo_Y.jpeg" />
+    <None Remove="Vista\padlock.png" />
+    <None Remove="Vista\user.png" />
+  </ItemGroup>
+
+  <ItemGroup>
 	 <Folder Include="Model\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MySql.Data" Version="8.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Vista\logo_Y.jpeg" />
+    <Resource Include="Vista\padlock.png" />
+    <Resource Include="Vista\user.png" />
   </ItemGroup>
 
 </Project>
