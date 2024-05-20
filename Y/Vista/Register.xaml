@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Y.Vista"
         mc:Ignorable="d"
-        Title="Register" Height="350" Width="300">
+        Title="Register" Height="360" Width="300">
     <Grid x:Name="MainGrid">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
@@ -13,9 +13,9 @@
                 <GradientStop Color="#FF5A4D92" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="regYster" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="63" Width="200" FontFamily="Dubai Medium" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="106,78,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="Black" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
-        <Button x:Name="BtnRegister" Content="regYster" HorizontalAlignment="Center" Margin="0,290,0,0" VerticalAlignment="Top" Height="34" Width="114" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand">
+        <Label Content="reg   ster" HorizontalAlignment="Center" VerticalAlignment="Top" Height="49" Width="184" FontFamily="Dubai Medium" FontSize="36" Padding="5,0,5,0" HorizontalContentAlignment="Center" Grid.RowSpan="1" Grid.ColumnSpan="1" Foreground="White"/>
+        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="102,65,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
+        <Button x:Name="BtnRegister" Content="regYster" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Height="34" Width="114" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand">
             <Button.Effect>
                 <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
             </Button.Effect>
@@ -25,8 +25,17 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <PasswordBox x:Name="PsswdRegister" HorizontalAlignment="Left" Margin="106,124,0,0" VerticalAlignment="Top" Width="128" Height="27" BorderBrush="Black" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="72,78,0,0" VerticalAlignment="Top" Width="28" Source="/Vista/user.png"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="72,124,0,0" VerticalAlignment="Top" Width="28" Source="/Vista/padlock.png"/>
+        <PasswordBox x:Name="PsswdRegister" HorizontalAlignment="Left" Margin="102,98,0,0" VerticalAlignment="Top" Width="128" Height="26" BorderBrush="#FF24246A" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="TxtBoxNom" HorizontalAlignment="Left" Margin="102,160,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
+        <TextBox x:Name="TxtBoxCognom" HorizontalAlignment="Left" Margin="102,192,0,0" TextWrapping="Wrap" Text="Cognom" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
+        <TextBox x:Name="TxtBoxCorreu" HorizontalAlignment="Left" Margin="102,224,0,0" TextWrapping="Wrap" Text="Correu" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
+        <TextBox x:Name="TxtBoxTelefon" HorizontalAlignment="Left" Margin="102,256,0,0" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
+        <Image HorizontalAlignment="Left" Height="30" Margin="131,12,0,0" VerticalAlignment="Top" Width="31" Source="/Vista/logoBlanc_Y.png"/>
+        <PasswordBox x:Name="PsswdRegister2" HorizontalAlignment="Left" Margin="102,129,0,0" VerticalAlignment="Top" Width="128" Height="26" BorderBrush="#FF24246A" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Image Margin="71,65,203,252" Source="/Vista/userBlanc.png" Stretch="Fill"/>
+        <Image Margin="71,113,203,204" Source="/Vista/padlock.png" Stretch="Fill"/>
+        <Image Margin="71,176,203,141" Source="/Vista/id-cardBlanc.png" Stretch="Fill"/>
+        <Image Margin="71,225,203,94" Source="/Vista/emailBlanc.png" Stretch="Fill"/>
+        <Image Margin="71,257,203,62" Source="/Vista/telephoneBlanc.png" Stretch="Fill"/>
     </Grid>
 </Window>
