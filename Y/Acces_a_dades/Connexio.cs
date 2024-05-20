@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Y.Acces_a_dades
+namespace Y.AccesADades
 {
     internal class Connexio
     {
@@ -28,7 +28,7 @@ namespace Y.Acces_a_dades
                 //MySqlCommand oCommand = new MySqlCommand(cmdSelect, connection);
                 //long num_contactes = (long)oCommand.ExecuteScalar();
                 //MessageBox.Show(num_contactes.ToString());
-                
+
                 MessageBox.Show("Connexio oberta OK");
             }
             catch (Exception ex)
@@ -47,15 +47,15 @@ namespace Y.Acces_a_dades
         }
         public void Desconnectar()
         {
-            if (!this.connection.IsDisposed)
+            if (!connection.IsDisposed)
             {
-                this.connection.Close();
+                connection.Close();
                 MessageBox.Show("La connexio sha desconnectat");
             }
             else
-            MessageBox.Show("La connexio no sha tancat pq no estava oberta burro");
-                
-            
+                MessageBox.Show("La connexio no sha tancat pq no estava oberta burro");
+
+
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
-using Y.Acces_a_dades;
 using Y;
+using Y.AccesADades;
 
 namespace Y
 {

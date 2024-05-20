@@ -8,5 +8,7 @@ namespace Y.Model
 {
     internal class DbContext
     {
+        public virtual List<Comentari> comentaris { get; set; }
+
     }
 }
