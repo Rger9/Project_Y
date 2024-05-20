@@ -11,8 +11,9 @@ namespace Y.AccesADades
 {
     internal class Connexio
     {
-        private MySqlConnection connection;
-
+        private static string ip;
+        private static MySqlConnection connection;
+        public MySqlConnection Connection { get; set; }
 
         public MySqlConnection Connectar()
         {

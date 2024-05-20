@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Y.Model
+namespace Y.Negoci
 {
-    internal class DbContext
+    internal class Tagpublicacio
     {
-        public virtual List<Comentari> comentaris { get; set; }
-
     }
 }

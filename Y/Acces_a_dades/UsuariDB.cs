@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Y.Model
 {
-    public partial class Usuari
+    public partial class UsuariDB
     {
         public int user_id { get; set; }
         public string username { get; set; }
@@ -17,7 +17,7 @@ namespace Y.Model
         public string? cognom { get; set; }
         public string correu { get; set; }
         public string? telefon { get; set; }
-        public virtual ICollection<Publicacio> publicacio { get; set; } = new List<Publicacio>();
-        public virtual ICollection<Comentari> comentari { get; set; } = new List<Comentari>();
+        public virtual ICollection<PublicacioDB> publicacio { get; set; } = new List<PublicacioDB>();
+        public virtual ICollection<ComentariDB> comentari { get; set; } = new List<ComentariDB>();
     }
 }

@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Y.Model
 {
-    public partial class Tagpublicacio
+    public partial class TagDB
     {
-        public int publicacio_id { get; set; }
         public int tag_id { get; set; }
+        public string nom { get; set; }
+        public virtual ICollection<TagpublicacioDB> tagpublicacio { get; set; } = new List<TagpublicacioDB>();
     }
 }

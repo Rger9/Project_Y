@@ -28,7 +28,7 @@ namespace Y.Vista
 
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
-            Publicacio a = new Publicacio();
+            PublicacioDB a = new PublicacioDB();
             string comanda = "INSERT INTO Publicacio(user_id, data_p, titol, contingut)" +
                                 $"VALUES({a.user_id}, {a.data_p}, {a.titol}, {a.contingut})";
         }

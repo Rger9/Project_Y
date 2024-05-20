@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Y.Model
 {
-    public partial class Publicacio
+    public partial class PublicacioDB
     {
         public int publicacio_id { get; set; }
         public int user_id { get; set; }
         public DateTime data_p { get; set; }
         public string titol { get; set; }
         public string contingut { get; set; }
-        public virtual ICollection<Tagpublicacio> tagpublicacio { get; set; } = new List<Tagpublicacio>();
+        public virtual ICollection<TagpublicacioDB> tagpublicacio { get; set; } = new List<TagpublicacioDB>();
     }
 }
