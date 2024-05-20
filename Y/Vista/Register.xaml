@@ -32,10 +32,10 @@
         <TextBox x:Name="TxtBoxTelefon" HorizontalAlignment="Left" Margin="102,256,0,0" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
         <Image HorizontalAlignment="Left" Height="30" Margin="131,12,0,0" VerticalAlignment="Top" Width="31" Source="/Vista/logoBlanc_Y.png"/>
         <PasswordBox x:Name="PsswdRegister2" HorizontalAlignment="Left" Margin="102,129,0,0" VerticalAlignment="Top" Width="128" Height="26" BorderBrush="#FF24246A" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Image Margin="71,65,203,252" Source="/Vista/userBlanc.png" Stretch="Fill"/>
-        <Image Margin="71,113,203,204" Source="/Vista/padlock.png" Stretch="Fill"/>
-        <Image Margin="71,176,203,141" Source="/Vista/id-cardBlanc.png" Stretch="Fill"/>
-        <Image Margin="71,225,203,94" Source="/Vista/emailBlanc.png" Stretch="Fill"/>
-        <Image Margin="71,257,203,62" Source="/Vista/telephoneBlanc.png" Stretch="Fill"/>
+        <Image Margin="71,65,203,252" Source="/Imatges/userBlanc.png" Stretch="Fill"/>
+        <Image Margin="71,113,203,204" Source="/Imatges/padlock.png" Stretch="Fill"/>
+        <Image Margin="71,176,203,141" Source="/Imatges/id-cardBlanc.png" Stretch="Fill"/>
+        <Image Margin="71,225,203,94" Source="/Imatges/emailBlanc.png" Stretch="Fill"/>
+        <Image Margin="71,257,203,62" Source="/Imatges/telephoneBlanc.png" Stretch="Fill"/>
     </Grid>
 </Window>
