@@ -10,7 +10,7 @@ namespace Y.Model
 {
     public partial class UsuariDB
     {
-        public static void Inserir(Usuari u)
+        public static void Inserir(UsuariModel u)
         {
 
         }
