@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Y.Negoci;<
 
-namespace Y.Model
+namespace Y.Negoci
 {
-    public partial class TagDB
+    public class UsuariNegoci
     {
-        
     }
 }

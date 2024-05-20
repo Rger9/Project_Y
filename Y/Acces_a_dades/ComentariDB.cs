@@ -10,6 +10,5 @@ namespace Y.Model
 {
     public partial class ComentariDB
     {
-        
     }
 }

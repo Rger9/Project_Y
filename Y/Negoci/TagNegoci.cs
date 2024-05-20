@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Y.Negoci
 {
-    public class Usuari
+    internal class TagNegoci
     {
     }
 }
