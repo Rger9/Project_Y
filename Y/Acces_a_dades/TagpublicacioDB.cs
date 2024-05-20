@@ -8,7 +8,6 @@ namespace Y.Model
 {
     public partial class TagpublicacioDB
     {
-        public int publicacio_id { get; set; }
-        public int tag_id { get; set; }
+
     }
 }

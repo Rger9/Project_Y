@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Y.Negoci
 {
-    internal class Comentari
+    internal class PublicacioNegoci
     {
     }
 }
