@@ -7,7 +7,7 @@ using Y.Model;
 
 namespace Y.Negoci
 {
-    internal class Comentari
+    public class Comentari
     {
         public int comentari_id { get; set; }
         public int user_id { get; set; }

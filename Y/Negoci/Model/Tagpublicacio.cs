@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Y.Negoci
 {
-    internal class Tagpublicacio
+    public class Tagpublicacio
     {
         public int publicacio_id { get; set; }
         public int tag_id { get; set; }

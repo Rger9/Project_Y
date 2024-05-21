@@ -7,7 +7,7 @@ using Y.Model;
 
 namespace Y.Negoci
 {
-    internal class Publicacio
+    public class Publicacio
     {
         public int publicacio_id { get; set; }
         public int user_id { get; set; }

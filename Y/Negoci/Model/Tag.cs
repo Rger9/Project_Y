@@ -7,7 +7,7 @@ using Y.Model;
 
 namespace Y.Negoci
 {
-    internal class Tag
+    public class Tag
     {
         public int tag_id { get; set; }
         public string nom { get; set; }
