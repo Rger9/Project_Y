@@ -13,8 +13,8 @@
                 <GradientStop Color="#FF5A4D92" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="106,78,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="Black" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxUser_GotFocus"/>
-        <Button x:Name="BtnLogin" Content="logYn" HorizontalAlignment="Center" Margin="0,170,0,0" VerticalAlignment="Top" Height="34" Width="68" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand">
+        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="106,118,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxUser_GotFocus"/>
+        <Button x:Name="BtnLogin" Content="logYn" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Height="34" Width="68" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand">
             <Button.Effect>
                 <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
             </Button.Effect>
@@ -24,11 +24,14 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Label Content="No tens compte?" Margin="98,204,98,151" Foreground="White"/>
-        <PasswordBox x:Name="PsswdLogIn" HorizontalAlignment="Left" Margin="106,124,0,0" VerticalAlignment="Top" Width="128" Height="27" BorderBrush="Black" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdLogIn_GotFocus"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="72,78,0,0" VerticalAlignment="Top" Width="28" Source="/Vista/user.png"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="72,124,0,0" VerticalAlignment="Top" Width="28" Source="/Vista/padlock.png"/>
-        <Label Content="logYn" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Height="63" Width="200" FontFamily="Dubai Medium" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label x:Name="LabelRegister" Content="No tens compte?" HorizontalAlignment="Center" Margin="0,209,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Width="128" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Hand"/>
+
+        <PasswordBox x:Name="PsswdLogIn" HorizontalAlignment="Left" Margin="106,164,0,0" VerticalAlignment="Top" Width="128" Height="27" BorderBrush="#FF24246A" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdLogIn_GotFocus"/>
+        <Label Content="log   n " HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="63" Width="200" FontFamily="Dubai Medium" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"/>
+        <Label x:Name="LabelRegister" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Width="128" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Hand">
+            <TextBlock TextDecorations="Underline">No tens compte?</TextBlock>
+        </Label>
+        <Image HorizontalAlignment="Left" Height="30" Margin="145,67,0,0" VerticalAlignment="Top" Width="31" Source="/Vista/logoBlanc_Y.png"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="74,118,0,0" VerticalAlignment="Top" Width="29" Source="/Imatges/userBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="27" Margin="74,164,0,0" VerticalAlignment="Top" Width="29" Source="/Imatges/padlock.png"/>
     </Grid>
 </Window>
