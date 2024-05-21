@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using Y;
 using Y.AccesADades;
+using Y.Negoci;
 
 namespace Y
 {
@@ -9,6 +10,7 @@ namespace Y
     /// </summary>
     public partial class MainWindow : Window
     {
+        UsuariModel u = new UsuariModel();
         public MainWindow()
         {
             Connexio c = new Connexio();
@@ -23,7 +25,7 @@ namespace Y
 
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
-            Vista.Publicar publicar = new Vista.Publicar();
+            Vista.Publicar publicar = new Vista.Publicar(u);
             publicar.Show();
 
         }
