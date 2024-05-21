@@ -14,7 +14,7 @@ namespace Y.Model
 {
     public partial class PublicacioDB
     {
-        public void Publicar(Publicacio p)
+        public void Publicar(PublicacioModel p)
         {
             Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Publicacio(user_id, data_p, titol, contingut)" +
@@ -27,10 +27,10 @@ namespace Y.Model
                 comanda.Parameters.Add("@titol", MySqlDbType.VarChar, 30);
                 comanda.Parameters.Add("@contingut", MySqlDbType.VarChar, 300);
 
-                comanda.Parameters["@user_id"].Value = p.user_id;
-                comanda.Parameters["@data_p"].Value = p.data_p; 
-                comanda.Parameters["@titol"].Value = p.titol;
-                comanda.Parameters["@contingut"].Value = p.contingut;
+                comanda.Parameters["@user_id"].Value = p.User_id;
+                comanda.Parameters["@data_p"].Value = p.Data_p; 
+                comanda.Parameters["@titol"].Value = p.Titol;
+                comanda.Parameters["@contingut"].Value = p.Contingut;
 
                 c.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
@@ -45,7 +45,7 @@ namespace Y.Model
             }
         }
 
-        public void GetPublicacio(Publicacio p)
+        public void GetPublicacio(PublicacioModel p)
         {
             Connexio c = new Connexio();
             string cmdSelect = "SELECT * FROM Publicacio" +
@@ -55,7 +55,7 @@ namespace Y.Model
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
 
-                comanda.Parameters["@publicacio_id"].Value = p.publicacio_id;
+                comanda.Parameters["@publicacio_id"].Value = p.Publicacio_id;
 
                 c.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();

@@ -12,8 +12,8 @@ namespace Y.Model
 {
     public partial class TagDB
     {
-        Tag t = new Tag();
-        public void InserirTag(Publicacio p)
+        TagModel t = new TagModel();
+        public void InserirTag(PublicacioModel p)
         {
             Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Tag(nom)" +
@@ -23,7 +23,7 @@ namespace Y.Model
                 MySqlCommand comanda = new MySqlCommand(cmdInsert, c.Connection);
                 comanda.Parameters.Add("@nom", MySqlDbType.VarChar, 20);
 
-                comanda.Parameters["@nom"].Value = t.nom;
+                comanda.Parameters["@nom"].Value = t.Nom;
 
                 c.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
