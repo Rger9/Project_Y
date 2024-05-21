@@ -18,16 +18,23 @@ namespace Y.Negoci
         {
             return PublicacioDB.GetPublicacio(id);
         }
-        public static void Inserir()
+        public void Inserir()
         {
             PublicacioDB pdb = new PublicacioDB();
             pdb.Publicar(publicacio);
         }
-        public static bool Validar()
+        public bool Validar()
         {
+            if (publicacio == null) return false;
+            if(publicacio.Contingut == null || publicacio.Data_p == null || publicacio.Titol == null)
             PublicacioDB pdb = new PublicacioDB();
             UsuariDB udb = new UsuariDB();
-            List<UsuariModel> uModel = udb.ObtenirTots();
+            List<int> llistaId = udb.ObtenirTotsId();
+            if (llistaId.Contains(publicacio.Publicacio_id))
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
