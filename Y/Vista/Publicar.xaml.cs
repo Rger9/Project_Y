@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Y.Model;
+using Y.Negoci;
 
 namespace Y.Vista
 {
@@ -20,15 +21,41 @@ namespace Y.Vista
     /// </summary>
     public partial class Publicar : Window
     {
-        public Publicar()
+        private UsuariModel usuari;
+        public Publicar(UsuariModel u)
         {
             InitializeComponent();
             TxtBoxCos.Focus();
+            usuari = u;
         }
 
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
-            PublicacioDB a = new PublicacioDB();
+            // Publicar un article modifica les bases de dades PUBLICACIO, TAG i TAGPUBLICACIO
+            PublicacioModel p = new PublicacioModel();
+            p.Titol = TxtBoxTitol.Text;
+            p.Contingut = TxtBoxTitol.Text;
+            p.Data_p = DateTime.Now;
+            p.User_id = usuari.User_id;
+            PublicacioNegoci pNegoci = new PublicacioNegoci();
+            pNegoci.Publicacio = p;
+            // pNegoci.Inserir();
+
+            string[] tags = TxtBoxEtiqueta.Text.Split(", ");
+            for (int i  = 0; i < tags.Length; i++)
+            {
+                TagModel t = new TagModel();
+                t.Nom = tags[i];
+                TagNegoci tNegoci = new TagNegoci();
+                tNegoci.Tag = t;
+                // tNegoci.Inserir();
+
+                TagpublicacioModel tp = new TagpublicacioModel();
+                // FER MÈTODE QUE BUSQUI EL STRING TAG I RETORNI ID:
+                //tp.Tag_id = tags[i];
+                tp.Publicacio_id = p.Publicacio_id;
+            }
+
         }
 
         private void TxtBoxTitol_GotFocus(object sender, RoutedEventArgs e)
