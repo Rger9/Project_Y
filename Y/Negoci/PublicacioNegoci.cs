@@ -14,9 +14,20 @@ namespace Y.Negoci
         //Propietats
         public PublicacioModel Publicacio { get; set; }
         //Metodes
-        public PublicacioModel GetPublicacioDB(int id)
+        public static PublicacioModel GetPublicacioDB(int id)
         {
             return PublicacioDB.GetPublicacio(id);
+        }
+        public static void Inserir()
+        {
+            PublicacioDB pdb = new PublicacioDB();
+            pdb.Publicar(publicacio);
+        }
+        public static bool Validar()
+        {
+            PublicacioDB pdb = new PublicacioDB();
+            UsuariDB udb = new UsuariDB();
+            List<UsuariModel> uModel = udb.ObtenirTots();
         }
     }
 }
