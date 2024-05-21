@@ -9,6 +9,7 @@ using Y.Negoci;
 using Y.AccesADades;
 using Mysqlx.Crud;
 using System.Windows;
+using System.Data;
 
 namespace Y.Model
 {
@@ -72,9 +73,41 @@ namespace Y.Model
         public static PublicacioModel GetPublicacio(int id)
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT * FROM publicacio";
+            string cmdSelect_User_Id = "SELECT user_id" +
+                                        "FROM publicacio" +
+                                        $"WHERE publicacio_id = {id}";
 
+            string cmdSelect_Data_P = "SELECT data_p" +
+                                        "FROM publicacio" +
+                                        $"WHERE publicacio_id = {id}";
+
+            string cmdSelect_Titol = "SELECT titol" +
+                                        "FROM publicacio" +
+                                        $"WHERE publicacio_id = {id}";
+
+            string cmdSelect_Contingut = "SELECT contingut" +
+                                        "FROM publicacio" +
+                                        $"WHERE publicacio_id = {id}";
             PublicacioModel p = new PublicacioModel();
+            try
+            {
+                MySqlCommand comanda_User_Id = new MySqlCommand(cmdSelect_User_Id, c.Connection);
+                p.User_id = (int)comanda_User_Id.ExecuteScalar();
+                MySqlCommand comanda_Data_P = new MySqlCommand(cmdSelect_Data_P, c.Connection);
+                p.Data_p = (DateTime)comanda_Data_P.ExecuteScalar();
+                MySqlCommand comanda_Titol = new MySqlCommand(cmdSelect_Titol, c.Connection);
+                p.Titol = (string)comanda_Titol.ExecuteScalar();
+                MySqlCommand comanda_Contingut = new MySqlCommand(cmdSelect_Contingut, c.Connection);
+                p.Contingut = (string)comanda_Contingut.ExecuteScalar();
+            }
+            catch
+            {
+                MessageBox.Show($"ERROR: No s'ha trobat una publicació amb ID{id}");
+            }
+            finally
+            {
+                c.Desconnectar();
+            }
             return p;
         }
     }
