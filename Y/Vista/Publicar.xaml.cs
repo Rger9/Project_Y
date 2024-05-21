@@ -51,8 +51,7 @@ namespace Y.Vista
                 // tNegoci.Inserir();
 
                 TagpublicacioModel tp = new TagpublicacioModel();
-                // FER MÈTODE QUE BUSQUI EL STRING TAG I RETORNI ID:
-                //tp.Tag_id = tags[i];
+                tp.Tag_id = tNegoci.GetTag_id(tags[i]);
                 tp.Publicacio_id = p.Publicacio_id;
             }
 

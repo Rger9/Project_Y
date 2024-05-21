@@ -69,5 +69,13 @@ namespace Y.Model
                 c.Desconnectar();
             }
         }
+        public static PublicacioModel GetPublicacio(int id)
+        {
+            Connexio c = new Connexio();
+            string cmdSelect = "SELECT * FROM publicacio";
+
+            PublicacioModel p = new PublicacioModel();
+            return p;
+        }
     }
 }

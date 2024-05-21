@@ -27,9 +27,15 @@ namespace Y.Negoci
         {
             if (publicacio == null) return false;
             if(publicacio.Contingut == null || publicacio.Data_p == null || publicacio.Titol == null)
+            {
+
+            }
             PublicacioDB pdb = new PublicacioDB();
             UsuariDB udb = new UsuariDB();
-            List<int> llistaId = udb.ObtenirTotsId();
+            List<int> llistaId = new List<int>();
+            // llistaId = udb.ObtenirTotsId();
+
+
             if (llistaId.Contains(publicacio.Publicacio_id))
             {
                 return true;

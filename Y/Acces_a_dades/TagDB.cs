@@ -13,7 +13,11 @@ namespace Y.Model
     public partial class TagDB
     {
         TagModel t = new TagModel();
-        public void InserirTag(PublicacioModel p)
+        /// <summary>
+        /// Afegeix un tag a la taulda "Tag" de la base de dades "Db_Y"
+        /// </summary>
+        /// <param name="t">El Tag a inserir</param>
+        public void InserirTag(TagModel t)
         {
             Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Tag(nom)" +
@@ -36,6 +40,52 @@ namespace Y.Model
             {
                 c.Desconnectar();
             }
+        }
+        /// <summary>
+        /// Consegueix el id d'un Tag a partir del nom d'aquest
+        /// </summary>
+        /// <param name="nom">Nom del Tag</param>
+        /// <returns>L'ID del Tag</returns>
+        public static int GetTag_Id(string nom)
+        {
+            Connexio c = new Connexio();
+            string cmdSelect = "SELECT tag_id" +
+                                "FROM Tag" +
+                                $"WHERE nom = {nom}";
+            MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+            int resultat = (int)comanda.ExecuteScalar();
+            return resultat;
+        }
+        /// <summary>
+        /// Consegueix el tag a partir de l'id d'aquest
+        /// </summary>
+        /// <param name="id">Id del Tag</param>
+        /// <returns>Tag</returns>
+        public static TagModel GetTag(int id)
+        {
+            Connexio c = new Connexio();
+            string cmdSelect = "SELECT nom" +
+                                "FROM Tag" +
+                                $"WHERE tag_id = {id}";
+            TagModel tag = new TagModel();
+            try
+            {
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                string tag_name = (string)comanda.ExecuteScalar();
+
+                tag.Tag_id = id;
+                tag.Nom = tag_name;
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: No s'ha aconseguit cap");
+            }
+            finally
+            {
+                c.Desconnectar();
+            }
+            return tag;
+
         }
     }
 }

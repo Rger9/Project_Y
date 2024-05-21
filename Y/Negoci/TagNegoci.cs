@@ -14,9 +14,15 @@ namespace Y.Negoci
         //Propietats
         public TagModel Tag { get; set; }
         //Metodes
-        public TagModel GetTagDB(int id)
+        //public TagModel GetTagDB(int id)
+        //{
+        //    return TagDB.GetTag(id);
+        //}
+
+        public int GetTag_id(string tag_name)
         {
-            return TagDB.GetTag(id);
+            int id = TagDB.GetTag_Id(tag_name);
+            return id;
         }
     }
 }
