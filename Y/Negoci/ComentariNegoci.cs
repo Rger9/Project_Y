@@ -14,9 +14,18 @@ namespace Y.Negoci
         //Propietats
         public ComentariModel Comentari { get; set; }
         //Metodes
-        public ComentariModel GetComentariDB(int id)
+        public static ComentariModel GetComentariDB(int id)
         {
             return ComentariDB.GetComentari(id);
-        } 
+        }
+        public void Inserir()
+        {
+            ComentariDB cdb = new ComentariDB;
+            cdb.Inserir(comentari);
+        }
+        public bool Validar()
+        {
+
+        }
     }
 }

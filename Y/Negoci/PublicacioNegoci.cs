@@ -21,7 +21,7 @@ namespace Y.Negoci
         public void Inserir()
         {
             PublicacioDB pdb = new PublicacioDB();
-            pdb.Publicar(publicacio);
+            pdb.Inserir(publicacio);
         }
         public bool Validar()
         {
@@ -33,9 +33,7 @@ namespace Y.Negoci
             PublicacioDB pdb = new PublicacioDB();
             UsuariDB udb = new UsuariDB();
             List<int> llistaId = new List<int>();
-            // llistaId = udb.ObtenirTotsId();
-
-
+            //llistaId = udb.ObtenirTotsId();
             if (llistaId.Contains(publicacio.Publicacio_id))
             {
                 return true;

@@ -17,7 +17,7 @@ namespace Y.Model
         /// Afegeix un tag a la taulda "Tag" de la base de dades "Db_Y"
         /// </summary>
         /// <param name="t">El Tag a inserir</param>
-        public void InserirTag(TagModel t)
+        public void Inserir(TagModel t)
         {
             Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Tag(nom)" +

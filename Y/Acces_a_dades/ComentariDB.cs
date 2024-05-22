@@ -13,7 +13,7 @@ namespace Y.Model
 {
     public partial class ComentariDB
     {
-        public void Comentar(ComentariModel c)
+        public void Inserir(ComentariModel c)
         {
             Connexio con = new Connexio();
             string cmdInsert = "INSERT INTO Comentari(user_id, publicacio_id, data_c, contingut)" +

@@ -27,7 +27,7 @@ namespace Y.Negoci
         public void Inserir()
         {
             TagDB tdb = new TagDB();
-            tdb.InserirTag(tag);
+            tdb.Inserir(tag);
         }
         public bool Existeix(int id)
         {

@@ -12,7 +12,7 @@ namespace Y.Model
 {
     public partial class TagpublicacioDB
     {
-        public void InsertTagPublicacio(TagpublicacioModel tp)
+        public void Inserir(TagpublicacioModel tp)
         {
             Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO TagPublicacio(publicacio_id, tag_id)" +
