@@ -22,9 +22,9 @@ namespace Y.Negoci
         {
             ComentariDB.Inserir(comentari);
         }
-        public bool Validar()
-        {
+        //public bool Validar()
+        //{
 
-        }
+        //}
     }
 }

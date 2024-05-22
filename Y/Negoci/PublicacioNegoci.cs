@@ -20,8 +20,7 @@ namespace Y.Negoci
         }
         public void Inserir()
         {
-            PublicacioDB pdb = new PublicacioDB();
-            pdb.Inserir(publicacio);
+            PublicacioDB.Inserir(Publicacio);
         }
         public bool Validar()
         {

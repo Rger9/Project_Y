@@ -51,5 +51,37 @@ namespace Y.Model
                 c.Desconnectar();
             }
         }
+        public static UsuariModel GetUsuari(int id)
+        {
+            Connexio c = new Connexio();
+            string cmdSelect = "SELECT *" +
+                                "FROM usuari" +
+                                $"WHERE user_id = {id}";
+            UsuariModel u = new UsuariModel();
+            try
+            {
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                MySqlDataReader reader = comanda.ExecuteReader();
+                if (reader.Read())
+                {
+                    u.Username = reader.GetString(1);
+                    u.Contrasenya = reader.GetString(2);
+                    u.Nom = reader.GetString(3);
+                    u.Cognom = reader.GetString(4);
+                    u.Correu = reader.GetString(5);
+                    u.Telefon = reader.GetString(6);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: No s'ha trobat un usuari amb la ID indicada");
+            }
+            finally
+            {
+                c.Desconnectar();
+            }
+            return u;
+
+        }
     }
 }
