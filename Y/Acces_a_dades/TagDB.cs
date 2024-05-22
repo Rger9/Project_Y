@@ -12,7 +12,7 @@ namespace Y.Model
 {
     public partial class TagDB
     {
-        TagModel t = new TagModel();
+        //TagModel t = new TagModel();
         /// <summary>
         /// Afegeix un tag a la taulda "Tag" de la base de dades "Db_Y"
         /// </summary>
@@ -85,7 +85,31 @@ namespace Y.Model
                 c.Desconnectar();
             }
             return tag;
-
+        }
+        public static List<int> GetAllTag_Id()
+        {
+            Connexio c = new Connexio();
+            string cmdSelect = "SELECT tag_id" +
+                                "FROM Tag";
+            List<int> tags = new List<int>();
+            try
+            {
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                MySqlDataReader reader = comanda.ExecuteReader();
+                while (reader.Read())
+                {
+                    tags.Add(reader.GetInt32(0));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: No hi ha cap tag");
+            }
+            finally
+            {
+                c.Desconnectar();
+            }
+            return tags;
         }
     }
 }
