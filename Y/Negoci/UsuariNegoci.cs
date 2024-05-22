@@ -14,7 +14,7 @@ namespace Y.Negoci
         //Propietats
         public UsuariModel Model { get; set; }
         //Metodes
-        public UsuariModel GetUsuariDB(int id)
+        public UsuariModel GetUsuari(int id)
         {
             return UsuariDB.GetUsuari(id);
         }
