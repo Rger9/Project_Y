@@ -20,8 +20,7 @@ namespace Y.Negoci
         }
         public void Inserir()
         {
-            ComentariDB cdb = new ComentariDB;
-            cdb.Inserir(comentari);
+            ComentariDB.Inserir(comentari);
         }
         public bool Validar()
         {
