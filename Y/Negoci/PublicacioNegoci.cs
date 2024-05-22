@@ -26,19 +26,16 @@ namespace Y.Negoci
         public bool Validar()
         {
             if (publicacio == null) return false;
-            if(publicacio.Contingut == null || publicacio.Data_p == null || publicacio.Titol == null)
-            {
-
-            }
-            PublicacioDB pdb = new PublicacioDB();
+            if(this.HasNull()) return false;
             UsuariDB udb = new UsuariDB();
             List<int> llistaId = new List<int>();
             //llistaId = udb.ObtenirTotsId();
-            if (llistaId.Contains(publicacio.Publicacio_id))
-            {
-                return true;
-            }
+            if (llistaId.Contains(publicacio.Publicacio_id)) return true;
             return false;
+        }
+        public bool HasNull()
+        {
+            return publicacio.User_id == null || publicacio.Contingut == null || publicacio.Data_p == null || publicacio.Titol == null;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Y.Negoci
         //    return TagDB.GetTag(id);
         //}
 
-        public int GetTag_id(string tag_name)
+        public static int GetTag_id(string tag_name)
         {
             int id = TagDB.GetTag_Id(tag_name);
             return id;
@@ -27,11 +27,12 @@ namespace Y.Negoci
         public void Inserir()
         {
             TagDB tdb = new TagDB();
-            tdb.Inserir(tag);
+            if(!Existeix(tag))
+                tdb.Inserir(tag);
         }
-        public bool Existeix(int id)
+        public bool Existeix(TagModel tag)
         {
-            List<int> tags;
+            return TagDB.GetTag_Id(tag.Nom) != null;
         }
     }
 }

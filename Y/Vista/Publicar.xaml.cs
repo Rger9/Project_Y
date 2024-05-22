@@ -51,7 +51,7 @@ namespace Y.Vista
                 tNegoci.Inserir();
 
                 TagpublicacioModel tp = new TagpublicacioModel();
-                tp.Tag_id = tNegoci.GetTag_id(tags[i]);
+                tp.Tag_id = TagNegoci.GetTag_id(tags[i]);
                 tp.Publicacio_id = p.Publicacio_id;
             }
 
