@@ -61,6 +61,7 @@ namespace Y.Model
             try
             {
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                c.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
