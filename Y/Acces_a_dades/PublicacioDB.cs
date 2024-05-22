@@ -15,6 +15,10 @@ namespace Y.Model
 {
     public partial class PublicacioDB
     {
+        /// <summary>
+        /// Insereix una publicació a la base de dades
+        /// </summary>
+        /// <param name="p"></param>
         public static void Inserir(PublicacioModel p)
         {
             Connexio c = new Connexio();
@@ -45,49 +49,29 @@ namespace Y.Model
                 c.Desconnectar();
             }
         }
-
-        public void GetPublicacio(PublicacioModel p)
-        {
-            Connexio c = new Connexio();
-            string cmdSelect = "SELECT * FROM Publicacio" +
-                                "WHERE @publicacio_id = publicacio_id";
-            try
-            {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
-                comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
-
-                comanda.Parameters["@publicacio_id"].Value = p.Publicacio_id;
-
-                c.Connectar();
-                MySqlDataReader reader = comanda.ExecuteReader();
-            }
-            catch
-            {
-                MessageBox.Show("ERROR AL SELECCIONAR A LA BASE DE DADES 'PUBLICACIÓ' ");
-            }
-            finally
-            {
-                c.Desconnectar();
-            }
-        }
+        /// <summary>
+        /// A partir de la ID d'una publicaació, busca dita publicació a la base de dades i la retorna
+        /// </summary>
+        /// <param name="id">ID de la publicació a cercar</param>
+        /// <returns>La publicació</returns>
         public static PublicacioModel GetPublicacio(int id)
         {
             Connexio c = new Connexio();
-            string cmdSelect_User_Id = "SELECT user_id" +
-                                        "FROM publicacio" +
-                                        $"WHERE publicacio_id = {id}";
+            //string cmdSelect_User_Id = "SELECT user_id" +
+            //                            "FROM publicacio" +
+            //                            $"WHERE publicacio_id = {id}";
 
-            string cmdSelect_Data_P = "SELECT data_p" +
-                                        "FROM publicacio" +
-                                        $"WHERE publicacio_id = {id}";
+            //string cmdSelect_Data_P = "SELECT data_p" +
+            //                            "FROM publicacio" +
+            //                            $"WHERE publicacio_id = {id}";
 
-            string cmdSelect_Titol = "SELECT titol" +
-                                        "FROM publicacio" +
-                                        $"WHERE publicacio_id = {id}";
+            //string cmdSelect_Titol = "SELECT titol" +
+            //                            "FROM publicacio" +
+            //                            $"WHERE publicacio_id = {id}";
 
-            string cmdSelect_Contingut = "SELECT contingut" +
-                                        "FROM publicacio" +
-                                        $"WHERE publicacio_id = {id}";
+            //string cmdSelect_Contingut = "SELECT contingut" +
+            //                            "FROM publicacio" +
+            //                            $"WHERE publicacio_id = {id}";
             string cmdSelect_TOT = "SELECT * " +
                                     "FROM publicacio" +
                                     $"WHERE publicacio_id = {id}";

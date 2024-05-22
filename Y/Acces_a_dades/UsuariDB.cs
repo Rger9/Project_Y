@@ -13,6 +13,10 @@ namespace Y.Model
 {
     public partial class UsuariDB
     {
+        /// <summary>
+        /// Insereix un usuari a la base de dades
+        /// </summary>
+        /// <param name="u"></param>
         public static void Inserir(UsuariModel u)
         {
             Connexio c = new Connexio();

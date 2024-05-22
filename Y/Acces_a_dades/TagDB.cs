@@ -86,6 +86,10 @@ namespace Y.Model
             }
             return tag;
         }
+        /// <summary>
+        /// Consegueix una llista de tots els Tags existents
+        /// </summary>
+        /// <returns>Una Llista de Noms</returns>
         public static List<string> GetAllTagName()
         {
             Connexio c = new Connexio();

@@ -13,6 +13,10 @@ namespace Y.Model
 {
     public partial class ComentariDB
     {
+        /// <summary>
+        /// Insereix un comentari a la base de dades
+        /// </summary>
+        /// <param name="c"></param>
         public static void Inserir(ComentariModel c)
         {
             Connexio con = new Connexio();
@@ -42,6 +46,36 @@ namespace Y.Model
             {
                 con.Desconnectar();
             }
+        }
+        public static ComentariModel GetComentari(int id)
+        {
+            Connexio con = new Connexio();
+            string cmdSelect = "SELECT *" +
+                                "FROM comentari" +
+                                $"WHERE comentari_id = {id}";
+            ComentariModel c = new ComentariModel();
+            try
+            {
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, con.Connection);
+                MySqlDataReader reader = comanda.ExecuteReader();
+                if (reader.Read())
+                {
+                    c.User_id = reader.GetInt32(1);
+                    c.Publicacio_id = reader.GetInt32(2);
+                    c.Data_c = reader.GetDateTime(3);
+                    c.Contingut = reader.GetString(4);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: No s'ha trobat un comentari amb la ID indicada");
+            }
+            finally
+            {
+                con.Desconnectar();
+            }
+            return c;
+
         }
     }
 }

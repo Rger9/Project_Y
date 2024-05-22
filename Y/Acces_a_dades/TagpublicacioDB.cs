@@ -12,6 +12,10 @@ namespace Y.Model
 {
     public partial class TagpublicacioDB
     {
+        /// <summary>
+        /// Insereix una entrada a la base de dades "TagPublicacio"
+        /// </summary>
+        /// <param name="tp"></param>
         public static void Inserir(TagpublicacioModel tp)
         {
             Connexio c = new Connexio();
