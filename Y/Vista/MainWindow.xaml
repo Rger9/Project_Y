@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Y"
         mc:Ignorable="d"
-        Title="Y" Height="720" Width="1080">
+        Title="Y" Height="720" Width="1080" ResizeMode="NoResize">
     <Grid x:Name="MainGrid">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
@@ -23,7 +23,6 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Image x:Name="LogoY" HorizontalAlignment="Left" Height="100" Margin="30,23,0,0" VerticalAlignment="Top" Width="100" Source="/Vista/logo_Y.jpeg" Focusable="True" Cursor="Hand"/>
         <Grid x:Name="GridPosts" Margin="20,143,280,20">
             <Border x:Name="BorderPost" BorderBrush="White" BorderThickness="2,2,2,2" CornerRadius="30,30,30,30">
                 <Border.Background>
@@ -32,6 +31,16 @@
                 <ScrollBar Margin="756,26,4,26"/>
             </Border>
         </Grid>
-        <Button Name="BtnPublicar" Content="PUBLICAR" HorizontalAlignment="Left" Margin="818,529,0,0" VerticalAlignment="Top" Height="155" Width="233" FontSize="36" Click="BtnPublicar_Click"/>
+        <Button Name="BtnPublicar" Content="PUBLICAR" HorizontalAlignment="Left" Margin="818,529,0,0" VerticalAlignment="Top" Height="155" Width="233" FontSize="36" Click="BtnPublicar_Click" Background="{x:Null}" Foreground="White" BorderBrush="White" BorderThickness="2,2,2,2">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="60"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
+            </Button.Effect>
+        </Button>
+        <Image HorizontalAlignment="Left" Height="100" Margin="20,24,0,0" VerticalAlignment="Top" Width="102" Source="/Vista/logoBlanc_Y.png"/>
     </Grid>
 </Window>

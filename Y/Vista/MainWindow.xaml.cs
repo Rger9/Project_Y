@@ -26,5 +26,7 @@ namespace Y
             Vista.Publicar publicar = new Vista.Publicar();
             publicar.Show();
         }
+
+        
     }
 }

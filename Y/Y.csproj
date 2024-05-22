@@ -17,12 +17,15 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.0" />
     <PackageReference Include="MySql.Data" Version="8.4.0" />
     <None Remove="Vista\email.png" />
+    <None Remove="Vista\emailBlanc.png" />
     <None Remove="Vista\id-card.png" />
+    <None Remove="Vista\id-cardBlanc.png" />
     <None Remove="Vista\logoBlanc_Y.png" />
-    <None Remove="Vista\logo_Y.jpeg" />
     <None Remove="Vista\padlock.png" />
     <None Remove="Vista\telephone.png" />
+    <None Remove="Vista\telephoneBlanc.png" />
     <None Remove="Vista\user.png" />
+    <None Remove="Vista\userBlanc.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,13 +37,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Vista\email.png" />
-    <Resource Include="Vista\id-card.png" />
+    <Resource Include="Vista\emailBlanc.png" />
+    <Resource Include="Vista\id-cardBlanc.png" />
     <Resource Include="Vista\logoBlanc_Y.png" />
-    <Resource Include="Vista\logo_Y.jpeg" />
     <Resource Include="Vista\padlock.png" />
-    <Resource Include="Vista\telephone.png" />
-    <Resource Include="Vista\user.png" />
+    <Resource Include="Vista\telephoneBlanc.png" />
+    <Resource Include="Vista\userBlanc.png" />
   </ItemGroup>
 
 </Project>
