@@ -17,7 +17,7 @@ namespace Y.Model
         /// Afegeix un tag a la taulda "Tag" de la base de dades "Db_Y"
         /// </summary>
         /// <param name="t">El Tag a inserir</param>
-        public void Inserir(TagModel t)
+        public static void Inserir(TagModel t)
         {
             Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Tag(nom)" +
@@ -86,19 +86,19 @@ namespace Y.Model
             }
             return tag;
         }
-        public static List<int> GetAllTag_Id()
+        public static List<string> GetAllTagName()
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT tag_id" +
+            string cmdSelect = "SELECT nom" +
                                 "FROM Tag";
-            List<int> tags = new List<int>();
+            List<string> tags = new List<string>();
             try
             {
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
                 MySqlDataReader reader = comanda.ExecuteReader();
                 while (reader.Read())
                 {
-                    tags.Add(reader.GetInt32(0));
+                    tags.Add(reader.GetString(0));
                 }
             }
             catch

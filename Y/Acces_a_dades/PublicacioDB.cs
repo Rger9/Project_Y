@@ -15,7 +15,7 @@ namespace Y.Model
 {
     public partial class PublicacioDB
     {
-        public void Inserir(PublicacioModel p)
+        public static void Inserir(PublicacioModel p)
         {
             Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Publicacio(user_id, data_p, titol, contingut)" +

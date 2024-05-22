@@ -14,9 +14,9 @@ namespace Y.Negoci
         //Propietats
         public TagpublicacioModel Tagpublicacio { get; set; }
         //Metodes
-        public TagpublicacioModel GetTagpublicacioDB(int id)
+        public void Inserir(TagpublicacioModel tp)
         {
-            return TagpublicacioDB.GetTagpublicacio(id);
+            TagpublicacioDB.Inserir(tp);
         }
     }
 }

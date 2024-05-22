@@ -29,14 +29,4 @@
     <PackageReference Include="MySql.Data" Version="8.4.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="Vista\email.png" />
-    <Resource Include="Vista\id-card.png" />
-    <Resource Include="Vista\logoBlanc_Y.png" />
-    <Resource Include="Vista\logo_Y.jpeg" />
-    <Resource Include="Vista\padlock.png" />
-    <Resource Include="Vista\telephone.png" />
-    <Resource Include="Vista\user.png" />
-  </ItemGroup>
-
 </Project>

@@ -44,15 +44,21 @@ namespace Y.Vista
             string[] tags = TxtBoxEtiqueta.Text.Split(", ");
             for (int i  = 0; i < tags.Length; i++)
             {
-                TagModel t = new TagModel();
-                t.Nom = tags[i];
-                TagNegoci tNegoci = new TagNegoci();
-                tNegoci.Tag = t;
-                tNegoci.Inserir();
+                // si no existeix el tag...
+                if (!TagNegoci.Existeix(tags[i]))
+                {
+                    // AFEGIR TAG A LA BASE DE DADES
+                    TagModel t = new TagModel();
+                    t.Nom = tags[i];
+                    TagNegoci tNegoci = new TagNegoci();
+                    tNegoci.Tag = t;
+                    tNegoci.Inserir();
 
-                TagpublicacioModel tp = new TagpublicacioModel();
-                tp.Tag_id = tNegoci.GetTag_id(tags[i]);
-                tp.Publicacio_id = p.Publicacio_id;
+                    // AFEGIR ENTRADA A "TAGPUBLICACIO"
+                    TagpublicacioModel tp = new TagpublicacioModel();
+                    tp.Tag_id = tNegoci.GetTag_id(tags[i]);
+                    tp.Publicacio_id = p.Publicacio_id;
+                }
             }
 
         }

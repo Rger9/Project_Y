@@ -26,12 +26,12 @@ namespace Y.Negoci
         }
         public void Inserir()
         {
-            TagDB tdb = new TagDB();
-            tdb.Inserir(tag);
+            TagDB.Inserir(tag);
         }
-        public bool Existeix(int id)
+        public static bool Existeix(string nom)
         {
-            List<int> tags;
+            List<string> tags = TagDB.GetAllTagName();
+            return tags.Contains(nom);
         }
     }
 }
