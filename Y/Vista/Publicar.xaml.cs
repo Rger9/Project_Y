@@ -48,7 +48,7 @@ namespace Y.Vista
                 t.Nom = tags[i];
                 TagNegoci tNegoci = new TagNegoci();
                 tNegoci.Tag = t;
-                // tNegoci.Inserir();
+                tNegoci.Inserir();
 
                 TagpublicacioModel tp = new TagpublicacioModel();
                 tp.Tag_id = tNegoci.GetTag_id(tags[i]);

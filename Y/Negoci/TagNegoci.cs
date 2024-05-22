@@ -24,5 +24,14 @@ namespace Y.Negoci
             int id = TagDB.GetTag_Id(tag_name);
             return id;
         }
+        public void Inserir()
+        {
+            TagDB tdb = new TagDB();
+            tdb.InserirTag(tag);
+        }
+        public bool Existeix(int id)
+        {
+            List<int> tags;
+        }
     }
 }
