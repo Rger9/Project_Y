@@ -55,9 +55,9 @@ namespace Y.Vista
                     tNegoci.Inserir();
 
                     // AFEGIR ENTRADA A "TAGPUBLICACIO"
-                    TagpublicacioModel tp = new TagpublicacioModel();
-                    tp.Tag_id = tNegoci.GetTag_id(tags[i]);
-                    tp.Publicacio_id = p.Publicacio_id;
+                    TagpublicacioModel tagpubli = new TagpublicacioModel();
+                    tagpubli.Tag_id = TagNegoci.GetTag_id(tags[i]);
+                    tagpubli.Publicacio_id = p.Publicacio_id;
                 }
                 TagpublicacioModel tp = new TagpublicacioModel();
                 tp.Tag_id = TagNegoci.GetTag_id(tags[i]);
