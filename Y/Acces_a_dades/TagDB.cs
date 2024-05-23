@@ -53,8 +53,14 @@ namespace Y.Model
                                 "FROM Tag" +
                                 $"WHERE nom = {nom}";
             MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
-            int resultat = (int)comanda.ExecuteScalar();
-            return resultat;
+            c.Connectar();
+            
+            int? resultat = (int?)comanda.ExecuteScalar();
+            int r1 = 0;
+            if (resultat != null)
+                r1 = Convert.ToInt32(resultat);
+            c.Desconnectar();
+            return r1;
         }
         /// <summary>
         /// Consegueix el tag a partir de l'id d'aquest

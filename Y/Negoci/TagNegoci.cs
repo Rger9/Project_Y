@@ -19,7 +19,7 @@ namespace Y.Negoci
         //    return TagDB.GetTag(id);
         //}
 
-        public int GetTag_id(string tag_name)
+        public static int GetTag_id(string tag_name)
         {
             int id = TagDB.GetTag_Id(tag_name);
             return id;
@@ -32,6 +32,13 @@ namespace Y.Negoci
         {
             List<string> tags = TagDB.GetAllTagName();
             return tags.Contains(nom);
+            TagDB tdb = new TagDB();
+            if(!Existeix(tag))
+                tdb.Inserir(tag);
+        }
+        public bool Existeix(TagModel tag)
+        {
+            return TagDB.GetTag_Id(tag.Nom) != null;
         }
     }
 }

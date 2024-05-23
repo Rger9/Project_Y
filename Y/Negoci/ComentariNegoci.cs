@@ -22,9 +22,24 @@ namespace Y.Negoci
         {
             ComentariDB.Inserir(comentari);
         }
-        //public bool Validar()
-        //{
-
-        //}
+        public bool Validar()
+        {
+            if(comentari == null) return false;
+            if(this.HasNull() ) return false;
+            PublicacioDB pdb = new PublicacioDB();
+            List<int> llistaId = new List<int>();
+            //llistaId = pdb.ObtenirTotsId();
+            if (llistaId.Contains(comentari.Publicacio_id)) 
+            {
+                UsuariDB udb = new UsuariDB();
+                //llistaId = udb.ObtenirTotsId();
+                if (llistaId.Contains(comentari.User_id)) return true;
+            }
+            return false;
+        }
+        public bool HasNull()
+        {
+            return comentari.User_id == null || comentari.Data_c == null || comentari.Contingut == null || comentari.Data_c == DateTime.MinValue;
+        }
     }
 }
