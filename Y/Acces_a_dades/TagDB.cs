@@ -51,8 +51,10 @@ namespace Y.Model
             Connexio c = new Connexio();
             string cmdSelect = "SELECT tag_id" +
                                 "FROM Tag" +
-                                $"WHERE nom = {nom}";
+                                $"WHERE nom = @nom";
             MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+            comanda.Parameters.Add("@nom", MySqlDbType.String);
+            comanda.Parameters["@nom"].Value = nom;
             c.Connectar();
             
             int? resultat = (int?)comanda.ExecuteScalar();
@@ -72,11 +74,14 @@ namespace Y.Model
             Connexio c = new Connexio();
             string cmdSelect = "SELECT nom" +
                                 "FROM Tag" +
-                                $"WHERE tag_id = {id}";
+                                $"WHERE tag_id = @tag_id";
             TagModel tag = new TagModel();
             try
             {
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                comanda.Parameters.Add("@tag_id", MySqlDbType.Int32);
+                comanda.Parameters["@tag_id"].Value = id;
+                c.Connectar();
                 string tag_name = (string)comanda.ExecuteScalar();
 
                 tag.Tag_id = id;
@@ -95,21 +100,27 @@ namespace Y.Model
         /// <summary>
         /// Consegueix una llista de tots els Tags existents
         /// </summary>
-        /// <returns>Una Llista de Noms</returns>
-        public static List<string> GetAllTagName()
+        /// <returns>Llista de Ids</returns>
+        public static List<int> ObtenirTotsId()
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT nom" +
+            string cmdSelect = "SELECT tag_id" +
                                 "FROM Tag";
-            List<string> tags = new List<string>();
+            List<int> llistaId = new List<int>();
             try
             {
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                c.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
-                while (reader.Read())
+                if (reader.HasRows)
                 {
-                    tags.Add(reader.GetString(0));
+                    while(reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        llistaId.Add(id);
+                    }
                 }
+                reader.Close();
             }
             catch
             {
@@ -119,7 +130,7 @@ namespace Y.Model
             {
                 c.Desconnectar();
             }
-            return tags;
+            return llistaId;
         }
     }
 }

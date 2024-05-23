@@ -10,6 +10,8 @@ using Y.AccesADades;
 using Mysqlx.Crud;
 using System.Windows;
 using System.Data;
+using System.Collections.Specialized;
+using System.Reflection.PortableExecutable;
 
 namespace Y.Model
 {
@@ -57,38 +59,17 @@ namespace Y.Model
         public static PublicacioModel GetPublicacio(int id)
         {
             Connexio c = new Connexio();
-            //string cmdSelect_User_Id = "SELECT user_id" +
-            //                            "FROM publicacio" +
-            //                            $"WHERE publicacio_id = {id}";
-
-            //string cmdSelect_Data_P = "SELECT data_p" +
-            //                            "FROM publicacio" +
-            //                            $"WHERE publicacio_id = {id}";
-
-            //string cmdSelect_Titol = "SELECT titol" +
-            //                            "FROM publicacio" +
-            //                            $"WHERE publicacio_id = {id}";
-
-            //string cmdSelect_Contingut = "SELECT contingut" +
-            //                            "FROM publicacio" +
-            //                            $"WHERE publicacio_id = {id}";
             string cmdSelect_TOT = "SELECT * " +
                                     "FROM publicacio" +
-                                    $"WHERE publicacio_id = {id}";
+                                    $"WHERE publicacio_id = @publicacio_id";
             PublicacioModel p = new PublicacioModel();
             try
             {
-                //MySqlCommand comanda_User_Id = new MySqlCommand(cmdSelect_User_Id, c.Connection);
-                //p.User_id = (int)comanda_User_Id.ExecuteScalar();
-                //MySqlCommand comanda_Data_P = new MySqlCommand(cmdSelect_Data_P, c.Connection);
-                //p.Data_p = (DateTime)comanda_Data_P.ExecuteScalar();
-                //MySqlCommand comanda_Titol = new MySqlCommand(cmdSelect_Titol, c.Connection);
-                //p.Titol = (string)comanda_Titol.ExecuteScalar();
-                //MySqlCommand comanda_Contingut = new MySqlCommand(cmdSelect_Contingut, c.Connection);
-                //p.Contingut = (string)comanda_Contingut.ExecuteScalar();
-                MySqlCommand comanda_Select = new MySqlCommand(cmdSelect_TOT, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdSelect_TOT, c.Connection);
+                comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
+                comanda.Parameters["@publicacio_id"].Value = id;
                 c.Connectar();
-                MySqlDataReader reader = comanda_Select.ExecuteReader();
+                MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
                     p.Publicacio_id = reader.GetInt32(0);
@@ -97,16 +78,48 @@ namespace Y.Model
                     p.Titol = reader.GetString(3);
                     p.Contingut = reader.GetString(4);
                 }
+                reader.Close();
             }
             catch
             {
-                MessageBox.Show($"ERROR: No s'ha trobat una publicació amb ID{id}");
+                MessageBox.Show($"ERROR: No s'ha trobat una publicació amb ID@publicacio_id");
             }
             finally
             {
                 c.Desconnectar();
             }
             return p;
+        }
+        public static List<int> ObtenirTotsId()
+        {
+            Connexio c = new Connexio();
+            string cmdSelect = "SELECT publicacio_id" +
+                                "FROM publicacio";
+            List<int> llistaId = new List<int>();
+            try
+            {
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                c.Connectar();
+                MySqlDataReader reader = comanda.ExecuteReader(); 
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        int id = reader.GetInt32(0);
+                        llistaId.Add(id);
+                    }
+                }
+                reader.Close();
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: No s'han pogut obtenir tots els id");
+            }
+            finally
+            {
+                c.Desconnectar();
+            }
+            return llistaId;
         }
     }
 }

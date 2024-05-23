@@ -16,7 +16,7 @@ namespace Y.Model
         /// <summary>
         /// Insereix un comentari a la base de dades
         /// </summary>
-        /// <param name="c"></param>
+        /// <param name="c">El comentari</param>
         public static void Inserir(ComentariModel c)
         {
             Connexio con = new Connexio();
@@ -47,16 +47,24 @@ namespace Y.Model
                 con.Desconnectar();
             }
         }
+        /// <summary>
+        /// A partí de l'ID d'un comentari el retorna
+        /// </summary>
+        /// <param name="id">ID del comentari</param>
+        /// <returns>el comentari</returns>
         public static ComentariModel GetComentari(int id)
         {
             Connexio con = new Connexio();
             string cmdSelect = "SELECT *" +
                                 "FROM comentari" +
-                                $"WHERE comentari_id = {id}";
+                                $"WHERE comentari_id = @comentari_id";
             ComentariModel c = new ComentariModel();
             try
             {
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, con.Connection);
+                comanda.Parameters.Add("@comentari_id", MySqlDbType.Int32);
+                comanda.Parameters["@comentari_id"].Value = id;
+                con.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -65,6 +73,7 @@ namespace Y.Model
                     c.Data_c = reader.GetDateTime(3);
                     c.Contingut = reader.GetString(4);
                 }
+                reader.Close();
             }
             catch
             {
@@ -76,6 +85,50 @@ namespace Y.Model
             }
             return c;
 
+        }
+        /// <summary>
+        /// Retorna tots els comentaris de certa publicació, indicada per la seva Id
+        /// </summary>
+        /// <param name="postId">Id de la publicació</param>
+        /// <returns>Tots els comentaris de la publicació</returns>
+        public static List<ComentariModel> GetComentarisPost(int postId)
+        {
+            Connexio con = new Connexio();
+            string cmdSelect = "SELECT *" +
+                                "FROM comentari" +
+                                $"WHERE publicacio_id = @publicacio_id";
+            List<ComentariModel> llistaComentaris = new List<ComentariModel>();
+            ComentariModel comentari = new ComentariModel();
+            try
+            {
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, con.Connection);
+                comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
+                comanda.Parameters["@publicacio_id"].Value = postId;
+                con.Connectar();
+                MySqlDataReader reader = comanda.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        comentari.Comentari_id = reader.GetInt32(0);
+                        comentari.User_id = reader.GetInt32(1);
+                        comentari.Data_c = reader.GetDateTime(3);
+                        comentari.Contingut = reader.GetString(4);
+                        llistaComentaris.Add(comentari);
+                    }
+                }
+                reader.Close();
+            }
+            catch
+            {
+                MessageBox.Show($"ERROR: No hi ha comentaris amb la publicació_id {postId}");
+            }
+            finally
+            {
+
+                con.Desconnectar();
+            }
+            return llistaComentaris;
         }
     }
 }

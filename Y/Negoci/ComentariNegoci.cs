@@ -27,12 +27,10 @@ namespace Y.Negoci
             if(comentari == null) return false;
             if(this.HasNull() ) return false;
             PublicacioDB pdb = new PublicacioDB();
-            List<int> llistaId = new List<int>();
-            //llistaId = pdb.ObtenirTotsId();
+            List<int> llistaId = PublicacioDB.ObtenirTotsId();
             if (llistaId.Contains(comentari.Publicacio_id)) 
             {
-                UsuariDB udb = new UsuariDB();
-                //llistaId = udb.ObtenirTotsId();
+                llistaId = UsuariDB.ObtenirTotsId();
                 if (llistaId.Contains(comentari.User_id)) return true;
             }
             return false;
@@ -40,6 +38,10 @@ namespace Y.Negoci
         public bool HasNull()
         {
             return comentari.User_id == null || comentari.Data_c == null || comentari.Contingut == null || comentari.Data_c == DateTime.MinValue;
+        }
+        public List<ComentariModel> GetComentarisPost(int postId)
+        {
+            return ComentariDB.GetComentarisPost(postId);
         }
     }
 }

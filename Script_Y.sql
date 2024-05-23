@@ -65,7 +65,29 @@ INSERT INTO usuari (username, contrasenya, nom, cognom, correu, telefon)
 -- INSERT INICIAL A LA TAULA "publicacio"
 INSERT INTO publicacio (user_id, data_p, titol, contingut)
 	VALUES('4', '20240513', 'Quina desgracia!', "Avui se m'ha caigut el suc de prèssec dins el portàtil i ja no em funciona, algun consell gent? :(");
+INSERT INTO publicacio (user_id, data_p, titol, contingut)
+	VALUES('1', '20240523', 'Títol exemple', "Contingut interessant 1");
+INSERT INTO publicacio (user_id, data_p, titol, contingut)
+	VALUES('2', '20240520', 'Otru titol', "Contingut interessant 2");
+INSERT INTO publicacio (user_id, data_p, titol, contingut)
+	VALUES('3', '20240522', 'Canvis', "Faig canvis");
 
 -- INSERT INICIAL A LA TAULA "comentari"
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
 	VALUES('1', '1', '20240513', 'Radical');
+INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
+	VALUES('2', '4', '20240523', 'Si que en fas');
+
+-- INSERT INICIAL A LA TAULA "Tags"
+
+
+DELIMITER //
+CREATE OR REPLACE TRIGGER T_NoUsuariUpdate
+	BEFORE UPDATE ON Usuari FOR EACH ROW
+BEGIN 
+	IF OLD.user_id <> NEW.user_id THEN 
+		SIGNAL SQLSTATE 'HY000' SET message_text = "ERROR: No es pot modificar la ID d'usuari";
+	END IF;
+END
+//
+DELIMITER ;

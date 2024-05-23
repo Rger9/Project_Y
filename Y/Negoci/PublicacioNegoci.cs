@@ -26,9 +26,8 @@ namespace Y.Negoci
         {
             if (publicacio == null) return false;
             if(this.HasNull()) return false;
-            UsuariDB udb = new UsuariDB();
             List<int> llistaId = new List<int>();
-            //llistaId = udb.ObtenirTotsId();
+            llistaId = UsuariDB.ObtenirTotsId();
             if (llistaId.Contains(publicacio.Publicacio_id)) return true;
             return false;
         }

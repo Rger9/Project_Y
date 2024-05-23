@@ -14,10 +14,10 @@ namespace Y.Negoci
         //Propietats
         public TagModel Tag { get; set; }
         //Metodes
-        //public TagModel GetTagDB(int id)
-        //{
-        //    return TagDB.GetTag(id);
-        //}
+        public TagModel GetTagDB(int id)
+        {
+            return TagDB.GetTag(id);
+        }
 
         public static int GetTag_id(string tag_name)
         {
@@ -30,15 +30,11 @@ namespace Y.Negoci
         }
         public static bool Existeix(string nom)
         {
-            List<string> tags = TagDB.GetAllTagName();
-            return tags.Contains(nom);
-            TagDB tdb = new TagDB();
-            if(!Existeix(tag))
-                tdb.Inserir(tag);
+            return (TagDB.ObtenirTotsId().Contains(GetTag_id(nom)));
         }
         public bool Existeix(TagModel tag)
         {
-            return TagDB.GetTag_Id(tag.Nom) != null;
+            return (TagDB.ObtenirTotsId().Contains(tag.Tag_id));
         }
     }
 }
