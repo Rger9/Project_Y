@@ -1,16 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
+
 
 namespace Y.Vista
 {
@@ -22,6 +11,90 @@ namespace Y.Vista
         public Register()
         {
             InitializeComponent();
+        }
+
+        private void TxtBoxUser_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxUser.Text == "Usuari")
+                TxtBoxUser.Text = "";
+        }
+
+        private void TxtBoxUser_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxUser.Text == string.Empty)
+                TxtBoxUser.Text = "Usuari";
+        }
+
+        private void PsswdRegister_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (PsswdRegister.Password == "Contrasenya")
+                PsswdRegister.Password = "";
+        }
+
+        private void PsswdRegister_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (PsswdRegister.Password == string.Empty)
+                PsswdRegister.Password = "Contrasenya";
+        }
+
+        private void PsswdRegister2_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (PsswdRegister2.Password == "Contrasenya")
+                PsswdRegister2.Password = "";
+        }
+
+        private void PsswdRegister2_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (PsswdRegister2.Password == string.Empty)
+                PsswdRegister2.Password = "Contrasenya";
+        }
+
+        private void TxtBoxNom_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxNom.Text == "Nom")
+                TxtBoxNom.Text = "";
+        }
+
+        private void TxtBoxNom_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxNom.Text == string.Empty)
+                TxtBoxNom.Text = "Nom";
+        }
+
+        private void TxtBoxCognom_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxCognom.Text == "Cognom")
+                TxtBoxCognom.Text = "";
+        }
+
+        private void TxtBoxCognom_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxCognom.Text == string.Empty)
+                TxtBoxCognom.Text = "Cognom";
+        }
+
+        private void TxtBoxCorreu_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxCorreu.Text == "Correu")
+                TxtBoxCorreu.Text = "";
+        }
+
+        private void TxtBoxCorreu_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxCorreu.Text == string.Empty)
+                TxtBoxCorreu.Text = "Correu";
+        }
+
+        private void TxtBoxTelefon_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxTelefon.Text == "Telefon")
+                TxtBoxTelefon.Text = "";
+        }
+
+        private void TxtBoxTelefon_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (TxtBoxTelefon.Text == string.Empty)
+                TxtBoxTelefon.Text = "Telefon";
         }
     }
 }

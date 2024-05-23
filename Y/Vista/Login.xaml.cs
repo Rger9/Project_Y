@@ -1,16 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace Y.Vista
 {
@@ -26,12 +14,29 @@ namespace Y.Vista
 
         private void TxtBoxUser_GotFocus(object sender, RoutedEventArgs e)
         {
-            TxtBoxUser.Text = "";
+            if(TxtBoxUser.Text == "Usuari")
+                TxtBoxUser.Text = "";
         }
-
+        private void TxtBoxUser_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if(TxtBoxUser.Text == string.Empty)
+                TxtBoxUser.Text = "Usuari";
+        }
         private void PsswdLogIn_GotFocus(object sender, RoutedEventArgs e)
         {
-            PsswdLogIn.Password = "";
-        }        
+            if(PsswdLogIn.Password== "Contrasenya")
+                PsswdLogIn.Password = "";
+        }
+        private void PsswdLogIn_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (PsswdLogIn.Password == string.Empty)
+                PsswdLogIn.Password = "Contrasenya";
+        }
+        private void TextBlock_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            Register register = new();
+            register.Show();
+        }
+
     }
 }
