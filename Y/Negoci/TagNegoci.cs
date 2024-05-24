@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Y.Model;
 
 namespace Y.Negoci
@@ -26,7 +27,25 @@ namespace Y.Negoci
         }
         public void Inserir()
         {
-            TagDB.Inserir(tag);
+            try
+            {
+                if (!Validar()) throw new Exception();
+                TagDB.Inserir(tag);
+            }
+            catch
+            {
+                MessageBox.Show("ERROR AL VALIDAR/INSERIR TAG");
+            }
+        }
+        public bool Validar()
+        {
+            if(Tag == null) return false;
+            if(this.HasNull() ) return false;
+            return true;
+        }
+        public bool HasNull()
+        {
+            return tag.Nom == null || tag.Nom == "";
         }
         public static bool Existeix(string nom)
         {

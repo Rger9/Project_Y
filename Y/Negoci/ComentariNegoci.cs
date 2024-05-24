@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Y.Model;
 
 namespace Y.Negoci
@@ -20,7 +21,16 @@ namespace Y.Negoci
         }
         public void Inserir()
         {
-            ComentariDB.Inserir(comentari);
+            try
+            {
+                if (!Validar()) throw new Exception();
+                ComentariDB.Inserir(comentari);
+            }
+            catch
+            {
+                MessageBox.Show("ERROR AL VALIDAR/INSERIR A LA BASE DE DADES");
+            }
+            
         }
         public bool Validar()
         {
@@ -37,7 +47,7 @@ namespace Y.Negoci
         }
         public bool HasNull()
         {
-            return comentari.User_id == null || comentari.Data_c == null || comentari.Contingut == null || comentari.Data_c == DateTime.MinValue;
+            return comentari.User_id == 0 || comentari.Publicacio_id == 0 || comentari.Contingut == null || comentari.Contingut == "" || comentari.Data_c == DateTime.MinValue;
         }
         public List<ComentariModel> GetComentarisPost(int postId)
         {

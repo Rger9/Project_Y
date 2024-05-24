@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using Y.Model;
 
 namespace Y.Negoci
@@ -20,7 +21,16 @@ namespace Y.Negoci
         }
         public void Inserir()
         {
-            PublicacioDB.Inserir(Publicacio);
+            try
+            {
+                if (!Validar()) throw new Exception();
+                PublicacioDB.Inserir(publicacio);
+            }
+            catch
+            {
+                MessageBox.Show("ERROR AL VALIDAR/INSERIR A LA BASE DE DADES");
+            }
+            
         }
         public bool Validar()
         {
@@ -33,7 +43,7 @@ namespace Y.Negoci
         }
         public bool HasNull()
         {
-            return publicacio.User_id == null || publicacio.Contingut == null || publicacio.Data_p == null || publicacio.Titol == null;
+            return publicacio.User_id == 0 || publicacio.Contingut == null || publicacio.Contingut == "" || publicacio.Data_p == DateTime.MinValue || publicacio.Titol == null || publicacio.Titol == "";
         }
     }
 }
