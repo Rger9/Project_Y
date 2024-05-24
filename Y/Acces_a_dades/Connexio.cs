@@ -30,27 +30,11 @@ namespace Y.AccesADades
             {
                 connection = new MySqlConnection(connectionString);
                 connection.Open();
-                //MessageBox.Show("Connexio oberta OK");
-
-                //string cmdSelect = "SELECT COUNT(*) " + " FROM Publicacio;";
-                //MySqlCommand oCommand = new MySqlCommand(cmdSelect, connection);
-                //long num_contactes = (long)oCommand.ExecuteScalar();
-                //MessageBox.Show(num_contactes.ToString());
-
-                MessageBox.Show("Connexio oberta OK");
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al obrir la BD: " + ex.Message);
             }
-            //finally
-            //{
-            //    if (connection != null)
-            //    {
-            //        connection.Close();
-            //        MessageBox.Show("Connexio tancada OK");
-            //    }
-            //}
             return connection;
         }
         public static void Desconnectar()
@@ -58,10 +42,9 @@ namespace Y.AccesADades
             if (!connection.IsDisposed)
             {
                 connection.Close();
-                MessageBox.Show("La connexio sha desconnectat");
             }
             else
-                MessageBox.Show("La connexio no sha tancat pq no estava oberta burro");
+                MessageBox.Show("La connexio no sha tancat pq no estava oberta");
         }
     }
 }

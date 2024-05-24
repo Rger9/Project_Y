@@ -79,14 +79,56 @@ INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
 	VALUES('2', '4', '20240523', 'Si que en fas');
 
 -- INSERT INICIAL A LA TAULA "Tags"
+INSERT INTO tag (nom)
+	VALUES("Radical");
+INSERT INTO tag (nom)
+	VALUES("Fantasia");
+INSERT INTO tag(nom)
+	VALUES("Terror");
 
+-- INSERT INICIAL A LA TAULA "Tagpublicacio"
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(1, 1);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(1, 3);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(2, 2);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(2, 1);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(3, 3);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(4, 1);
 
+-- TRIGGERS
 DELIMITER //
 CREATE OR REPLACE TRIGGER T_NoUsuariUpdate
 	BEFORE UPDATE ON Usuari FOR EACH ROW
 BEGIN 
 	IF OLD.user_id <> NEW.user_id THEN 
 		SIGNAL SQLSTATE 'HY000' SET message_text = "ERROR: No es pot modificar la ID d'usuari";
+	END IF;
+END
+//
+CREATE OR REPLACE TRIGGER T_BorrarEntradaTagPublicacio
+	AFTER DELETE ON Publicacio FOR EACH ROW
+BEGIN
+	DELETE FROM tagpublicacio 
+		WHERE publicacio_id = OLD.publicacio_id;
+END
+//
+CREATE OR REPLACE TRIGGER T_BorrarTagSiSonZero
+	AFTER DELETE ON tagpublicacio FOR EACH ROW
+BEGIN
+	DECLARE v_QuantitatTags int;
+	
+	SELECT COUNT(tag_id)
+		INTO v_QuantitatTags
+		WHERE tag_id = OLD.tag_id;
+	
+	IF v_QuantitatTags = 0 THEN
+		DELETE FROM tag 
+			WHERE tag_id = OLD.tag_id;
 	END IF;
 END
 //
