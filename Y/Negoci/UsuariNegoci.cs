@@ -18,5 +18,9 @@ namespace Y.Negoci
         {
             return UsuariDB.GetUsuari(id);
         }
+        public UsuariModel GetUsuari(string username)
+        {
+            return UsuariDB.GetUsuari(username);
+        }
     }
 }

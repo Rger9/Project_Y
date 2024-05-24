@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Y.Negoci;
 
 namespace Y.Vista
 {
@@ -38,5 +39,17 @@ namespace Y.Vista
             register.Show();
         }
 
+        private void BtnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                UsuariNegoci uNegoci = new UsuariNegoci();
+                uNegoci.GetUsuari(TxtBoxUser.Text);
+            }
+            catch
+            {
+                MessageBox.Show("NYE");
+            }
+        }
     }
 }

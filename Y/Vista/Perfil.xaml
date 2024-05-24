@@ -15,14 +15,14 @@
         </Grid.Background>
         <Label Content="Perf" HorizontalAlignment="Left" Margin="128,26,0,0" VerticalAlignment="Top" Foreground="White" FontSize="48" FontFamily="Reem Kufi" FontWeight="Bold"/>
         <Label Content="l" HorizontalAlignment="Left" Margin="273,26,0,0" VerticalAlignment="Top" Foreground="White" FontSize="48" FontFamily="Reem Kufi" FontWeight="Bold"/>
-        <Button Name="BtnUpdate" Content="ACTUALITZAR PERFIL" HorizontalAlignment="Left" Margin="128,317,0,0" VerticalAlignment="Top" Height="57" Width="386" Click="Button_Click"/>
+        <Button Name="BtnUpdate" Content="ACTUALITZAR PERFIL" HorizontalAlignment="Left" Margin="333,317,0,0" VerticalAlignment="Top" Height="57" Width="181" Click="Button_Click"/>
         <TextBox x:Name="TxtBoxUsername" HorizontalAlignment="Left" Margin="128,113,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="181" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
         <TextBox x:Name="TxtBoxNom" HorizontalAlignment="Left" Margin="128,164,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="181" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
         <TextBox x:Name="TxtBoxCognom" HorizontalAlignment="Left" Margin="333,164,0,0" TextWrapping="Wrap" Text="Cognom" VerticalAlignment="Top" Width="181" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
         <TextBox x:Name="TxtBoxCorreu" HorizontalAlignment="Left" Margin="128,217,0,0" TextWrapping="Wrap" Text="Correu" VerticalAlignment="Top" Width="386" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" TextChanged="TxtBoxCorreu_TextChanged"/>
         <TextBox x:Name="TxtBoxTelefon" HorizontalAlignment="Left" Margin="128,269,0,0" TextWrapping="Wrap" Text="Telèfon" VerticalAlignment="Top" Width="244" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
-        <TextBlock HorizontalAlignment="Left" Margin="333,113,0,0" TextWrapping="Wrap" Text="user_id" VerticalAlignment="Top" Height="27" Width="120" Background="{x:Null}" Foreground="White" FontFamily="Dubai Medium" FontSize="16"/>
         <Image Margin="222,26,316,347" Source="/Vista/logoBlanc_Y.png" Stretch="Fill"/>
+        <Button x:Name="BtnCancelar" Content="CANCELAR" HorizontalAlignment="Left" Margin="128,317,0,0" VerticalAlignment="Top" Height="57" Width="181"/>
 
     </Grid>
 </Window>

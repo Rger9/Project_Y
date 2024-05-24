@@ -20,7 +20,7 @@ namespace Y.Model
         public static void Inserir(ComentariModel c)
         {
             Connexio con = new Connexio();
-            string cmdInsert = "INSERT INTO Comentari(user_id, publicacio_id, data_c, contingut)" +
+            string cmdInsert = "INSERT INTO Comentari(user_id, publicacio_id, data_c, contingut) " +
                                 "VALUES(@user_id, @publicacio, @data_c, @contingut)";
             try
             {
@@ -55,8 +55,8 @@ namespace Y.Model
         public static ComentariModel GetComentari(int id)
         {
             Connexio con = new Connexio();
-            string cmdSelect = "SELECT *" +
-                                "FROM comentari" +
+            string cmdSelect = "SELECT * " +
+                                "FROM comentari " +
                                 $"WHERE comentari_id = @comentari_id";
             ComentariModel c = new ComentariModel();
             try
@@ -94,8 +94,8 @@ namespace Y.Model
         public static List<ComentariModel> GetComentarisPost(int postId)
         {
             Connexio con = new Connexio();
-            string cmdSelect = "SELECT *" +
-                                "FROM comentari" +
+            string cmdSelect = "SELECT * " +
+                                "FROM comentari " +
                                 $"WHERE publicacio_id = @publicacio_id";
             List<ComentariModel> llistaComentaris = new List<ComentariModel>();
             ComentariModel comentari = new ComentariModel();

@@ -20,7 +20,7 @@ namespace Y.Model
         public static void Inserir(TagModel t)
         {
             Connexio c = new Connexio();
-            string cmdInsert = "INSERT INTO Tag(nom)" +
+            string cmdInsert = "INSERT INTO Tag(nom) " +
                                 "VALUES(@nom)";
             try
             {
@@ -49,8 +49,8 @@ namespace Y.Model
         public static int GetTag_Id(string nom)
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT tag_id" +
-                                "FROM Tag" +
+            string cmdSelect = "SELECT tag_id " +
+                                "FROM Tag " +
                                 $"WHERE nom = @nom";
             MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
             comanda.Parameters.Add("@nom", MySqlDbType.String);
@@ -72,8 +72,8 @@ namespace Y.Model
         public static TagModel GetTag(int id)
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT nom" +
-                                "FROM Tag" +
+            string cmdSelect = "SELECT nom " +
+                                "FROM Tag " +
                                 $"WHERE tag_id = @tag_id";
             TagModel tag = new TagModel();
             try
@@ -104,7 +104,7 @@ namespace Y.Model
         public static List<int> ObtenirTotsId()
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT tag_id" +
+            string cmdSelect = "SELECT tag_id " +
                                 "FROM Tag";
             List<int> llistaId = new List<int>();
             try

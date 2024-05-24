@@ -14,7 +14,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="106,118,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxUser_GotFocus" LostFocus="TxtBoxUser_LostFocus"/>
-        <Button x:Name="BtnLogin" Content="logYn" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Height="34" Width="68" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand">
+        <Button x:Name="BtnLogin" Content="logYn" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Height="34" Width="68" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand" Click="BtnLogin_Click">
             <Button.Effect>
                 <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
             </Button.Effect>

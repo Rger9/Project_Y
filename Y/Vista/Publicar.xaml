@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Y.Vista"
         mc:Ignorable="d"
-        Title="Publicar" Height="300" Width="600">
+        Title="Publicar" Height="308" Width="600">
     <Grid Background="#FF000531" Margin="0,0,0,-16">
         <Label Content="PUBL" HorizontalAlignment="Left" Margin="64,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Arial Black" FontSize="22"/>
         <Grid Margin="55,64,55,46">
@@ -14,7 +14,7 @@
             <TextBox Name="TxtBoxEtiqueta" HorizontalAlignment="Center" Margin="0,146,0,0" TextWrapping="Wrap" Text="etiqueta1, etiqueta2, etiqueta3..." VerticalAlignment="Top" Width="470" GotFocus="TxtBoxEtiqueta_GotFocus" Foreground="Gray" LostFocus="TxtBoxEtiqueta_LostFocus"/>
         </Grid>
         <Label Content="CAR" HorizontalAlignment="Left" Margin="162,29,0,0" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontWeight="Bold" FontFamily="Arial Black" FontSize="22"/>
-        <Button Name="BtnPublicar" Content="AFEGIR PUBLICACIÓ" Margin="0,238,0,0" Click="BtnPublicar_Click"/>
+        <Button Name="BtnPublicar" Content="AFEGIR PUBLICACIÓ" Margin="0,232,0,0" Click="BtnPublicar_Click" Height="62" VerticalAlignment="Top"/>
         <Image HorizontalAlignment="Left" Height="38" Margin="131,27,0,0" VerticalAlignment="Top" Width="38" Source="/Vista/logoBlanc_Y.png" RenderTransformOrigin="0.5,0.5">
             <Image.RenderTransform>
                 <TransformGroup>

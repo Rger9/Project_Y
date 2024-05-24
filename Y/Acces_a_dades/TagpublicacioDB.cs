@@ -19,7 +19,7 @@ namespace Y.Model
         public static void Inserir(TagpublicacioModel tp)
         {
             Connexio c = new Connexio();
-            string cmdInsert = "INSERT INTO TagPublicacio(publicacio_id, tag_id)" +
+            string cmdInsert = "INSERT INTO TagPublicacio(publicacio_id, tag_id) " +
                                 "VALUES(@publicacio_id, @tag_id)";
             try
             {

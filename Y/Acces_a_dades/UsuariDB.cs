@@ -20,7 +20,7 @@ namespace Y.Model
         public static void Inserir(UsuariModel u)
         {
             Connexio c = new Connexio();
-            string cmdInsert = "INSERT INTO Usuari(username, contrasenya, nom, cognom, correu, telefon)" +
+            string cmdInsert = "INSERT INTO Usuari(username, contrasenya, nom, cognom, correu, telefon) " +
                                 "VALUES(@username, @contrasenya, @nom, @cognom, @correu, @telefon)";
             try
             {
@@ -54,13 +54,13 @@ namespace Y.Model
         public static void UpdatePerfil(UsuariModel u)
         {
             Connexio c = new Connexio();
-            string cmdUpdate = "UPDATE usuari" +
-                                $"SET username = @username," +
-                                    $"contrasenya = @contrasenya," +
-                                    $"nom = @nom," +
-                                    $"cognom = @cognom," +
-                                    $"correu = @correu," +
-                                    $"telefon = @telefon" +
+            string cmdUpdate = "UPDATE usuari " +
+                                $"SET username = @username, " +
+                                    $"contrasenya = @contrasenya, " +
+                                    $"nom = @nom, " +
+                                    $"cognom = @cognom, " +
+                                    $"correu = @correu, " +
+                                    $"telefon = @telefon " +
                                 $"WHERE user_id = @user_id";
             try
             {
@@ -101,8 +101,8 @@ namespace Y.Model
         public static UsuariModel GetUsuari(int id)
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT *" +
-                                "FROM usuari" +
+            string cmdSelect = "SELECT * " +
+                                "FROM usuari " +
                                 $"WHERE user_id = @user_id";
             UsuariModel u = new UsuariModel();
             try
@@ -133,10 +133,46 @@ namespace Y.Model
             }
             return u;
         }
+        public static UsuariModel GetUsuari(string username)
+        {
+            Connexio c = new Connexio();
+            string cmdSelect = "SELECT * " +
+                                "FROM usuari " +
+                                $"WHERE username = @username";
+            string username2;
+            UsuariModel u = new UsuariModel();
+            try
+            {
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                comanda.Parameters.Add("@username", MySqlDbType.String);
+                comanda.Parameters["@username"].Value = username;
+                c.Connectar();
+                MySqlDataReader reader = comanda.ExecuteReader();
+                if (reader.Read())
+                {
+                    u.User_id = reader.GetInt32(0);
+                    u.Contrasenya = reader.GetString(2);
+                    u.Nom = reader.GetString(3);
+                    u.Cognom = reader.GetString(4);
+                    u.Correu = reader.GetString(5);
+                    u.Telefon = reader.GetString(6);
+                }
+                reader.Close();
+            }
+            catch
+            {
+                MessageBox.Show($"ERROR: No existeix un usuarir amb l'username indicat {u.User_id}");
+            }
+            finally
+            {
+                c.Desconnectar();
+            }
+            return u;
+        }
         public static List<int> ObtenirTotsId()
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT user_id" +
+            string cmdSelect = "SELECT user_id " +
                                 "FROM usuari";
             List<int> llistaId = new List<int>();
             try

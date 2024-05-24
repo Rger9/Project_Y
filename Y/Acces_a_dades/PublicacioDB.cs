@@ -24,7 +24,7 @@ namespace Y.Model
         public static void Inserir(PublicacioModel p)
         {
             Connexio c = new Connexio();
-            string cmdInsert = "INSERT INTO Publicacio(user_id, data_p, titol, contingut)" +
+            string cmdInsert = "INSERT INTO Publicacio(user_id, data_p, titol, contingut) " +
                                 "VALUES(@user_id, @data_p, @titol, @contingut)";
             try
             {
@@ -60,7 +60,7 @@ namespace Y.Model
         {
             Connexio c = new Connexio();
             string cmdSelect_TOT = "SELECT * " +
-                                    "FROM publicacio" +
+                                    "FROM publicacio " +
                                     $"WHERE publicacio_id = @publicacio_id";
             PublicacioModel p = new PublicacioModel();
             try
@@ -93,7 +93,7 @@ namespace Y.Model
         public static List<int> ObtenirTotsId()
         {
             Connexio c = new Connexio();
-            string cmdSelect = "SELECT publicacio_id" +
+            string cmdSelect = "SELECT publicacio_id " +
                                 "FROM publicacio";
             List<int> llistaId = new List<int>();
             try
