@@ -28,7 +28,7 @@ namespace Y.Negoci
             }
             catch
             {
-                MessageBox.Show("ERROR AL VALIDAR/INSERIR A LA BASE DE DADES");
+                MessageBox.Show("ERROR AL VALIDAR/INSERIR COMENTARI A LA BASE DE DADES");
             }
             
         }

@@ -19,16 +19,28 @@ namespace Y.Negoci
         {
             return PublicacioDB.GetPublicacio(id);
         }
-        public void Inserir()
+        public void Inserir(List<string> tags)
         {
             try
             {
                 if (!Validar()) throw new Exception();
                 PublicacioDB.Inserir(publicacio);
+                foreach(string tag in tags)
+                {
+                    if(!TagNegoci.Existeix(tag))
+                    {
+                        TagNegoci tagNegoci = new TagNegoci();
+                        tagNegoci.Tag = new TagModel();
+                        tagNegoci.Tag.Nom = tag;
+                        tagNegoci.Inserir();
+                        //falta cosetes
+                    }
+                        
+                }
             }
             catch
             {
-                MessageBox.Show("ERROR AL VALIDAR/INSERIR A LA BASE DE DADES");
+                MessageBox.Show("ERROR AL VALIDAR/INSERIR PUBLICACIO A LA BASE DE DADES");
             }
             
         }

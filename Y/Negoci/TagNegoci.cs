@@ -13,7 +13,12 @@ namespace Y.Negoci
         //Atributs
         private TagModel tag;
         //Propietats
-        public TagModel Tag { get; set; }
+        public TagModel Tag 
+        {
+            get { return tag; }
+            set { tag = value;
+                tag.Nom = FormatarString(tag.Nom); }
+        }
         //Metodes
         public TagModel GetTagDB(int id)
         {
@@ -22,6 +27,7 @@ namespace Y.Negoci
 
         public static int GetTag_id(string tag_name)
         {
+            tag_name = FormatarString(tag_name);
             int id = TagDB.GetTag_Id(tag_name);
             return id;
         }
@@ -34,7 +40,7 @@ namespace Y.Negoci
             }
             catch
             {
-                MessageBox.Show("ERROR AL VALIDAR/INSERIR TAG");
+                MessageBox.Show("ERROR AL VALIDAR/INSERIR TAG A LA BASE DE DADES");
             }
         }
         public bool Validar()
@@ -49,11 +55,16 @@ namespace Y.Negoci
         }
         public static bool Existeix(string nom)
         {
+            nom = FormatarString(nom);
             return (TagDB.ObtenirTotsId().Contains(GetTag_id(nom)));
         }
         public bool Existeix(TagModel tag)
         {
             return (TagDB.ObtenirTotsId().Contains(tag.Tag_id));
+        }
+        public static string FormatarString(string tag_name)
+        {
+            return tag_name.Substring(0, 1).ToUpper() + tag_name.Substring(1).ToLower();
         }
     }
 }
