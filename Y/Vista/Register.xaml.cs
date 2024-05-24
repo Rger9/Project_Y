@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using Y.Negoci;
 
 
 namespace Y.Vista
@@ -95,6 +96,21 @@ namespace Y.Vista
         {
             if (TxtBoxTelefon.Text == string.Empty)
                 TxtBoxTelefon.Text = "Telefon";
+        }
+
+        private void BtnRegister_Click(object sender, RoutedEventArgs e)
+        {
+            UsuariModel u = new UsuariModel();
+            if (PsswdRegister.Password == PsswdRegister2.Password)
+                u.Contrasenya = PsswdRegister.Password;
+            u.Username = TxtBoxUser.Text;
+            u.Nom = TxtBoxNom.Text;
+            u.Cognom = TxtBoxCognom.Text;
+            u.Correu = TxtBoxCorreu.Text;
+            u.Telefon = TxtBoxTelefon.Text;
+            UsuariNegoci uNegoci = new UsuariNegoci();
+            uNegoci.Usuari = u;
+            uNegoci.Inserir();            
         }
     }
 }

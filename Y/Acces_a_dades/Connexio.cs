@@ -10,20 +10,22 @@ using MySql.Data.MySqlClient;
 
 namespace Y.AccesADades
 {
-    internal class Connexio
+    public class Connexio
     {
         private static string ip = "localhost";
         private static string nom = "Db_y";
         private static string user = "root";
         private static string password = "";
         private static int port = 3306;
-        private static MySqlConnection connection;
-        public MySqlConnection Connection { get; set; }
-
-        public MySqlConnection Connectar()
+        private static MySqlConnection connection = new MySqlConnection($"Server={ip};Database={nom};Uid={user};Password={password};Port={port};");
+        public static MySqlConnection Connection
+        {
+            get { return connection; }
+            set { connection = value; }
+        }
+        public static MySqlConnection Connectar()
         {
             string connectionString = $"Server={ip};Database={nom};Uid={user};Password={password};Port={port};";
-            connection = new MySqlConnection();
             try
             {
                 connection = new MySqlConnection(connectionString);
@@ -51,7 +53,7 @@ namespace Y.AccesADades
             //}
             return connection;
         }
-        public void Desconnectar()
+        public static void Desconnectar()
         {
             if (!connection.IsDisposed)
             {

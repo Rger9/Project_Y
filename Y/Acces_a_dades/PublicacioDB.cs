@@ -28,7 +28,7 @@ namespace Y.Model
                                 "VALUES(@user_id, @data_p, @titol, @contingut)";
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdInsert,c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdInsert,Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@data_p", MySqlDbType.DateTime);
                 comanda.Parameters.Add("@titol", MySqlDbType.VarChar, 30);
@@ -39,7 +39,7 @@ namespace Y.Model
                 comanda.Parameters["@titol"].Value = p.Titol;
                 comanda.Parameters["@contingut"].Value = p.Contingut;
 
-                c.Connectar();
+                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -48,7 +48,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
         }
         /// <summary>
@@ -65,10 +65,10 @@ namespace Y.Model
             PublicacioModel p = new PublicacioModel();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect_TOT, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdSelect_TOT, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters["@publicacio_id"].Value = id;
-                c.Connectar();
+                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -86,7 +86,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
             return p;
         }
@@ -98,8 +98,8 @@ namespace Y.Model
             List<int> llistaId = new List<int>();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
-                c.Connectar();
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader(); 
                 if (reader.HasRows)
                 {
@@ -117,7 +117,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
             return llistaId;
         }
