@@ -19,12 +19,11 @@ namespace Y.Model
         /// <param name="u"></param>
         public static void Inserir(UsuariModel u)
         {
-            Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Usuari(username, contrasenya, nom, cognom, correu, telefon) " +
                                 "VALUES(@username, @contrasenya, @nom, @cognom, @correu, @telefon)";
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdInsert, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@username", MySqlDbType.VarChar, 20);
                 comanda.Parameters.Add("@contrasenya", MySqlDbType.VarChar, 30);
                 comanda.Parameters.Add("@nom", MySqlDbType.VarChar, 20);
@@ -39,7 +38,7 @@ namespace Y.Model
                 comanda.Parameters["@correu"].Value = u.Correu;
                 comanda.Parameters["@telefon"].Value = u.Telefon;
 
-                c.Connectar();
+                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -48,12 +47,11 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
         }
         public static void UpdatePerfil(UsuariModel u)
         {
-            Connexio c = new Connexio();
             string cmdUpdate = "UPDATE usuari " +
                                 $"SET username = @username, " +
                                     $"contrasenya = @contrasenya, " +
@@ -64,7 +62,7 @@ namespace Y.Model
                                 $"WHERE user_id = @user_id";
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdUpdate, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdUpdate, Connexio.Connection);
                 comanda.Parameters.Add("@username", MySqlDbType.VarChar, 20);
                 comanda.Parameters.Add("@contrasenya", MySqlDbType.VarChar, 30);
                 comanda.Parameters.Add("@nom", MySqlDbType.VarChar, 20);
@@ -81,7 +79,7 @@ namespace Y.Model
                 comanda.Parameters["@telefon"].Value = u.Telefon;
                 comanda.Parameters["@user_id"].Value = u.User_id;
 
-                c.Connectar();
+                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -90,7 +88,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
         }
         /// <summary>
@@ -100,17 +98,16 @@ namespace Y.Model
         /// <returns>Usuari</returns>
         public static UsuariModel GetUsuari(int id)
         {
-            Connexio c = new Connexio();
             string cmdSelect = "SELECT * " +
                                 "FROM usuari " +
                                 $"WHERE user_id = @user_id";
             UsuariModel u = new UsuariModel();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters["@user_id"].Value = id;
-                c.Connectar();
+                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -129,24 +126,23 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
             return u;
         }
         public static UsuariModel GetUsuari(string username)
         {
-            Connexio c = new Connexio();
             string cmdSelect = "SELECT * " +
                                 "FROM usuari " +
                                 $"WHERE username = @username";
-            string username2;
             UsuariModel u = new UsuariModel();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                Connexio.Connectar();
+                MessageBox.Show(Connexio.Connection.ToString());
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@username", MySqlDbType.String);
                 comanda.Parameters["@username"].Value = username;
-                c.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -158,6 +154,8 @@ namespace Y.Model
                     u.Telefon = reader.GetString(6);
                 }
                 reader.Close();
+
+                MessageBox.Show($"{u.User_id}{u.Contrasenya}{u.Nom}{u.Cognom}{u.Correu}{u.Telefon}");
             }
             catch
             {
@@ -165,20 +163,19 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
             return u;
         }
         public static List<int> ObtenirTotsId()
         {
-            Connexio c = new Connexio();
             string cmdSelect = "SELECT user_id " +
                                 "FROM usuari";
             List<int> llistaId = new List<int>();
             try
             {
-                MySqlCommand commanda = new MySqlCommand(cmdSelect, c.Connection);
-                c.Connectar();
+                MySqlCommand commanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                Connexio.Connectar();
                 MySqlDataReader reader = commanda.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -196,7 +193,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
             return llistaId;
         }

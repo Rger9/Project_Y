@@ -10,10 +10,14 @@ namespace Y.Negoci
     public class UsuariNegoci
     {
         //Atributs
-        private UsuariModel model;
+        private UsuariModel usuari;
         //Propietats
-        public UsuariModel Model { get; set; }
+        public UsuariModel Usuari { get; set; }
         //Metodes
+        public void Inserir()
+        {
+            UsuariDB.Inserir(usuari);
+        }
         public UsuariModel GetUsuari(int id)
         {
             return UsuariDB.GetUsuari(id);

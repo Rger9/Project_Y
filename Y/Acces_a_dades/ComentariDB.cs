@@ -19,12 +19,11 @@ namespace Y.Model
         /// <param name="c">El comentari</param>
         public static void Inserir(ComentariModel c)
         {
-            Connexio con = new Connexio();
             string cmdInsert = "INSERT INTO Comentari(user_id, publicacio_id, data_c, contingut) " +
                                 "VALUES(@user_id, @publicacio, @data_c, @contingut)";
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdInsert, con.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@data_c", MySqlDbType.DateTime);
@@ -35,7 +34,7 @@ namespace Y.Model
                 comanda.Parameters["@data_c"].Value = c.Data_c;
                 comanda.Parameters["@contingut"].Value = c.Contingut;
 
-                con.Connectar();
+                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -44,7 +43,7 @@ namespace Y.Model
             }
             finally
             {
-                con.Desconnectar();
+                Connexio.Desconnectar();
             }
         }
         /// <summary>
@@ -54,17 +53,16 @@ namespace Y.Model
         /// <returns>el comentari</returns>
         public static ComentariModel GetComentari(int id)
         {
-            Connexio con = new Connexio();
             string cmdSelect = "SELECT * " +
                                 "FROM comentari " +
                                 $"WHERE comentari_id = @comentari_id";
             ComentariModel c = new ComentariModel();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, con.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@comentari_id", MySqlDbType.Int32);
                 comanda.Parameters["@comentari_id"].Value = id;
-                con.Connectar();
+                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -81,7 +79,7 @@ namespace Y.Model
             }
             finally
             {
-                con.Desconnectar();
+                Connexio.Desconnectar();
             }
             return c;
 
@@ -93,7 +91,6 @@ namespace Y.Model
         /// <returns>Tots els comentaris de la publicació</returns>
         public static List<ComentariModel> GetComentarisPost(int postId)
         {
-            Connexio con = new Connexio();
             string cmdSelect = "SELECT * " +
                                 "FROM comentari " +
                                 $"WHERE publicacio_id = @publicacio_id";
@@ -101,10 +98,10 @@ namespace Y.Model
             ComentariModel comentari = new ComentariModel();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, con.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters["@publicacio_id"].Value = postId;
-                con.Connectar();
+                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -126,7 +123,7 @@ namespace Y.Model
             finally
             {
 
-                con.Desconnectar();
+                Connexio.Desconnectar();
             }
             return llistaComentaris;
         }

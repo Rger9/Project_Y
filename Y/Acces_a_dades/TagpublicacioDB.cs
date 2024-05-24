@@ -18,19 +18,18 @@ namespace Y.Model
         /// <param name="tp"></param>
         public static void Inserir(TagpublicacioModel tp)
         {
-            Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO TagPublicacio(publicacio_id, tag_id) " +
                                 "VALUES(@publicacio_id, @tag_id)";
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdInsert, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@tag_id", MySqlDbType.Int32);
 
                 comanda.Parameters["@publicacio_id"].Value = tp.Tag_id;
                 comanda.Parameters["@tag_id"].Value = tp.Tag_id;
 
-                c.Connectar();
+                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -39,7 +38,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
         }
     }

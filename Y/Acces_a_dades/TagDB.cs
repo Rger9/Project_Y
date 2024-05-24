@@ -19,17 +19,16 @@ namespace Y.Model
         /// <param name="t">El Tag a inserir</param>
         public static void Inserir(TagModel t)
         {
-            Connexio c = new Connexio();
             string cmdInsert = "INSERT INTO Tag(nom) " +
                                 "VALUES(@nom)";
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdInsert, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@nom", MySqlDbType.VarChar, 20);
 
                 comanda.Parameters["@nom"].Value = t.Nom;
 
-                c.Connectar();
+                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -38,7 +37,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
         }
         /// <summary>
@@ -48,20 +47,19 @@ namespace Y.Model
         /// <returns>L'ID del Tag</returns>
         public static int GetTag_Id(string nom)
         {
-            Connexio c = new Connexio();
             string cmdSelect = "SELECT tag_id " +
                                 "FROM Tag " +
                                 $"WHERE nom = @nom";
-            MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+            MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
             comanda.Parameters.Add("@nom", MySqlDbType.String);
             comanda.Parameters["@nom"].Value = nom;
-            c.Connectar();
+            Connexio.Connectar();
             
             int? resultat = (int?)comanda.ExecuteScalar();
             int r1 = 0;
             if (resultat != null)
                 r1 = Convert.ToInt32(resultat);
-            c.Desconnectar();
+            Connexio.Desconnectar();
             return r1;
         }
         /// <summary>
@@ -71,17 +69,16 @@ namespace Y.Model
         /// <returns>Tag</returns>
         public static TagModel GetTag(int id)
         {
-            Connexio c = new Connexio();
             string cmdSelect = "SELECT nom " +
                                 "FROM Tag " +
                                 $"WHERE tag_id = @tag_id";
             TagModel tag = new TagModel();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@tag_id", MySqlDbType.Int32);
                 comanda.Parameters["@tag_id"].Value = id;
-                c.Connectar();
+                Connexio.Connectar();
                 string tag_name = (string)comanda.ExecuteScalar();
 
                 tag.Tag_id = id;
@@ -93,7 +90,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
             return tag;
         }
@@ -109,8 +106,8 @@ namespace Y.Model
             List<int> llistaId = new List<int>();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, c.Connection);
-                c.Connectar();
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.HasRows)
                 {
@@ -128,7 +125,7 @@ namespace Y.Model
             }
             finally
             {
-                c.Desconnectar();
+                Connexio.Desconnectar();
             }
             return llistaId;
         }

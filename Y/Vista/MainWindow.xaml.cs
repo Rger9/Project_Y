@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using MySql.Data.MySqlClient;
+using System.Windows;
 using Y;
 using Y.AccesADades;
 using Y.Negoci;
@@ -13,7 +14,7 @@ namespace Y
         UsuariModel u = new UsuariModel();
         public MainWindow()
         {
-            Connexio c = new Connexio();
+            Prova();
             InitializeComponent();
         }
 
@@ -28,6 +29,10 @@ namespace Y
             Vista.Publicar publicar = new Vista.Publicar(u);
             publicar.Show();
 
+        }
+        private void Prova()
+        {
+            
         }
 
         
