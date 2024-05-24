@@ -110,7 +110,7 @@ namespace Y.Vista
             u.Telefon = TxtBoxTelefon.Text;
             UsuariNegoci uNegoci = new UsuariNegoci();
             uNegoci.Usuari = u;
-            uNegoci.Inserir();            
+            uNegoci.Inserir();
         }
     }
 }

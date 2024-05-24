@@ -41,14 +41,24 @@ namespace Y.Vista
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
+            UsuariModel u = new UsuariModel();
             try
             {
+                // comprovem si existeix l'usuari
                 UsuariNegoci uNegoci = new UsuariNegoci();
-                uNegoci.GetUsuari(TxtBoxUser.Text);
+                u = uNegoci.GetUsuari(TxtBoxUser.Text);
+                if (u.Contrasenya != PsswdLogIn.Password)
+                {
+                    MessageBox.Show("Has introduït una contrasenya incorrecta");
+                }
+                else
+                {
+                    // LA CONTRASENYA ÉS CORRECTE
+                }
             }
             catch
             {
-                MessageBox.Show("NYE");
+                MessageBox.Show("ERROR: Hi ha hagut un error en el procés de 'Log In'");
             }
         }
     }

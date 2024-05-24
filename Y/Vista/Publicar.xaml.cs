@@ -22,16 +22,23 @@ namespace Y.Vista
     public partial class Publicar : Window
     {
         private UsuariModel usuari;
+        private bool placeholderTitol;
+        private bool placeholderContingut;
+        private bool placeholderEtiquetes;
         public Publicar(UsuariModel u)
         {
             InitializeComponent();
-            TxtBoxCos.Focus();
             usuari = u;
+            placeholderContingut = true;
+            placeholderEtiquetes = true;
+            placeholderTitol = true;
+            BtnPublicar.IsEnabled = false;
         }
 
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
             // Publicar un article modifica les bases de dades PUBLICACIO, TAG i TAGPUBLICACIO
+            // AFEGIM PUBLICACIO
             PublicacioModel p = new PublicacioModel();
             p.Titol = TxtBoxTitol.Text;
             p.Contingut = TxtBoxTitol.Text;
@@ -39,39 +46,25 @@ namespace Y.Vista
             p.User_id = usuari.User_id;
             PublicacioNegoci pNegoci = new PublicacioNegoci();
             pNegoci.Publicacio = p;
-            // pNegoci.Inserir();
+            pNegoci.Inserir();
 
+            // AFEGIM TAGS
             string[] tags = TxtBoxEtiqueta.Text.Split(", ");
-            for (int i  = 0; i < tags.Length; i++)
+            List<string> tagsList = new List<string>();
+            for (int i = 0; i < tags.Length; i++)
             {
-                // si no existeix el tag...
-                if (!TagNegoci.Existeix(tags[i]))
-                {
-                    // AFEGIR TAG A LA BASE DE DADES
-                    TagModel t = new TagModel();
-                    t.Nom = tags[i];
-                    TagNegoci tNegoci = new TagNegoci();
-                    tNegoci.Tag = t;
-                    tNegoci.Inserir();
-
-                    // AFEGIR ENTRADA A "TAGPUBLICACIO"
-                    TagpublicacioModel tagpubli = new TagpublicacioModel();
-                    tagpubli.Tag_id = TagNegoci.GetTag_id(tags[i]);
-                    tagpubli.Publicacio_id = p.Publicacio_id;
-                }
-                TagpublicacioModel tp = new TagpublicacioModel();
-                tp.Tag_id = TagNegoci.GetTag_id(tags[i]);
-                tp.Publicacio_id = p.Publicacio_id;
+                tagsList.Add(tags[i]);
             }
-
+            // pNegoci.Inserir(tagsList);
         }
 
         private void TxtBoxTitol_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (TxtBoxTitol.Text == "TÍTOL")
+            if (placeholderTitol)
             {
                 TxtBoxTitol.Text = string.Empty;
                 TxtBoxTitol.Foreground = Brushes.Black;
+                placeholderTitol = false;
             }
             ModificarText();
         }
@@ -83,15 +76,17 @@ namespace Y.Vista
             {
                 TxtBoxTitol.Text = "TÍTOL";
                 TxtBoxTitol.Foreground = Brushes.Gray;
+                placeholderTitol = true;
             }
         }
 
         private void TxtBoxCos_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (TxtBoxCos.Text == "Escriu la teva publicació aquí")
+            if (placeholderContingut)
             {
                 TxtBoxCos.Text = string.Empty;
                 TxtBoxCos.Foreground = Brushes.Black;
+                placeholderContingut = false;
             }
             ModificarText();
         }
@@ -103,15 +98,17 @@ namespace Y.Vista
             {
                 TxtBoxCos.Text = "Escriu la teva publicació aquí";
                 TxtBoxCos.Foreground = Brushes.Gray;
+                placeholderContingut = true;
             }
         }
 
         private void TxtBoxEtiqueta_GotFocus(object sender, RoutedEventArgs e)
         {
-            if (TxtBoxEtiqueta.Text == "etiqueta1, etiqueta2, etiqueta3...")
+            if (placeholderEtiquetes)
             {
                 TxtBoxEtiqueta.Text = string.Empty;
                 TxtBoxEtiqueta.Foreground = Brushes.Black;
+                placeholderEtiquetes = false;
             }
             ModificarText();
         }
@@ -123,11 +120,12 @@ namespace Y.Vista
             {
                 TxtBoxEtiqueta.Text = "etiqueta1, etiqueta2, etiqueta3...";
                 TxtBoxEtiqueta.Foreground = Brushes.Gray;
+                placeholderEtiquetes = true;
             }
         }
         private void ModificarText()
         {
-            if (TxtBoxTitol.Text != string.Empty && TxtBoxCos.Text != string.Empty && TxtBoxEtiqueta.Text != string.Empty)
+            if (!(placeholderContingut || placeholderEtiquetes || placeholderTitol))
             {
                 BtnPublicar.IsEnabled = true;
             }

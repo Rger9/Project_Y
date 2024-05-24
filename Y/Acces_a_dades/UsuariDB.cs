@@ -154,12 +154,11 @@ namespace Y.Model
                     u.Telefon = reader.GetString(6);
                 }
                 reader.Close();
-
-                MessageBox.Show($"{u.User_id}{u.Contrasenya}{u.Nom}{u.Cognom}{u.Correu}{u.Telefon}");
+                if (!Existeix(u)) throw new Exception();
             }
             catch
             {
-                MessageBox.Show($"ERROR: No existeix un usuarir amb l'username indicat {u.User_id}");
+                MessageBox.Show($"ERROR: No existeix un usuarir amb l'username indicat");
             }
             finally
             {
@@ -196,6 +195,45 @@ namespace Y.Model
                 Connexio.Desconnectar();
             }
             return llistaId;
+        }
+        public static bool Existeix(UsuariModel u)
+        {
+            bool existeix = true;
+            string cmdSelect = "SELECT * " +
+                                "FROM usuari " +
+                                $"WHERE user_id = @user_id";
+            try
+            {
+                Connexio.Connectar();
+                MessageBox.Show(Connexio.Connection.ToString());
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
+                comanda.Parameters["@user_id"].Value = u.User_id;
+                MySqlDataReader reader = comanda.ExecuteReader();
+                if (reader.Read())
+                {
+                    u.Username = reader.GetString(1);
+                    u.Contrasenya = reader.GetString(2);
+                    u.Nom = reader.GetString(3);
+                    u.Cognom = reader.GetString(4);
+                    u.Correu = reader.GetString(5);
+                    u.Telefon = reader.GetString(6);
+                }
+                reader.Close();
+                if (u.Username is null || u.Contrasenya is null || u.Nom is null || u.Correu is null)
+                {
+                    existeix = false;
+                }
+            }
+            catch
+            {
+                MessageBox.Show($"ERROR: No s'ha pogut comprovar si existe");
+            }
+            finally
+            {
+                Connexio.Desconnectar();
+            }
+            return existeix;
         }
     }
 }
