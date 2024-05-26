@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Y"
         mc:Ignorable="d"
         Title="Y" Height="720" Width="1080" ResizeMode="NoResize">
-    <Grid x:Name="MainGrid">
+    <Grid x:Name="MainGrid" Margin="0,0,-15,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="3*"/>
             <RowDefinition Height="5*"/>
@@ -17,35 +17,44 @@
                 <GradientStop Color="#FF5A4D92" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Button x:Name="Btn_Perfil" Content="Iniciar Sessió" HorizontalAlignment="Left" Margin="818,38,0,0" VerticalAlignment="Top" Height="71" Width="233" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="36" BorderThickness="2,2,2,2" Cursor="Hand" Click="Btn_Perfil_Click">
+        <Button x:Name="Btn_Perfil" Content="Iniciar Sessió" HorizontalAlignment="Left" Margin="818,32,0,0" VerticalAlignment="Top" Height="71" Width="233" Background="#7F000000" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="36" BorderThickness="2,2,2,2" Cursor="Hand" Click="Btn_Perfil_Click">
             <Button.Effect>
                 <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
             </Button.Effect>
             <Button.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="35"/>
+                    <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
         <Grid x:Name="GridPosts" Margin="20,143,280,20" Grid.RowSpan="2">
-            <Border x:Name="BorderPost" BorderBrush="White" BorderThickness="2,2,2,2" CornerRadius="30,30,30,30">
+            <Border x:Name="BorderPost" BorderBrush="White" BorderThickness="2,2,2,2" CornerRadius="15,15,15,15" Margin="0,-113,0,0">
                 <Border.Background>
-                    <SolidColorBrush Color="White" Opacity="0.15"/>
+                    <SolidColorBrush Color="Black" Opacity="0.3"/>
                 </Border.Background>
                 <ScrollBar Margin="756,26,4,26"/>
             </Border>
         </Grid>
-        <Button Name="BtnPublicar" Content="PUBLICAR" HorizontalAlignment="Left" Margin="818,265,0,0" VerticalAlignment="Top" Height="155" Width="233" FontSize="36" Click="BtnPublicar_Click" Background="{x:Null}" Foreground="White" BorderBrush="White" BorderThickness="2,2,2,2" Grid.Row="1">
+        <Button Name="BtnPublicar" Content="Publicar" HorizontalAlignment="Left" Margin="818,344,0,0" VerticalAlignment="Top" Height="76" Width="158" FontSize="36" Click="BtnPublicar_Click" Background="#0CFFFFFF" Foreground="White" BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="1">
             <Button.Resources>
                 <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="60"/>
+                    <Setter Property="CornerRadius" Value="15"/>
                 </Style>
             </Button.Resources>
             <Button.Effect>
                 <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
             </Button.Effect>
         </Button>
-        <Image HorizontalAlignment="Left" Height="100" Margin="20,24,0,0" VerticalAlignment="Top" Width="102" Source="/Vista/logoBlanc_Y.png"/>
-        <Button Name="BtnUsername" Content="Button" HorizontalAlignment="Left" Margin="804,26,0,0" VerticalAlignment="Top" Height="106" Width="266" FontSize="36" FontFamily="Yu Gothic UI Semibold" Background="#FF5A3FE0" BorderBrush="White" Foreground="White" Click="BtnUsername_Click"/>
+        <Image HorizontalAlignment="Left" Height="65" Margin="991,350,0,0" VerticalAlignment="Top" Width="66" Source="/Vista/logoBlanc_Y.png" Grid.Row="1"/>
+        <Button Name="BtnUsername" Content="Button" HorizontalAlignment="Left" Margin="818,35,0,0" VerticalAlignment="Top" Height="68" Width="233" FontSize="36" FontFamily="Yu Gothic UI Semibold" Background="#0CFFFFFF" BorderBrush="White" Foreground="White" Click="BtnUsername_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="15"/>
+                </Style>
+            </Button.Resources>
+            <Button.Effect>
+                <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
+            </Button.Effect>
+        </Button>
     </Grid>
 </Window>

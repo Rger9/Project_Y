@@ -21,6 +21,7 @@ namespace Y
         {
             InitializeComponent();
             this.u = u;
+            Btn_Perfil.Visibility = Visibility.Hidden;
             BtnUsername.Content = u.Username;
         }
 
