@@ -184,5 +184,10 @@ namespace Y.Vista
             uNegoci.Usuari = usuari;
             uNegoci.Update();
         }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

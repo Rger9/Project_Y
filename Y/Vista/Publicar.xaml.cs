@@ -137,5 +137,10 @@ namespace Y.Vista
             if (IsInitialized)
             ComprovarButton();
         }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

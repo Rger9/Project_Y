@@ -71,6 +71,7 @@ namespace Y.Vista
         {
             Register register = new();
             register.Show();
+            this.Close();
         }
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
