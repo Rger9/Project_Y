@@ -3,6 +3,7 @@ using System.Windows;
 using Y;
 using Y.AccesADades;
 using Y.Negoci;
+using Y.Vista;
 
 namespace Y
 {
@@ -16,6 +17,7 @@ namespace Y
         {
             InitializeComponent();
             BtnUsername.Visibility = Visibility.Hidden;
+            CarregarPost();
         }
         public MainWindow(UsuariModel u)
         {
@@ -23,6 +25,12 @@ namespace Y
             this.u = u;
             Btn_Perfil.Visibility = Visibility.Hidden;
             BtnUsername.Content = u.Username;
+            CarregarPost();
+        }
+
+        private void CarregarPost()
+        {
+            FramePublicacions.NavigationService.Navigate(new VistaPost());
         }
 
         private void Btn_Perfil_Click(object sender, RoutedEventArgs e)
