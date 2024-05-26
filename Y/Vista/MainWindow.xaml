@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Y" Height="720" Width="1080" ResizeMode="NoResize">
     <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
                 <GradientStop Color="#FF070028" Offset="1"/>
@@ -23,7 +27,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Grid x:Name="GridPosts" Margin="20,143,280,20">
+        <Grid x:Name="GridPosts" Margin="20,143,280,20" Grid.RowSpan="2">
             <Border x:Name="BorderPost" BorderBrush="White" BorderThickness="2,2,2,2" CornerRadius="30,30,30,30">
                 <Border.Background>
                     <SolidColorBrush Color="White" Opacity="0.15"/>
@@ -31,7 +35,7 @@
                 <ScrollBar Margin="756,26,4,26"/>
             </Border>
         </Grid>
-        <Button Name="BtnPublicar" Content="PUBLICAR" HorizontalAlignment="Left" Margin="818,529,0,0" VerticalAlignment="Top" Height="155" Width="233" FontSize="36" Click="BtnPublicar_Click" Background="{x:Null}" Foreground="White" BorderBrush="White" BorderThickness="2,2,2,2">
+        <Button Name="BtnPublicar" Content="PUBLICAR" HorizontalAlignment="Left" Margin="818,265,0,0" VerticalAlignment="Top" Height="155" Width="233" FontSize="36" Click="BtnPublicar_Click" Background="{x:Null}" Foreground="White" BorderBrush="White" BorderThickness="2,2,2,2" Grid.Row="1">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="60"/>

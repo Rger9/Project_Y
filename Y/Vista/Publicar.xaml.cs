@@ -66,12 +66,12 @@ namespace Y.Vista
                 TxtBoxTitol.Foreground = Brushes.Black;
                 placeholderTitol = false;
             }
-            ModificarText();
+            ComprovarButton();
         }
 
         private void TxtBoxTitol_LostFocus(object sender, RoutedEventArgs e)
         {
-            ModificarText();
+            ComprovarButton();
             if (TxtBoxTitol.Text == string.Empty)
             {
                 TxtBoxTitol.Text = "TÍTOL";
@@ -88,12 +88,12 @@ namespace Y.Vista
                 TxtBoxCos.Foreground = Brushes.Black;
                 placeholderContingut = false;
             }
-            ModificarText();
+            ComprovarButton();
         }
 
         private void TxtBoxCos_LostFocus(object sender, RoutedEventArgs e)
         {
-            ModificarText();
+            ComprovarButton();
             if (TxtBoxCos.Text == string.Empty)
             {
                 TxtBoxCos.Text = "Escriu la teva publicació aquí";
@@ -110,12 +110,12 @@ namespace Y.Vista
                 TxtBoxEtiqueta.Foreground = Brushes.Black;
                 placeholderEtiquetes = false;
             }
-            ModificarText();
+            ComprovarButton();
         }
 
         private void TxtBoxEtiqueta_LostFocus(object sender, RoutedEventArgs e)
         {
-            ModificarText();
+            ComprovarButton();
             if (TxtBoxEtiqueta.Text == string.Empty)
             {
                 TxtBoxEtiqueta.Text = "etiqueta1, etiqueta2, etiqueta3...";
@@ -123,13 +123,19 @@ namespace Y.Vista
                 placeholderEtiquetes = true;
             }
         }
-        private void ModificarText()
+        private void ComprovarButton()
         {
-            if (!(placeholderContingut || placeholderEtiquetes || placeholderTitol))
+            if ((!(placeholderContingut || placeholderEtiquetes || placeholderTitol)) && TxtBoxCos.Text != string.Empty && TxtBoxEtiqueta.Text != string.Empty && TxtBoxTitol.Text != string.Empty)
             {
                 BtnPublicar.IsEnabled = true;
             }
             else BtnPublicar.IsEnabled = false;
+        }
+
+        private void Escriure(object sender, TextChangedEventArgs e)
+        {
+            if (IsInitialized)
+            ComprovarButton();
         }
     }
 }

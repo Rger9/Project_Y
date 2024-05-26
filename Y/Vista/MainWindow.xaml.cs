@@ -14,7 +14,6 @@ namespace Y
         UsuariModel u = new UsuariModel();
         public MainWindow()
         {
-            Prova();
             InitializeComponent();
         }
 
@@ -28,13 +27,6 @@ namespace Y
         {
             Vista.Publicar publicar = new Vista.Publicar(u);
             publicar.Show();
-
         }
-        private void Prova()
-        {
-            
-        }
-
-        
     }
 }

@@ -13,8 +13,8 @@
                 <GradientStop Color="#FF5A4D92" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="106,118,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxUser_GotFocus" LostFocus="TxtBoxUser_LostFocus"/>
-        <Button x:Name="BtnLogin" Content="logYn" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Height="34" Width="68" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand" Click="BtnLogin_Click">
+        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="106,118,0,0" TextWrapping="Wrap" Text="Nom d'usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxUser_GotFocus" LostFocus="TxtBoxUser_LostFocus" TextChanged="Escriure"/>
+        <Button x:Name="BtnLogin" Content="logYn" HorizontalAlignment="Center" Margin="0,210,0,0" VerticalAlignment="Top" Height="34" Width="68" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand" Click="BtnLogin_Click" >
             <Button.Effect>
                 <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
             </Button.Effect>
@@ -25,9 +25,9 @@
             </Button.Resources>
         </Button>
 
-        <PasswordBox x:Name="PsswdLogIn" HorizontalAlignment="Left" Margin="106,164,0,0" VerticalAlignment="Top" Width="128" Height="27" BorderBrush="#FF24246A" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdLogIn_GotFocus" LostFocus="PsswdLogIn_LostFocus"/>
+        <PasswordBox x:Name="PsswdLogIn" HorizontalAlignment="Left" Margin="106,164,0,0" VerticalAlignment="Top" Width="128" Height="27" BorderBrush="#FF24246A" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="abcdef" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdLogIn_GotFocus" LostFocus="PsswdLogIn_LostFocus" PasswordChanged="PsswdLogIn_PasswordChanged" />
         <Label Content="log" HorizontalAlignment="Left" Margin="89,50,0,0" VerticalAlignment="Top" Height="63" Width="64" FontFamily="Dubai Medium" FontSize="36" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"/>
-        <Label x:Name="LabelRegister" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Width="128" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Hand">
+        <Label x:Name="LabelRegister" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Width="134" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Hand">
             <TextBlock TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp">No tens compte?</TextBlock>
         </Label>
         <Image HorizontalAlignment="Left" Height="28" Margin="147,68,0,0" VerticalAlignment="Top" Width="34" Source="/Vista/logoBlanc_Y.png" UseLayoutRounding="False"/>

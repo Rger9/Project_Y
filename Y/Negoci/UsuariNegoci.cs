@@ -13,7 +13,11 @@ namespace Y.Negoci
         //Atributs
         private UsuariModel usuari;
         //Propietats
-        public UsuariModel Usuari { get; set; }
+        public UsuariModel Usuari
+        {
+            get { return usuari; }
+            set { usuari = value; }
+        }
         //Metodes
         public UsuariModel GetUsuari(int id)
         {
@@ -28,7 +32,7 @@ namespace Y.Negoci
             try
             {
                 if (!Validar()) throw new Exception();
-                UsuariDB.Inserir(usuari);
+                UsuariDB.Inserir(Usuari);
             }
             catch
             {
@@ -37,13 +41,16 @@ namespace Y.Negoci
         }
         public bool Validar()
         {
-            if(usuari == null) return false;
-            if(this.HasNull()) return false;
-            return true;
+            if (usuari.Username == "" ||  usuari.Contrasenya == ""  || usuari.Nom == ""  || usuari.Correu == "") return false;
+            else return true;
         }
-        public bool HasNull()
-        {
-            return usuari.Username == null || usuari.Username == "" || usuari.Contrasenya == null || usuari.Contrasenya == "" || usuari.Description == null || usuari.Description == "" || usuari.Nom == null || usuari.Nom == "" || usuari.Correu == null || usuari.Correu == "";
-        }
+        //public bool HasNull()
+        //{
+        //    return (usuari.Username == null || usuari.Username == "" || usuari.Contrasenya == null || usuari.Contrasenya == "" || usuari.Nom == null || usuari.Nom == "" || usuari.Correu == null || usuari.Correu == "");
+        //}
+        //public static bool operator == (string propietat, string valor)
+        //{
+
+        //}
     }
 }

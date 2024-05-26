@@ -43,7 +43,7 @@ namespace Y.Model
             }
             catch
             {
-                MessageBox.Show("ERROR: no s'ha pogut interir a la base de dades 'Usuari' ");
+                MessageBox.Show("ERROR: no s'ha pogut inserir a la base de dades 'Usuari' ");
             }
             finally
             {

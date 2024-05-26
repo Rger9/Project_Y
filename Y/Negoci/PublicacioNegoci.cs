@@ -15,11 +15,15 @@ namespace Y.Negoci
         //Propietats
         public PublicacioModel Publicacio { get; set; }
         //Metodes
+        public void Inserir()
+        {
+            PublicacioDB.Inserir(Publicacio);
+        }
         public static PublicacioModel GetPublicacioDB(int id)
         {
             return PublicacioDB.GetPublicacio(id);
         }
-        public void Inserir(List<string> tags)
+        public void InserirTags(List<string> tags)
         {
             try
             {
