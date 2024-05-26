@@ -39,9 +39,13 @@ namespace Y.Negoci
                 MessageBox.Show("ERROR AL VALIDAR/INSERIR USUARI A LA BASE DE DADES");
             }
         }
+        public void Update()
+        {
+            UsuariDB.UpdatePerfil(Usuari);
+        }
         public bool Validar()
         {
-            if (usuari.Username == "" ||  usuari.Contrasenya == ""  || usuari.Nom == ""  || usuari.Correu == "") return false;
+            if (Usuari.Username == "" ||  Usuari.Contrasenya == ""  || Usuari.Nom == ""  || Usuari.Correu == "") return false;
             else return true;
         }
         //public bool HasNull()

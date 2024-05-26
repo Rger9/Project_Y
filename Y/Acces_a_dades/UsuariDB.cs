@@ -139,7 +139,6 @@ namespace Y.Model
             try
             {
                 Connexio.Connectar();
-                MessageBox.Show(Connexio.Connection.ToString());
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@username", MySqlDbType.String);
                 comanda.Parameters["@username"].Value = username;
@@ -205,7 +204,6 @@ namespace Y.Model
             try
             {
                 Connexio.Connectar();
-                MessageBox.Show(Connexio.Connection.ToString());
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters["@user_id"].Value = u.User_id;

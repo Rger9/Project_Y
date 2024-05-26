@@ -46,5 +46,6 @@
             </Button.Effect>
         </Button>
         <Image HorizontalAlignment="Left" Height="100" Margin="20,24,0,0" VerticalAlignment="Top" Width="102" Source="/Vista/logoBlanc_Y.png"/>
+        <Button Name="BtnUsername" Content="Button" HorizontalAlignment="Left" Margin="804,26,0,0" VerticalAlignment="Top" Height="106" Width="266" FontSize="36" FontFamily="Yu Gothic UI Semibold" Background="#FF5A3FE0" BorderBrush="White" Foreground="White" Click="BtnUsername_Click"/>
     </Grid>
 </Window>

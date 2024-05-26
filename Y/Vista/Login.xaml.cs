@@ -87,7 +87,9 @@ namespace Y.Vista
                 }
                 else
                 {
-                    
+                    MainWindow main = new MainWindow(u);
+                    main.Show();
+                    this.Close();
                 }
             }
             catch
