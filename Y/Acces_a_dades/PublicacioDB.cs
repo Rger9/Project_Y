@@ -120,6 +120,7 @@ namespace Y.Model
             {
                 Connexio.Desconnectar();
             }
+            int test1 = llistaId.Max();
             return llistaId;
         }
     }

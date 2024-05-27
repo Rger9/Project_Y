@@ -15,31 +15,45 @@ namespace Y.Negoci
         //Propietats
         public PublicacioModel Publicacio { get; set; }
         //Metodes
-        public void Inserir()
+        public void Inserir(List<string> tags)
         {
-            PublicacioDB.Inserir(Publicacio);
+            try
+            {
+                PublicacioDB.Inserir(Publicacio);
+                List<int> t = PublicacioDB.ObtenirTotsId();
+                Publicacio.Publicacio_id = t.Max();
+                InserirTags(tags, Publicacio.Publicacio_id);
+            }
+            catch
+            {
+                MessageBox.Show("Error al inserir la publicacio");
+            }
+            
         }
         public PublicacioModel GetPublicacio(int id)
         {
             return PublicacioDB.GetPublicacio(id);
         }
-        public void InserirTags(List<string> tags)
+        public void InserirTags(List<string> tags, int id_publi)
         {
             try
             {
-                if (!Validar()) throw new Exception();
-                PublicacioDB.Inserir(publicacio);
-                foreach(string tag in tags)
+                //if (!Validar()) throw new Exception();
+                foreach (string tag in tags)
                 {
                     if(!TagNegoci.Existeix(tag))
                     {
                         TagNegoci tagNegoci = new TagNegoci();
                         tagNegoci.Tag = new TagModel();
-                        tagNegoci.Tag.Nom = tag;
+                        tagNegoci.Tag.Nom = TagNegoci.FormatarString(tag);
                         tagNegoci.Inserir();
-                        //falta cosetes
                     }
-                        
+                    int id_tag = TagDB.GetTag_Id(tag);
+                    TagpublicacioModel tpm = new TagpublicacioModel();
+                    tpm.Publicacio_id = id_publi;
+                    tpm.Tag_id = id_tag;
+                    TagpublicacioNegoci tpn = new TagpublicacioNegoci(tpm);
+                    tpn.Inserir();
                 }
             }
             catch
@@ -50,16 +64,16 @@ namespace Y.Negoci
         }
         public bool Validar()
         {
-            if (publicacio == null) return false;
+            if (Publicacio == null) return false;
             if(this.HasNull()) return false;
             List<int> llistaId = new List<int>();
             llistaId = UsuariDB.ObtenirTotsId();
-            if (llistaId.Contains(publicacio.Publicacio_id)) return true;
+            if (llistaId.Contains(Publicacio.Publicacio_id)) return true;
             return false;
         }
         public bool HasNull()
         {
-            return publicacio.User_id == 0 || publicacio.Contingut == null || publicacio.Contingut == "" || publicacio.Data_p == DateTime.MinValue || publicacio.Titol == null || publicacio.Titol == "";
+            return Publicacio.User_id == 0 || Publicacio.Contingut == null || Publicacio.Contingut == "" || Publicacio.Data_p == DateTime.MinValue || Publicacio.Titol == null || Publicacio.Titol == "";
         }
         public List<int> ObtenirTotsId()
         {
