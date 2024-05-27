@@ -46,7 +46,7 @@ namespace Y.Vista
             p.User_id = usuari.User_id;
             PublicacioNegoci pNegoci = new PublicacioNegoci();
             pNegoci.Publicacio = p;
-            pNegoci.Inserir();
+            
 
             // AFEGIM TAGS
             string[] tags = TxtBoxEtiqueta.Text.Split(", ");
@@ -55,7 +55,8 @@ namespace Y.Vista
             {
                 tagsList.Add(tags[i]);
             }
-            // pNegoci.Inserir(tagsList);
+            pNegoci.Inserir(tagsList);
+            this.Close();
         }
 
         private void TxtBoxTitol_GotFocus(object sender, RoutedEventArgs e)

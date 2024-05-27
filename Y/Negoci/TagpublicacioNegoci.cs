@@ -13,10 +13,19 @@ namespace Y.Negoci
         private TagpublicacioModel tagPublicacio;
         //Propietats
         public TagpublicacioModel Tagpublicacio { get; set; }
-        //Metodes
-        public void Inserir(TagpublicacioModel tp)
+        //Constructors
+        public TagpublicacioNegoci()
         {
-            TagpublicacioDB.Inserir(tp);
+            tagPublicacio = new TagpublicacioModel();
+        }
+        public TagpublicacioNegoci(TagpublicacioModel tagPublicacio)
+        {
+            this.tagPublicacio = tagPublicacio;
+        }
+        //Metodes
+        public void Inserir()
+        {
+            TagpublicacioDB.Inserir(tagPublicacio);
         }
     }
 }
