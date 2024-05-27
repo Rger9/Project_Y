@@ -34,6 +34,7 @@ namespace Y
             // Conseguim tots els id de les publicacions
             PublicacioNegoci pNegoci = new PublicacioNegoci();
             llistaIdPublicacio = pNegoci.ObtenirTotsId();
+            
             // Carreguem el frame amb el post
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
         }

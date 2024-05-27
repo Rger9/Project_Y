@@ -19,10 +19,6 @@ namespace Y.Negoci
         {
             return ComentariDB.GetComentari(id);
         }
-        public List<ComentariModel> ObtenirTotsId(int id)
-        {
-            return ComentariDB.GetComentarisPost(id);
-        }
         public void Inserir()
         {
             try

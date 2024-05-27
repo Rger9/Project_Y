@@ -36,19 +36,23 @@ namespace Y.Vista
             ComentariNegoci cNegoci = new ComentariNegoci();
             UsuariNegoci uNegoci = new UsuariNegoci();
             llistaComentaris = cNegoci.GetComentarisPost(p.Publicacio_id);
+            CarregarComentaris();
+            BlockUsername.Text = uNegoci.GetUsuari(p.User_id).Username + " : ";
+            BlockTitol.Text = p.Titol;
+            BlockContingut.Text = p.Contingut;
+            
+            //BlockEtiquetes.Text = ACA TOTES LES ETIQUETES
+        }
+        private void CarregarComentaris()
+        {
+            UsuariNegoci uNegoci = new UsuariNegoci();
             contingutComentaris = new List<string>();
             foreach (ComentariModel comentari in llistaComentaris)
             {
                 contingutComentaris.Add(uNegoci.GetUsuari(comentari.User_id).Username + ": " + comentari.Contingut);
             }
             ListBoxComentaris.ItemsSource = contingutComentaris;
-            BlockUsername.Text = uNegoci.GetUsuari(p.User_id).Username + " :";
-            BlockTitol.Text = p.Titol;
-            BlockContingut.Text = p.Contingut;
-            
-            //BlockEtiquetes.Text = ACA TOTES LES ETIQUETES
         }
-
         private void TxtBoxComentari_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderComentari)
@@ -79,14 +83,25 @@ namespace Y.Vista
                 }
                 else
                 {
+                    // Construïr el objecte "comentari"
                     ComentariModel comentari = new ComentariModel();
                     comentari.User_id = usuari.User_id;
                     comentari.Publicacio_id = publicacio.Publicacio_id;
                     comentari.Data_c = DateTime.Now;
                     comentari.Contingut = TxtBoxComentari.Text;
+
+                    // Construïr "comentariNegoci", i igualem el seu atribut al comentari
                     ComentariNegoci comentariNegoci = new ComentariNegoci();
                     comentariNegoci.Comentari = comentari;
                     comentariNegoci.Inserir();
+
+                    // Afegir a la llista de comentaris i recarregar-los
+                    llistaComentaris.Add(comentari);
+                    CarregarComentaris();
+
+                    // Buidar la caixa per comentari i deshabilitar el botó
+                    TxtBoxComentari.Text = string.Empty;
+                    BtnComentar.IsEnabled = false;
                 }
             }
             catch

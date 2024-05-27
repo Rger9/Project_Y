@@ -39,8 +39,8 @@
             </Button.Resources>
 
         </Button>
-        <StackPanel Margin="34,34,329,36">
-            <Frame Name="FramePublicacions" Content="" Height="678" Width="756"/>
+        <StackPanel Margin="34,10,329,16">
+            <Frame Name="FramePublicacions" Content="" Height="687" Width="756"/>
         </StackPanel>
         <Button Name="BtnAnterior" Content="Anterior" HorizontalAlignment="Left" Margin="894,387,0,0" VerticalAlignment="Top" Height="30" Width="68" Click="BtnAnterior_Click"/>
         <Button Name="BtnSeguent" Content="Següent" HorizontalAlignment="Left" Margin="984,387,0,0" VerticalAlignment="Top" Height="30" Width="68" Click="BtnSeguent_Click"/>
