@@ -27,9 +27,9 @@
         <Label x:Name="LabelRegister" HorizontalAlignment="Left" Margin="145,311,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Width="134" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Cursor="Hand">
             <TextBlock TextDecorations="Underline" MouseLeftButtonUp="TextBlock_MouseLeftButtonUp">No tens compte?</TextBlock>
         </Label>
-        <Image HorizontalAlignment="Left" Height="68" Margin="201,82,0,0" VerticalAlignment="Top" Width="68" Source="/Vista/logoBlanc_Y.png" UseLayoutRounding="False" RenderTransformOrigin="0.041,0.45"/>
-        <Image HorizontalAlignment="Left" Height="22" Margin="89,179,0,0" VerticalAlignment="Top" Width="25" Source="/Vista/userBlanc.png"/>
-        <Image HorizontalAlignment="Left" Height="24" Margin="88,219,0,0" VerticalAlignment="Top" Width="25" Source="/Vista/padlock.png"/>
+        <Image HorizontalAlignment="Left" Height="68" Margin="201,82,0,0" VerticalAlignment="Top" Width="68" Source="/Vista/Imatges/logoBlanc_Y.png" UseLayoutRounding="False" RenderTransformOrigin="0.041,0.45"/>
+        <Image HorizontalAlignment="Left" Height="22" Margin="89,179,0,0" VerticalAlignment="Top" Width="25" Source="/Vista/Imatges/userBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="24" Margin="88,219,0,0" VerticalAlignment="Top" Width="25" Source="/Vista/Imatges/padlock.png"/>
         <Label Content="n" HorizontalAlignment="Left" Margin="235,91,0,0" VerticalAlignment="Top" Height="64" Width="64" FontFamily="Segoe UI Semibold" FontSize="48" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White"/>
     </Grid>
 </Window>
