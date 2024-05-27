@@ -42,5 +42,7 @@
         <StackPanel Margin="34,34,329,36">
             <Frame Name="FramePublicacions" Content="" Height="646" Width="756"/>
         </StackPanel>
+        <Button Name="BtnAnterior" Content="Anterior" HorizontalAlignment="Left" Margin="894,387,0,0" VerticalAlignment="Top" Height="30" Width="68"/>
+        <Button Name="BtnSeguent" Content="Següent" HorizontalAlignment="Left" Margin="984,387,0,0" VerticalAlignment="Top" Height="30" Width="68" Click="BtnSeguent_Click"/>
     </Grid>
 </Window>

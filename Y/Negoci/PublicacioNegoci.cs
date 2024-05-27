@@ -19,7 +19,7 @@ namespace Y.Negoci
         {
             PublicacioDB.Inserir(Publicacio);
         }
-        public static PublicacioModel GetPublicacioDB(int id)
+        public PublicacioModel GetPublicacio(int id)
         {
             return PublicacioDB.GetPublicacio(id);
         }
@@ -60,6 +60,10 @@ namespace Y.Negoci
         public bool HasNull()
         {
             return publicacio.User_id == 0 || publicacio.Contingut == null || publicacio.Contingut == "" || publicacio.Data_p == DateTime.MinValue || publicacio.Titol == null || publicacio.Titol == "";
+        }
+        public List<int> ObtenirTotsId()
+        {
+            return PublicacioDB.ObtenirTotsId();
         }
     }
 }

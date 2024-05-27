@@ -111,7 +111,6 @@ namespace Y.Model
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters["@user_id"].Value = id;
-                
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {

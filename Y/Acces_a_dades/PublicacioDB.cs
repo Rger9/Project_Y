@@ -1,4 +1,4 @@
-﻿using Y;
+using Y;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -70,7 +70,6 @@ namespace Y.Model
                 MySqlCommand comanda = new MySqlCommand(cmdSelect_TOT, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters["@publicacio_id"].Value = id;
-                
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -102,7 +101,6 @@ namespace Y.Model
             {
                 Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
-                
                 MySqlDataReader reader = comanda.ExecuteReader(); 
                 if (reader.HasRows)
                 {
