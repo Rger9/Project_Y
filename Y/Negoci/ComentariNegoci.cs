@@ -28,7 +28,7 @@ namespace Y.Negoci
             try
             {
                 if (!Validar()) throw new Exception();
-                ComentariDB.Inserir(comentari);
+                ComentariDB.Inserir(Comentari);
             }
             catch
             {
@@ -38,20 +38,20 @@ namespace Y.Negoci
         }
         public bool Validar()
         {
-            if(comentari == null) return false;
+            if(Comentari == null) return false;
             if(this.HasNull() ) return false;
             PublicacioDB pdb = new PublicacioDB();
             List<int> llistaId = PublicacioDB.ObtenirTotsId();
-            if (llistaId.Contains(comentari.Publicacio_id)) 
+            if (llistaId.Contains(Comentari.Publicacio_id)) 
             {
                 llistaId = UsuariDB.ObtenirTotsId();
-                if (llistaId.Contains(comentari.User_id)) return true;
+                if (llistaId.Contains(Comentari.User_id)) return true;
             }
             return false;
         }
         public bool HasNull()
         {
-            return comentari.User_id == 0 || comentari.Publicacio_id == 0 || comentari.Contingut == null || comentari.Contingut == "" || comentari.Data_c == DateTime.MinValue;
+            return Comentari.User_id == 0 || Comentari.Publicacio_id == 0 || Comentari.Contingut == null || Comentari.Contingut == "" || Comentari.Data_c == DateTime.MinValue;
         }
         public List<ComentariModel> GetComentarisPost(int postId)
         {

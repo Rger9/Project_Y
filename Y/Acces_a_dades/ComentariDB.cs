@@ -20,9 +20,10 @@ namespace Y.Model
         public static void Inserir(ComentariModel c)
         {
             string cmdInsert = "INSERT INTO Comentari(user_id, publicacio_id, data_c, contingut) " +
-                                "VALUES(@user_id, @publicacio, @data_c, @contingut)";
+                                "VALUES(@user_id, @publicacio_id, @data_c, @contingut)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
@@ -34,7 +35,6 @@ namespace Y.Model
                 comanda.Parameters["@data_c"].Value = c.Data_c;
                 comanda.Parameters["@contingut"].Value = c.Contingut;
 
-                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch

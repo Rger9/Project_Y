@@ -21,21 +21,31 @@ namespace Y.Vista
     /// </summary>
     public partial class VistaPost : Page
     {
+        private UsuariModel usuari;
         private PublicacioModel publicacio;
         private List<ComentariModel> llistaComentaris;
         private bool placeholderComentari;
+        private List<string> contingutComentaris;
         public VistaPost(UsuariModel u, PublicacioModel p)
         {
             InitializeComponent();
+            usuari = u;
+            BtnComentar.IsEnabled = false;
             placeholderComentari = true;
             publicacio = p;
             ComentariNegoci cNegoci = new ComentariNegoci();
             UsuariNegoci uNegoci = new UsuariNegoci();
             llistaComentaris = cNegoci.GetComentarisPost(p.Publicacio_id);
-            ListBoxComentaris.ItemsSource = llistaComentaris;
+            contingutComentaris = new List<string>();
+            foreach (ComentariModel comentari in llistaComentaris)
+            {
+                contingutComentaris.Add(uNegoci.GetUsuari(comentari.User_id).Username + ": " + comentari.Contingut);
+            }
+            ListBoxComentaris.ItemsSource = contingutComentaris;
             BlockUsername.Text = uNegoci.GetUsuari(p.User_id).Username + " :";
             BlockTitol.Text = p.Titol;
             BlockContingut.Text = p.Contingut;
+            
             //BlockEtiquetes.Text = ACA TOTES LES ETIQUETES
         }
 
@@ -61,7 +71,28 @@ namespace Y.Vista
 
         private void BtnComentar_Click(object sender, RoutedEventArgs e)
         {
-            
+            try
+            {
+                if (usuari.User_id == 0)
+                {
+                    throw new Exception();
+                }
+                else
+                {
+                    ComentariModel comentari = new ComentariModel();
+                    comentari.User_id = usuari.User_id;
+                    comentari.Publicacio_id = publicacio.Publicacio_id;
+                    comentari.Data_c = DateTime.Now;
+                    comentari.Contingut = TxtBoxComentari.Text;
+                    ComentariNegoci comentariNegoci = new ComentariNegoci();
+                    comentariNegoci.Comentari = comentari;
+                    comentariNegoci.Inserir();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: Has d'iniciar sessió");
+            }
         }
 
         private void TxtBoxComentari_TextChanged(object sender, TextChangedEventArgs e)
