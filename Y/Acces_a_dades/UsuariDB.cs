@@ -23,6 +23,7 @@ namespace Y.Model
                                 "VALUES(@username, @contrasenya, @nom, @cognom, @correu, @telefon)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@username", MySqlDbType.VarChar, 20);
                 comanda.Parameters.Add("@contrasenya", MySqlDbType.VarChar, 30);
@@ -38,7 +39,7 @@ namespace Y.Model
                 comanda.Parameters["@correu"].Value = u.Correu;
                 comanda.Parameters["@telefon"].Value = u.Telefon;
 
-                Connexio.Connectar();
+                
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -62,6 +63,8 @@ namespace Y.Model
                                 $"WHERE user_id = @user_id";
             try
             {
+                Connexio.Connectar();
+
                 MySqlCommand comanda = new MySqlCommand(cmdUpdate, Connexio.Connection);
                 comanda.Parameters.Add("@username", MySqlDbType.VarChar, 20);
                 comanda.Parameters.Add("@contrasenya", MySqlDbType.VarChar, 30);
@@ -79,7 +82,7 @@ namespace Y.Model
                 comanda.Parameters["@telefon"].Value = u.Telefon;
                 comanda.Parameters["@user_id"].Value = u.User_id;
 
-                Connexio.Connectar();
+                
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -172,8 +175,9 @@ namespace Y.Model
             List<int> llistaId = new List<int>();
             try
             {
-                MySqlCommand commanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 Connexio.Connectar();
+                MySqlCommand commanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                
                 MySqlDataReader reader = commanda.ExecuteReader();
                 if (reader.HasRows)
                 {

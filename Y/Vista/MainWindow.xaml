@@ -16,7 +16,7 @@
             </LinearGradientBrush>
         </Grid.Background>
         <Rectangle HorizontalAlignment="Left" Height="744" Margin="825,-21,0,0" Stroke="White" VerticalAlignment="Top" Width="288" Fill="#FF120025"/>
-        <Image HorizontalAlignment="Left" Height="227" Margin="854,455,0,0" VerticalAlignment="Top" Width="240" Source="/Vista/logoBlanc_Y.png" Opacity="0.2"/>
+        <Image HorizontalAlignment="Left" Height="227" Margin="854,455,0,0" VerticalAlignment="Top" Width="240" Source="/Vista/Imatges/logoBlanc_Y.png" Opacity="0.2"/>
         <Button x:Name="Btn_Perfil" Content="Iniciar Sessió" HorizontalAlignment="Left" Margin="846,32,0,0" VerticalAlignment="Top" Height="71" Width="233" Background="#FF7C00FF" BorderBrush="#00000000" Foreground="White" FontSize="24" BorderThickness="2,2,2,2" Cursor="Hand" Click="Btn_Perfil_Click">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">

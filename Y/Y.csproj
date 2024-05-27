@@ -20,6 +20,7 @@
     <None Remove="Vista\emailBlanc.png" />
     <None Remove="Vista\id-card.png" />
     <None Remove="Vista\id-cardBlanc.png" />
+    <None Remove="Vista\Imatges\logo_Y.jpeg" />
     <None Remove="Vista\logoBlanc_Y.png" />
     <None Remove="Vista\padlock.png" />
     <None Remove="Vista\telephone.png" />
@@ -34,12 +35,13 @@
 
 
   <ItemGroup>
-    <Resource Include="Vista\emailBlanc.png" />
-    <Resource Include="Vista\id-cardBlanc.png" />
-    <Resource Include="Vista\logoBlanc_Y.png" />
-    <Resource Include="Vista\padlock.png" />
-    <Resource Include="Vista\telephoneBlanc.png" />
-    <Resource Include="Vista\userBlanc.png" />
+    <Resource Include="Vista\Imatges\emailBlanc.png" />
+    <Resource Include="Vista\Imatges\id-cardBlanc.png" />
+    <Resource Include="Vista\Imatges\logoBlanc_Y.png" />
+    <Resource Include="Vista\Imatges\logo_Y.jpeg" />
+    <Resource Include="Vista\Imatges\padlock.png" />
+    <Resource Include="Vista\Imatges\telephoneBlanc.png" />
+    <Resource Include="Vista\Imatges\userBlanc.png" />
   </ItemGroup>
 
 </Project>

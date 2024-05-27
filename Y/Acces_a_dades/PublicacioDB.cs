@@ -1,4 +1,4 @@
-﻿using Y;
+using Y;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -28,6 +28,7 @@ namespace Y.Model
                                 "VALUES(@user_id, @data_p, @titol, @contingut)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert,Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@data_p", MySqlDbType.DateTime);
@@ -39,7 +40,7 @@ namespace Y.Model
                 comanda.Parameters["@titol"].Value = p.Titol;
                 comanda.Parameters["@contingut"].Value = p.Contingut;
 
-                Connexio.Connectar();
+                
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
