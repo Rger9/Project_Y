@@ -28,6 +28,7 @@ namespace Y.Model
                                 "VALUES(@user_id, @data_p, @titol, @contingut)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert,Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@data_p", MySqlDbType.DateTime);
@@ -39,7 +40,7 @@ namespace Y.Model
                 comanda.Parameters["@titol"].Value = p.Titol;
                 comanda.Parameters["@contingut"].Value = p.Contingut;
 
-                Connexio.Connectar();
+                
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -65,10 +66,11 @@ namespace Y.Model
             PublicacioModel p = new PublicacioModel();
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect_TOT, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters["@publicacio_id"].Value = id;
-                Connexio.Connectar();
+                
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -98,8 +100,9 @@ namespace Y.Model
             List<int> llistaId = new List<int>();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 Connexio.Connectar();
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                
                 MySqlDataReader reader = comanda.ExecuteReader(); 
                 if (reader.HasRows)
                 {

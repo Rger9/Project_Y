@@ -23,6 +23,7 @@ namespace Y.Model
                                 "VALUES(@user_id, @publicacio, @data_c, @contingut)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
@@ -34,7 +35,7 @@ namespace Y.Model
                 comanda.Parameters["@data_c"].Value = c.Data_c;
                 comanda.Parameters["@contingut"].Value = c.Contingut;
 
-                Connexio.Connectar();
+                
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -59,10 +60,11 @@ namespace Y.Model
             ComentariModel c = new ComentariModel();
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@comentari_id", MySqlDbType.Int32);
                 comanda.Parameters["@comentari_id"].Value = id;
-                Connexio.Connectar();
+                
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -98,10 +100,11 @@ namespace Y.Model
             ComentariModel comentari = new ComentariModel();
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters["@publicacio_id"].Value = postId;
-                Connexio.Connectar();
+                
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.HasRows)
                 {

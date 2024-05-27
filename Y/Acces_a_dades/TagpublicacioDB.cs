@@ -22,6 +22,7 @@ namespace Y.Model
                                 "VALUES(@publicacio_id, @tag_id)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@tag_id", MySqlDbType.Int32);
@@ -29,7 +30,7 @@ namespace Y.Model
                 comanda.Parameters["@publicacio_id"].Value = tp.Tag_id;
                 comanda.Parameters["@tag_id"].Value = tp.Tag_id;
 
-                Connexio.Connectar();
+                
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch

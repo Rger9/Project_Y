@@ -23,12 +23,13 @@ namespace Y.Model
                                 "VALUES(@nom)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@nom", MySqlDbType.VarChar, 20);
 
                 comanda.Parameters["@nom"].Value = t.Nom;
 
-                Connexio.Connectar();
+                
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -47,13 +48,14 @@ namespace Y.Model
         /// <returns>L'ID del Tag</returns>
         public static int GetTag_Id(string nom)
         {
+            Connexio.Connectar();
             string cmdSelect = "SELECT tag_id " +
                                 "FROM Tag " +
                                 $"WHERE nom = @nom";
             MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
             comanda.Parameters.Add("@nom", MySqlDbType.String);
             comanda.Parameters["@nom"].Value = nom;
-            Connexio.Connectar();
+            
             
             int? resultat = (int?)comanda.ExecuteScalar();
             int r1 = 0;
@@ -75,10 +77,11 @@ namespace Y.Model
             TagModel tag = new TagModel();
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@tag_id", MySqlDbType.Int32);
                 comanda.Parameters["@tag_id"].Value = id;
-                Connexio.Connectar();
+                
                 string tag_name = (string)comanda.ExecuteScalar();
 
                 tag.Tag_id = id;
@@ -106,8 +109,9 @@ namespace Y.Model
             List<int> llistaId = new List<int>();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 Connexio.Connectar();
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.HasRows)
                 {
