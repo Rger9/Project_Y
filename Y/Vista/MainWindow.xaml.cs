@@ -39,7 +39,19 @@ namespace Y
         }
         private void BtnSeguent_Click(object sender, RoutedEventArgs e)
         {
-
+            PublicacioNegoci pNegoci = new PublicacioNegoci();
+            int idPublicacioActual = llistaIdPublicacio.First();
+            llistaIdPublicacio.RemoveAt(0);
+            llistaIdPublicacio.Add(idPublicacioActual);
+            FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
+        }
+        private void BtnAnterior_Click(object sender, RoutedEventArgs e)
+        {
+            PublicacioNegoci pNegoci = new PublicacioNegoci();
+            int ultimPost = llistaIdPublicacio[llistaIdPublicacio.Count - 1];
+            llistaIdPublicacio.RemoveAt(llistaIdPublicacio.Count - 1);
+            llistaIdPublicacio.Insert(0, ultimPost);
+            FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
         }
 
         private void Btn_Perfil_Click(object sender, RoutedEventArgs e)
@@ -60,7 +72,5 @@ namespace Y
             Vista.Perfil perfil = new(u);
             perfil.Show();
         }
-
-
     }
 }

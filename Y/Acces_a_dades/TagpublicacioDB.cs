@@ -41,5 +41,10 @@ namespace Y.Model
                 Connexio.Desconnectar();
             }
         }
+        public static void GetTagsPublicacio(int post_id)
+        {
+            string cmdSelect = "SELECT tag_id " +
+                                "FROM tagpublicacio ";
+        }
     }
 }
