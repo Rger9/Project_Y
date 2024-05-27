@@ -28,7 +28,11 @@
                 <Border.Background>
                     <SolidColorBrush Color="White" Opacity="0.15"/>
                 </Border.Background>
-                <ScrollBar Margin="756,26,4,26"/>
+                <StackPanel x:Name="StackPanelPosts" Orientation="Vertical">
+                    <ListView Height="538" Background="{x:Null}" BorderBrush="{x:Null}">
+                        <!--<local:UserControlPosts/>-->
+                    </ListView>
+                </StackPanel>
             </Border>
         </Grid>
         <Button Name="BtnPublicar" Content="PUBLICAR" HorizontalAlignment="Left" Margin="818,529,0,0" VerticalAlignment="Top" Height="155" Width="233" FontSize="36" Click="BtnPublicar_Click" Background="{x:Null}" Foreground="White" BorderBrush="White" BorderThickness="2,2,2,2">
