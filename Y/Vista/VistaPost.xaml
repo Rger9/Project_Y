@@ -1,0 +1,27 @@
+﻿<Page x:Class="Y.Vista.VistaPost"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Y.Vista"
+      mc:Ignorable="d" 
+      d:DesignHeight="646" d:DesignWidth="756"
+      Title="VistaPost">
+
+    <Grid Background="#FF0E001B" Margin="0,0,0,48">
+        <TextBlock Name="BlockTitol" HorizontalAlignment="Left" Margin="233,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="402" Background="#0CFFFFFF" Foreground="White" FontSize="22"><Run Language="es-es" Text="Títol"/></TextBlock>
+        <TextBlock Name="BlockContingut" HorizontalAlignment="Center" Margin="0,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="165" Width="714" Background="#0CFFFFFF" Foreground="White" FontSize="16" FontFamily="Segoe UI Light"><Run Language="es-es" Text="contingut contingut contingut contingut contingut contingut contingut contingut contingut contingut contingut contingut contingut contingut contingut contingut "/></TextBlock>
+        <TextBlock Name="BlockEtiquetes" HorizontalAlignment="Center" Margin="0,252,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="714" Background="#0CFFFFFF" Foreground="White" FontSize="14"><Run Language="es-es" Text="dsds, klklk, ioio"/></TextBlock>
+        <ListBox Name="ListBoxComentaris" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="20,299,22,135" Background="#19FFFFFF" Foreground="White"/>
+        <TextBox Name="TxtBoxComentari" HorizontalAlignment="Center" Margin="0,475,0,0" TextWrapping="Wrap" Text="Comenta aqui!" VerticalAlignment="Top" Width="714" Height="55" Background="#19FFFFFF" Foreground="LightGray" GotFocus="TxtBoxComentari_GotFocus" LostFocus="TxtBoxComentari_LostFocus" TextChanged="TxtBoxComentari_TextChanged"/>
+        <Button x:Name="BtnComentar" Content="Comenta" HorizontalAlignment="Left" Margin="288,541,0,0" VerticalAlignment="Top" Height="40" Width="204" Background="#FF7C00FF" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand" BorderBrush="Transparent" Foreground="White" Click="BtnComentar_Click">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="18"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="BlockUsername" HorizontalAlignment="Left" Margin="21,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="35" Width="198" Background="#19FFFFFF" Foreground="White" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Semibold"><Run Text="Username"/><Run Language="es-es" Text=" :"/></TextBlock>
+
+    </Grid>
+</Page>

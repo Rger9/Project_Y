@@ -5,38 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Y.Vista"
         mc:Ignorable="d"
-        Title="Register" Height="383" Width="300" ResizeMode="NoResize">
-    <Grid x:Name="MainGrid">
+        Title="Register" Height="520" Width="500" ResizeMode="NoResize">
+    <Grid x:Name="MainGrid" HorizontalAlignment="Center" Width="500" Margin="0,0,0,-6">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox" SpreadMethod="Pad">
                 <GradientStop Color="#FF070028" Offset="1"/>
                 <GradientStop Color="#FF5A4D92" Offset="0"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label Content="reg" HorizontalAlignment="Left" VerticalAlignment="Top" Height="49" Width="72" FontFamily="Dubai Medium" FontSize="36" Padding="5,0,5,0" HorizontalContentAlignment="Center" Grid.RowSpan="1" Grid.ColumnSpan="1" Foreground="White" Margin="71,0,0,0"/>
-        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="102,65,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxUser_GotFocus" LostFocus="TxtBoxUser_LostFocus"/>
-        <Button x:Name="BtnRegister" Content="regYster" HorizontalAlignment="Center" Margin="0,300,0,0" VerticalAlignment="Top" Height="34" Width="114" Background="{x:Null}" BorderBrush="White" Foreground="White" FontFamily="Dubai Medium" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand">
-            <Button.Effect>
-                <DropShadowEffect Color="White" Direction="0" ShadowDepth="0" Opacity="0.5"/>
-            </Button.Effect>
+        <Label Content="Reg" HorizontalAlignment="Left" VerticalAlignment="Top" Height="68" Width="97" FontFamily="Segoe UI Semibold" FontSize="48" Padding="5,0,5,0" HorizontalContentAlignment="Center" Grid.RowSpan="1" Grid.ColumnSpan="1" Foreground="White" Margin="147,93,0,0"/>
+        <TextBox x:Name="TxtBoxUser" HorizontalAlignment="Left" Margin="144,171,0,0" TextWrapping="Wrap" Text="Usuari" VerticalAlignment="Top" Width="240" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" TextChanged="Escriure" GotFocus="TxtBoxUser_GotFocus" LostFocus="TxtBoxUser_LostFocus"/>
+        <Button x:Name="BtnRegister" Content="Registrar" HorizontalAlignment="Left" Margin="178,407,0,0" VerticalAlignment="Top" Height="34" Width="172" Background="#FF7C00FF" FontSize="18" BorderThickness="2,2,2,2" Cursor="Hand" Click="BtnRegister_Click" BorderBrush="Transparent" Foreground="White">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="18"/>
                 </Style>
             </Button.Resources>
         </Button>
-        <PasswordBox x:Name="PsswdRegister" HorizontalAlignment="Left" Margin="102,98,0,0" VerticalAlignment="Top" Width="128" Height="26" BorderBrush="#FF24246A" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdRegister_GotFocus" LostFocus="PsswdRegister_LostFocus"/>
-        <TextBox x:Name="TxtBoxNom" HorizontalAlignment="Left" Margin="102,160,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxNom_GotFocus" LostFocus="TxtBoxNom_LostFocus"/>
-        <TextBox x:Name="TxtBoxCognom" HorizontalAlignment="Left" Margin="102,192,0,0" TextWrapping="Wrap" Text="Cognom" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxCognom_GotFocus" LostFocus="TxtBoxCognom_LostFocus"/>
-        <TextBox x:Name="TxtBoxCorreu" HorizontalAlignment="Left" Margin="102,224,0,0" TextWrapping="Wrap" Text="Correu" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxCorreu_GotFocus" LostFocus="TxtBoxCorreu_LostFocus"/>
-        <TextBox x:Name="TxtBoxTelefon" HorizontalAlignment="Left" Margin="102,256,0,0" TextWrapping="Wrap" Text="Telefon" VerticalAlignment="Top" Width="128" Height="27" Background="{x:Null}" BorderBrush="#FF24246A" BorderThickness="2,2,2,2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxTelefon_GotFocus" LostFocus="TxtBoxTelefon_LostFocus"/>
-        <PasswordBox x:Name="PsswdRegister2" HorizontalAlignment="Left" Margin="102,129,0,0" VerticalAlignment="Top" Width="128" Height="26" BorderBrush="#FF24246A" Foreground="White" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="2,2,2,2" Password="Contrasenya" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdRegister2_GotFocus" LostFocus="PsswdRegister2_LostFocus"/>
-        <Image HorizontalAlignment="Left" Height="27" Margin="134,14,0,0" VerticalAlignment="Top" Width="28" Source="/Vista/logoBlanc_Y.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="71,65,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/userBlanc.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="71,114,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/padlock.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="71,177,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/id-cardBlanc.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="71,224,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/emailBlanc.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="71,256,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/telephoneBlanc.png"/>
-        <Label Content="ster" HorizontalAlignment="Left" VerticalAlignment="Top" Height="49" Width="72" FontFamily="Dubai Medium" FontSize="36" Padding="5,0,5,0" HorizontalContentAlignment="Center" Grid.RowSpan="1" Grid.ColumnSpan="1" Foreground="White" Margin="158,0,0,0"/>
+        <PasswordBox x:Name="PsswdRegister" HorizontalAlignment="Left" Margin="144,204,0,0" VerticalAlignment="Top" Width="240" Height="26" BorderBrush="White" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="0,0,0,1" Password="abcdef" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdRegister_GotFocus" LostFocus="PsswdRegister_LostFocus" PasswordChanged="Escriure"/>
+        <TextBox x:Name="TxtBoxNom" HorizontalAlignment="Left" Margin="144,266,0,0" TextWrapping="Wrap" Text="Nom" VerticalAlignment="Top" Width="240" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxNom_GotFocus" LostFocus="TxtBoxNom_LostFocus" TextInput="Escriure"/>
+        <TextBox x:Name="TxtBoxCognom" HorizontalAlignment="Left" Margin="144,298,0,0" TextWrapping="Wrap" Text="Cognom" VerticalAlignment="Top" Width="240" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxCognom_GotFocus" LostFocus="TxtBoxCognom_LostFocus" TextInput="Escriure"/>
+        <TextBox x:Name="TxtBoxCorreu" HorizontalAlignment="Left" Margin="144,330,0,0" TextWrapping="Wrap" Text="Correu" VerticalAlignment="Top" Width="240" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxCorreu_GotFocus" LostFocus="TxtBoxCorreu_LostFocus" TextChanged="Escriure"/>
+        <TextBox x:Name="TxtBoxTelefon" HorizontalAlignment="Left" Margin="144,362,0,0" TextWrapping="Wrap" Text="Telèfon" VerticalAlignment="Top" Width="240" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0,0,0,1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxTelefon_GotFocus" LostFocus="TxtBoxTelefon_LostFocus" TextChanged="Escriure"/>
+        <PasswordBox x:Name="PsswdRegister2" HorizontalAlignment="Left" Margin="144,235,0,0" VerticalAlignment="Top" Width="240" Height="26" BorderBrush="White" Foreground="LightGray" FontFamily="Dubai Medium" FontSize="16" Background="{x:Null}" SelectionBrush="{x:Null}" BorderThickness="0,0,0,1" Password="abcder" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" GotFocus="PsswdRegister2_GotFocus" LostFocus="PsswdRegister2_LostFocus" PasswordChanged="Escriure"/>
+        <Image HorizontalAlignment="Left" Height="70" Margin="219,78,0,0" VerticalAlignment="Top" Width="73" Source="/Vista/logoBlanc_Y.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,173,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/userBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,204,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/padlock.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,301,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/id-cardBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,331,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/emailBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,363,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/telephoneBlanc.png"/>
+        <Label Content="ster" HorizontalAlignment="Left" VerticalAlignment="Top" Height="62" Width="105" FontFamily="Segoe UI Semibold" FontSize="48" Padding="5,0,5,0" HorizontalContentAlignment="Center" Grid.RowSpan="1" Foreground="White" Margin="263,94,0,0" RenderTransformOrigin="1.097,0.409"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,235,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/padlock.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,267,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/id-cardBlanc.png"/>
     </Grid>
 </Window>

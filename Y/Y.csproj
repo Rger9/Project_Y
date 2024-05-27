@@ -29,12 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-	 <Folder Include="Model\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="MySql.Data" Version="8.4.0" />
   </ItemGroup>
+
 
   <ItemGroup>
     <Resource Include="Vista\emailBlanc.png" />
