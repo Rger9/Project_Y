@@ -63,7 +63,7 @@ namespace Y.Vista
             if (placeholderTitol)
             {
                 TxtBoxTitol.Text = string.Empty;
-                TxtBoxTitol.Foreground = Brushes.Black;
+                TxtBoxTitol.Foreground = Brushes.White;
                 placeholderTitol = false;
             }
             ComprovarButton();
@@ -75,7 +75,7 @@ namespace Y.Vista
             if (TxtBoxTitol.Text == string.Empty)
             {
                 TxtBoxTitol.Text = "TÍTOL";
-                TxtBoxTitol.Foreground = Brushes.Gray;
+                TxtBoxTitol.Foreground = Brushes.LightGray;
                 placeholderTitol = true;
             }
         }
@@ -85,7 +85,7 @@ namespace Y.Vista
             if (placeholderContingut)
             {
                 TxtBoxCos.Text = string.Empty;
-                TxtBoxCos.Foreground = Brushes.Black;
+                TxtBoxCos.Foreground = Brushes.White;
                 placeholderContingut = false;
             }
             ComprovarButton();
@@ -97,7 +97,7 @@ namespace Y.Vista
             if (TxtBoxCos.Text == string.Empty)
             {
                 TxtBoxCos.Text = "Escriu la teva publicació aquí";
-                TxtBoxCos.Foreground = Brushes.Gray;
+                TxtBoxCos.Foreground = Brushes.LightGray;
                 placeholderContingut = true;
             }
         }
@@ -107,7 +107,7 @@ namespace Y.Vista
             if (placeholderEtiquetes)
             {
                 TxtBoxEtiqueta.Text = string.Empty;
-                TxtBoxEtiqueta.Foreground = Brushes.Black;
+                TxtBoxEtiqueta.Foreground = Brushes.White;
                 placeholderEtiquetes = false;
             }
             ComprovarButton();
@@ -119,7 +119,7 @@ namespace Y.Vista
             if (TxtBoxEtiqueta.Text == string.Empty)
             {
                 TxtBoxEtiqueta.Text = "etiqueta1, etiqueta2, etiqueta3...";
-                TxtBoxEtiqueta.Foreground = Brushes.Gray;
+                TxtBoxEtiqueta.Foreground = Brushes.LightGray;
                 placeholderEtiquetes = true;
             }
         }
