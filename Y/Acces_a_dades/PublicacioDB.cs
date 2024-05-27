@@ -65,10 +65,10 @@ namespace Y.Model
             PublicacioModel p = new PublicacioModel();
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect_TOT, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters["@publicacio_id"].Value = id;
-                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {
@@ -98,8 +98,8 @@ namespace Y.Model
             List<int> llistaId = new List<int>();
             try
             {
-                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 Connexio.Connectar();
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 MySqlDataReader reader = comanda.ExecuteReader(); 
                 if (reader.HasRows)
                 {

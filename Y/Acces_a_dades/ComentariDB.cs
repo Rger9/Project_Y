@@ -98,10 +98,10 @@ namespace Y.Model
             ComentariModel comentari = new ComentariModel();
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters["@publicacio_id"].Value = postId;
-                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.HasRows)
                 {

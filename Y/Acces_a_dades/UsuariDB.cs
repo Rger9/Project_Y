@@ -104,10 +104,10 @@ namespace Y.Model
             UsuariModel u = new UsuariModel();
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
                 comanda.Parameters.Add("@user_id", MySqlDbType.Int32);
                 comanda.Parameters["@user_id"].Value = id;
-                Connexio.Connectar();
                 MySqlDataReader reader = comanda.ExecuteReader();
                 if (reader.Read())
                 {

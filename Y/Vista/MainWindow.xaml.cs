@@ -13,11 +13,12 @@ namespace Y
     public partial class MainWindow : Window
     {
         UsuariModel u = new UsuariModel();
+        List<int> llistaIdPublicacio = new List<int>();
         public MainWindow()
         {
             InitializeComponent();
             BtnUsername.Visibility = Visibility.Hidden;
-            CarregarPost();
+            Carregar();
         }
         public MainWindow(UsuariModel u)
         {
@@ -25,12 +26,20 @@ namespace Y
             this.u = u;
             Btn_Perfil.Visibility = Visibility.Hidden;
             BtnUsername.Content = u.Username;
-            CarregarPost();
+            Carregar();
         }
 
-        private void CarregarPost()
+        private void Carregar()
         {
-            FramePublicacions.NavigationService.Navigate(new VistaPost());
+            // Conseguim tots els id de les publicacions
+            PublicacioNegoci pNegoci = new PublicacioNegoci();
+            llistaIdPublicacio = pNegoci.ObtenirTotsId();
+            // Carreguem el frame amb el post
+            FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
+        }
+        private void BtnSeguent_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void Btn_Perfil_Click(object sender, RoutedEventArgs e)
@@ -51,5 +60,7 @@ namespace Y
             Vista.Perfil perfil = new(u);
             perfil.Show();
         }
+
+
     }
 }
