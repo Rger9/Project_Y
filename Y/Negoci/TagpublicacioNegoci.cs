@@ -18,5 +18,9 @@ namespace Y.Negoci
         {
             TagpublicacioDB.Inserir(tp);
         }
+        public List<int> GetTagsPublicacio(int id)
+        {
+            return TagpublicacioDB.GetTagsPublicacio(id);
+        }
     }
 }

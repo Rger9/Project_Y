@@ -22,6 +22,7 @@ namespace Y.Model
                                 "VALUES(@publicacio_id, @tag_id)";
             try
             {
+                Connexio.Connectar();
                 MySqlCommand comanda = new MySqlCommand(cmdInsert, Connexio.Connection);
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@tag_id", MySqlDbType.Int32);
@@ -29,7 +30,6 @@ namespace Y.Model
                 comanda.Parameters["@publicacio_id"].Value = tp.Tag_id;
                 comanda.Parameters["@tag_id"].Value = tp.Tag_id;
 
-                Connexio.Connectar();
                 int files_afectades = comanda.ExecuteNonQuery();
             }
             catch
@@ -41,10 +41,34 @@ namespace Y.Model
                 Connexio.Desconnectar();
             }
         }
-        public static void GetTagsPublicacio(int post_id)
+        public static List<int> GetTagsPublicacio(int post_id)
         {
             string cmdSelect = "SELECT tag_id " +
-                                "FROM tagpublicacio ";
+                                "FROM tagpublicacio " +
+                                "WHERE publicacio_id = @publicacio_id";
+            List<int> llistaId = new List<int>();
+            try
+            {
+                Connexio.Connectar();
+                MySqlCommand comanda = new MySqlCommand(cmdSelect, Connexio.Connection);
+                comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
+                comanda.Parameters["@publicacio_id"].Value = post_id;
+
+                MySqlDataReader reader = comanda.ExecuteReader();
+                if (reader.Read())
+                {
+                    llistaId.Add(reader.GetInt32(0));
+                }
+            }
+            catch
+            {
+                MessageBox.Show("ERROR: no s'han pogut obternir les id tags");
+            }
+            finally
+            {
+                Connexio.Desconnectar();
+            }
+            return llistaId;
         }
     }
 }
