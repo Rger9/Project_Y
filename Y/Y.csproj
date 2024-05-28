@@ -21,8 +21,11 @@
     <None Remove="Vista\id-card.png" />
     <None Remove="Vista\id-cardBlanc.png" />
     <None Remove="Vista\Imatges\logo_Y.jpeg" />
+    <None Remove="Vista\left.png" />
     <None Remove="Vista\logoBlanc_Y.png" />
+    <None Remove="Vista\next.png" />
     <None Remove="Vista\padlock.png" />
+    <None Remove="Vista\right.png" />
     <None Remove="Vista\telephone.png" />
     <None Remove="Vista\telephoneBlanc.png" />
     <None Remove="Vista\user.png" />
@@ -42,6 +45,8 @@
     <Resource Include="Vista\Imatges\padlock.png" />
     <Resource Include="Vista\Imatges\telephoneBlanc.png" />
     <Resource Include="Vista\Imatges\userBlanc.png" />
+    <Resource Include="Vista\left.png" />
+    <Resource Include="Vista\right.png" />
   </ItemGroup>
 
 </Project>
