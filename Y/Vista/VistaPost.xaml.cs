@@ -26,6 +26,7 @@ namespace Y.Vista
         private List<ComentariModel> llistaComentaris;
         private bool placeholderComentari;
         private List<string> contingutComentaris;
+        private List<int> likesUsuaris;
         public VistaPost(UsuariModel u, PublicacioModel p)
         {
             InitializeComponent();
@@ -39,7 +40,10 @@ namespace Y.Vista
             CarregarComentaris();
             BlockUsername.Text = uNegoci.GetUsuari(p.User_id).Username + " : ";
             BlockTitol.Text = p.Titol;
-            BlockContingut.Text = p.Contingut;
+            likesUsuaris = LikesNegoci.GetUsersDB(p.Publicacio_id);
+            //LA LLISTA DELS USUARIS QUE LI HAN DONAT LIKE ESTA A LIKESUSUARIS, CONTE IDS DELS USUARIS
+           
+            BlockContingut.Text = p.Contingut ;
             
             BlockEtiquetes.Text = TagpublicacioNegoci.GetTagsTextPublicacio(publicacio.Publicacio_id);
         }
