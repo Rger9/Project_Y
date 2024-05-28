@@ -47,7 +47,16 @@ CREATE OR REPLACE TABLE TagPublicacio(
     CONSTRAINT PK_TagPublicacio PRIMARY KEY(publicacio_id, tag_id),
     CONSTRAINT FK_TagPublicacio_Tag FOREIGN KEY(tag_id)
     REFERENCES Tag(tag_id),
-    CONSTRAINT PL_TagPublicacio_Publicacio FOREIGN KEY(publicacio_id)
+    CONSTRAINT FK_TagPublicacio_Publicacio FOREIGN KEY(publicacio_id)
+    REFERENCES Publicacio(publicacio_id)
+);
+CREATE OR REPLACE TABLE Likes(
+    publicacio_id int NOT NULL,
+    user_id int NOT NULL,
+    CONSTRAINT PK_Likes PRIMARY KEY(publicacio_id, user_id),
+    CONSTRAINT FK_Likes_Usuari FOREIGN KEY(user_id)
+    REFERENCES Usuari(user_id),
+    CONSTRAINT FK_Likes_Publicacio FOREIGN KEY(publicacio_id)
     REFERENCES Publicacio(publicacio_id)
 );
 
@@ -98,6 +107,20 @@ INSERT INTO tagpublicacio (publicacio_id, tag_id)
 INSERT INTO tagpublicacio (publicacio_id, tag_id)
 	VALUES(3, 3);
 INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(4, 1);
+
+-- INSERT INICIAL A LA TAULA "Likes"
+INSERT INTO likes (publicacio_id, user_id)
+    VALUES(1, 1);
+INSERT INTO likes (publicacio_id, user_id)
+	VALUES(1, 3);
+INSERT INTO likes (publicacio_id, user_id)
+	VALUES(2, 2);
+INSERT INTO likes (publicacio_id, user_id)
+	VALUES(2, 1);
+INSERT INTO likes (publicacio_id, user_id)
+	VALUES(3, 3);
+INSERT INTO likes (publicacio_id, user_id)
 	VALUES(4, 1);
 
 -- TRIGGERS
