@@ -17,7 +17,7 @@ using Y.Negoci;
 namespace Y.Vista
 {
     /// <summary>
-    /// Lógica de interacción para VistaPost.xaml
+    /// Finestra VistaPost, la qual es mostrarà dins la vista main per veure publicacions, els comentaris existents i fer nous comentaris
     /// </summary>
     public partial class VistaPost : Page
     {
@@ -26,6 +26,11 @@ namespace Y.Vista
         private List<ComentariModel> llistaComentaris;
         private bool placeholderComentari;
         private List<string> contingutComentaris;
+        /// <summary>
+        /// Finestra VistaPost, conté una publicació i l'usuari que l'ha realitzada
+        /// </summary>
+        /// <param name="u">usuari</param>
+        /// <param name="p">publicacio</param>
         
         public VistaPost(UsuariModel u, PublicacioModel p)
         {
