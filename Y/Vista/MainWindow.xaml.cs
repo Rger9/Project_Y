@@ -14,12 +14,17 @@ namespace Y
     {
         UsuariModel u = new UsuariModel();
         List<int> llistaIdPublicacio = new List<int>();
+
         public MainWindow()
         {
             InitializeComponent();
             BtnUsername.Visibility = Visibility.Hidden;
             Carregar();
         }
+        /// <summary>
+        /// executa la main window amb una sessio iniciada
+        /// </summary>
+        /// <param name="u">UsuariModel</param>
         public MainWindow(UsuariModel u)
         {
             InitializeComponent();
@@ -28,7 +33,9 @@ namespace Y
             BtnUsername.Content = u.Username;
             Carregar();
         }
-
+        /// <summary>
+        /// metode per carregar la finestra amb les publicacions
+        /// </summary>
         private void Carregar()
         {
             // Conseguim tots els id de les publicacions
@@ -37,6 +44,11 @@ namespace Y
             // Carreguem el frame amb el post
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
         }
+        /// <summary>
+        /// metode per passar a la seguent publicacio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnSeguent_Click(object sender, RoutedEventArgs e)
         {
             PublicacioNegoci pNegoci = new PublicacioNegoci();
@@ -45,6 +57,11 @@ namespace Y
             llistaIdPublicacio.Add(idPublicacioActual);
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
         }
+        /// <summary>
+        /// metode per passar a la publicacio anterior
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnAnterior_Click(object sender, RoutedEventArgs e)
         {
             PublicacioNegoci pNegoci = new PublicacioNegoci();
@@ -53,14 +70,22 @@ namespace Y
             llistaIdPublicacio.Insert(0, ultimPost);
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
         }
-
+        /// <summary>
+        /// Metode per anar a la finestra per iniciar sessio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Perfil_Click(object sender, RoutedEventArgs e)
         {
             Vista.Login login = new();
             login.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// metode per publicar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
             Vista.Publicar publicar = new Vista.Publicar(u);
