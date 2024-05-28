@@ -47,6 +47,11 @@ namespace Y.Vista
             }
             usuari = u;
         }
+        /// <summary>
+        /// Si l'aplicacio està inicialitzada, mentre s'escrigui comprovarà si el botó ha d'estar disponible o no
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Escriure(object sender, TextChangedEventArgs e)
         {
             if (IsInitialized)
@@ -54,7 +59,11 @@ namespace Y.Vista
                 ComprovarButton();
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxUsername_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderUsername)
@@ -65,6 +74,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxUsername_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -75,7 +89,11 @@ namespace Y.Vista
                 placeholderUsername = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxNom_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderNom)
@@ -86,6 +104,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void TxtBoxNom_LostFocus(object sender, RoutedEventArgs e)
         {
@@ -97,7 +120,11 @@ namespace Y.Vista
                 placeholderNom = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCognom_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderCognom)
@@ -108,7 +135,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCognom_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -119,7 +150,11 @@ namespace Y.Vista
                 placeholderCognom = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCorreu_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderCorreu)
@@ -130,7 +165,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCorreu_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -141,7 +180,11 @@ namespace Y.Vista
                 placeholderCorreu = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxTelefon_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderTelefon)
@@ -152,7 +195,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxTelefon_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -163,6 +210,9 @@ namespace Y.Vista
                 placeholderTelefon = true;
             }
         }
+        /// <summary>
+        /// Permetrà a l'usuari fer click al botó BtnUpdate si els camps necessaris no estan buits
+        /// </summary>
         private void ComprovarButton()
         {
             if (!(placeholderUsername || placeholderNom || placeholderCorreu) &&
@@ -172,7 +222,11 @@ namespace Y.Vista
             }
             else BtnUpdate.IsEnabled = false;
         }
-
+        /// <summary>
+        /// Construeix l'usuari a partir dels camps de text, el porta a la capa negoci per actualitzar-lo a la base de dades
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Update_Click(object sender, RoutedEventArgs e)
         {
             usuari.Username = TxtBoxUsername.Text;
@@ -186,7 +240,11 @@ namespace Y.Vista
             MessageBox.Show("S'han actualitzat les teves dades correctament!");
             this.Close();
         }
-
+        /// <summary>
+        /// Cancela la modificació de perfil, torna a la finestra principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();

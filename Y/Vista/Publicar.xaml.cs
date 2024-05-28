@@ -34,7 +34,11 @@ namespace Y.Vista
             placeholderTitol = true;
             BtnPublicar.IsEnabled = false;
         }
-
+        /// <summary>
+        /// Al fer click al botó BtnPublicar, construïrà l'objecte PublicacioModel a partir dels camps de text i l'enviarà a la capa negoci
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
             // Publicar un article modifica les bases de dades PUBLICACIO, TAG i TAGPUBLICACIO
@@ -64,7 +68,11 @@ namespace Y.Vista
             main.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxTitol_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderTitol)
@@ -75,7 +83,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxTitol_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -86,7 +98,11 @@ namespace Y.Vista
                 placeholderTitol = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCos_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderContingut)
@@ -97,7 +113,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCos_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -108,7 +128,11 @@ namespace Y.Vista
                 placeholderContingut = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxEtiqueta_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderEtiquetes)
@@ -119,7 +143,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxEtiqueta_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -130,6 +158,9 @@ namespace Y.Vista
                 placeholderEtiquetes = true;
             }
         }
+        /// <summary>
+        /// Mentre els camps necessaris no s'hagin emplenat, el botó no estarà disponible
+        /// </summary>
         private void ComprovarButton()
         {
             if ((!(placeholderContingut || placeholderEtiquetes || placeholderTitol)) && TxtBoxCos.Text != string.Empty && TxtBoxEtiqueta.Text != string.Empty && TxtBoxTitol.Text != string.Empty)
@@ -138,13 +169,21 @@ namespace Y.Vista
             }
             else BtnPublicar.IsEnabled = false;
         }
-
+        /// <summary>
+        /// Comprovarà si el botó ha d'estar dispobible o no mentre s'escrigui
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Escriure(object sender, TextChangedEventArgs e)
         {
             if (IsInitialized)
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Tanca la finestra publicació i obre la principal
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
             MainWindow main = new MainWindow(usuari);

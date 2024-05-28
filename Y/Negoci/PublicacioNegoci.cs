@@ -19,7 +19,7 @@ namespace Y.Negoci
         public PublicacioModel Publicacio { get; set; }
         //Metodes
         /// <summary>
-        /// Insereix una llista de Tags associades a una publicació
+        /// Insereix publicacio, associada a llista de Tags
         /// </summary>
         /// <param name="tags">Llista de tags</param>
         public void Inserir(List<string> tags)
@@ -47,10 +47,10 @@ namespace Y.Negoci
             return PublicacioDB.GetPublicacio(id);
         }
         /// <summary>
-        /// 
+        /// Insereix una llista de tags les quals prèviament comprova si ja existeixen, a les taules Tag i Tagpublicacio de la base de dades
         /// </summary>
-        /// <param name="tags"></param>
-        /// <param name="id_publi"></param>
+        /// <param name="tags">Llista de tags</param>
+        /// <param name="id_publi">Id de la publicacio</param>
         public void InserirTags(List<string> tags, int id_publi)
         {
             try
@@ -100,6 +100,10 @@ namespace Y.Negoci
         {
             return Publicacio.User_id == 0 || Publicacio.Contingut == null || Publicacio.Contingut == "" || Publicacio.Data_p == DateTime.MinValue || Publicacio.Titol == null || Publicacio.Titol == "";
         }
+        /// <summary>
+        /// Obté totes les publicacio_id de la base de dades
+        /// </summary>
+        /// <returns>Llista amb totes les publicacio_id</returns>
         public List<int> ObtenirTotsId()
         {
             return PublicacioDB.ObtenirTotsId();

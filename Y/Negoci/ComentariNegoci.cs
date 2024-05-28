@@ -18,6 +18,11 @@ namespace Y.Negoci
         //Propietats
         public ComentariModel Comentari { get; set; }
         //Metodes
+        /// <summary>
+        /// Obté el comentari a partir del seu id
+        /// </summary>
+        /// <param name="id">comentari_id</param>
+        /// <returns>comentari</returns>
         public static ComentariModel GetComentariDB(int id)
         {
             return ComentariDB.GetComentari(id);

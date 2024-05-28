@@ -28,7 +28,11 @@ namespace Y.Vista
             placeholderCorreu = true;
             placeholderTelefon = true;
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxUser_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderUsername)
@@ -39,6 +43,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxUser_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -49,7 +58,11 @@ namespace Y.Vista
                 placeholderUsername = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PsswdRegister_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderPassword)
@@ -60,7 +73,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PsswdRegister_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -71,7 +88,11 @@ namespace Y.Vista
                 placeholderPassword = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PsswdRegister2_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderPassword2)
@@ -82,7 +103,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PsswdRegister2_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -93,7 +118,11 @@ namespace Y.Vista
                 placeholderPassword2 = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxNom_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderNom)
@@ -104,7 +133,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxNom_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -115,7 +148,11 @@ namespace Y.Vista
                 placeholderNom = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCognom_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderCognom)
@@ -126,7 +163,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCognom_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -137,7 +178,11 @@ namespace Y.Vista
                 placeholderCognom = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCorreu_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderCorreu)
@@ -148,7 +193,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxCorreu_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -159,7 +208,11 @@ namespace Y.Vista
                 placeholderCorreu = true;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxTelefon_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderTelefon)
@@ -170,7 +223,11 @@ namespace Y.Vista
             }
             ComprovarButton();
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxTelefon_LostFocus(object sender, RoutedEventArgs e)
         {
             ComprovarButton();
@@ -181,6 +238,9 @@ namespace Y.Vista
                 placeholderTelefon = true;
             }
         }
+        /// <summary>
+        /// Mentre els camps necessaris no s'hagin emplenat, deshabilitarà el botó BtnRegister
+        /// </summary>
         private void ComprovarButton()
         {
             if (!(placeholderPassword || placeholderUsername || placeholderPassword2 || placeholderNom || placeholderCorreu) && 
@@ -190,7 +250,11 @@ namespace Y.Vista
             }
             else BtnRegister.IsEnabled = false;
         }
-
+        /// <summary>
+        /// Construirà l'objecte usuari a partir dels camps de text mentre les dues contrasenyes siguin iguals, i l'enviarà a la cacpa negoci
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnRegister_Click(object sender, RoutedEventArgs e)
         {
             UsuariModel u = new UsuariModel();
