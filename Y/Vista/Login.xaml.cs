@@ -6,12 +6,15 @@ using Y.Negoci;
 namespace Y.Vista
 {
     /// <summary>
-    /// Lógica de interacción para Login.xaml
+    /// Finestra de Login, la qual permet a l'usuari iniciar sessió
     /// </summary>
     public partial class Login : Window
     {
         private bool placeholderUsername;
         private bool placeholderPassword;
+        /// <summary>
+        /// Finestra Login
+        /// </summary>
         public Login()
         {
             InitializeComponent();

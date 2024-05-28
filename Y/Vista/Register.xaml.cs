@@ -6,7 +6,7 @@ using Y.Negoci;
 namespace Y.Vista
 {
     /// <summary>
-    /// Lógica de interacción para Register.xaml
+    /// Finestra registrar, la qual permetrà a qualsevol persona registrar el seu usuari
     /// </summary>
     public partial class Register : Window
     {
@@ -17,6 +17,9 @@ namespace Y.Vista
         private bool placeholderCognom;
         private bool placeholderCorreu;
         private bool placeholderTelefon;
+        /// <summary>
+        /// Finestra registrar
+        /// </summary>
         public Register()
         {
             InitializeComponent();

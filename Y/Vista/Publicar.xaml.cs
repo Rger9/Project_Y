@@ -17,7 +17,7 @@ using Y.Negoci;
 namespace Y.Vista
 {
     /// <summary>
-    /// Lógica de interacción para Publicar.xaml
+    /// Finestra de publicar, la qual permetrà a l'usuari realitzar publicacions
     /// </summary>
     public partial class Publicar : Window
     {
@@ -25,6 +25,10 @@ namespace Y.Vista
         private bool placeholderTitol;
         private bool placeholderContingut;
         private bool placeholderEtiquetes;
+        /// <summary>
+        /// Finestra de publicar, amb l'usuari loguejat
+        /// </summary>
+        /// <param name="u">usuari</param>
         public Publicar(UsuariModel u)
         {
             InitializeComponent();

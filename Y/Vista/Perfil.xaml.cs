@@ -16,7 +16,7 @@ using Y.Negoci;
 namespace Y.Vista
 {
     /// <summary>
-    /// Lógica de interacción para Perfil.xaml
+    /// Finestra de perfil, la qual permetrà a l'usuari modificar les seves dades
     /// </summary>
     public partial class Perfil : Window
     {
@@ -26,6 +26,10 @@ namespace Y.Vista
         private bool placeholderCognom;
         private bool placeholderCorreu;
         private bool placeholderTelefon;
+        /// <summary>
+        /// Finestra perfil, amb les dades de l'usuari loguejat
+        /// </summary>
+        /// <param name="u">usuari</param>
         public Perfil(UsuariModel u)
         {
             InitializeComponent();
