@@ -24,7 +24,7 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="BtnPublicar" Content="Publicar" HorizontalAlignment="Left" Margin="846,617,0,0" VerticalAlignment="Top" Height="42" Width="251" FontSize="24" Click="BtnPublicar_Click" Background="#FF7C00FF" Foreground="White" BorderBrush="#00000000" BorderThickness="1,1,1,1">
+        <Button x:Name="BtnPublicar" Content="Publicar" HorizontalAlignment="Left" Margin="846,617,0,0" VerticalAlignment="Top" Height="42" Width="251" FontSize="24" Click="BtnPublicar_Click" Background="#FF7C00FF" Foreground="White" BorderBrush="#00000000" BorderThickness="1,1,1,1" Cursor="Hand">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="15"/>
@@ -42,12 +42,12 @@
         <StackPanel Margin="34,10,329,16">
             <Frame Name="FramePublicacions" Content="" Height="687" Width="756"/>
         </StackPanel>
-        <Button Name="BtnAnterior" Content="" HorizontalAlignment="Left" Margin="894,368,0,0" VerticalAlignment="Top" Height="68" Width="68" Click="BtnAnterior_Click" Foreground="{x:Null}" BorderBrush="{x:Null}">
+        <Button Name="BtnAnterior" Content="" HorizontalAlignment="Left" Margin="894,368,0,0" VerticalAlignment="Top" Height="68" Width="68" Click="BtnAnterior_Click" Foreground="{x:Null}" BorderBrush="{x:Null}" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="/Vista/left.png"/>
             </Button.Background>
         </Button>
-        <Button Name="BtnSeguent" Content="" HorizontalAlignment="Left" Margin="984,368,0,0" VerticalAlignment="Top" Height="68" Width="68" Click="BtnSeguent_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button Name="BtnSeguent" Content="" HorizontalAlignment="Left" Margin="984,368,0,0" VerticalAlignment="Top" Height="68" Width="68" Click="BtnSeguent_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Cursor="Hand">
             <Button.Background>
                 <ImageBrush ImageSource="/Vista/right.png"/>
             </Button.Background>
