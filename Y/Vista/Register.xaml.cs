@@ -275,6 +275,10 @@ namespace Y.Vista
             UsuariNegoci uNegoci = new UsuariNegoci();
             uNegoci.Usuari = u;
             uNegoci.Inserir();
+            MessageBox.Show($"S'ha registrat a l'usuari {u.Username} amb èxit!");
+            MainWindow main = new MainWindow(u);
+            main.Show();
+            this.Close();
         }
 
         private void Escriure(object sender, System.Windows.Controls.TextChangedEventArgs e)

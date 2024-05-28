@@ -10,7 +10,7 @@ namespace Y.Negoci
     /// Aquesta classe guarda els likes de cada usuari a cada publicacio, si hi ha guardades dades de un usuari i una publicacio, 
     /// significa que aquest usuari li ha donat like a aquella publicacio
     /// </summary>
-    public class LikesModel
+    public class LikeModel
     {
         //Atributs
         private int publicacio_id;

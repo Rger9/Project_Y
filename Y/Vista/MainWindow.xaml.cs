@@ -87,14 +87,13 @@ namespace Y
             else MessageBox.Show("No pots publicar si no estas logged!");
         }
         /// <summary>
-        /// Obre la finestra de perfil
+        /// Obre un popup amb dues opcions, modificar perfil o sortir de la sessió
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnUsername_Click(object sender, RoutedEventArgs e)
         {
-            Vista.Perfil perfil = new(u);
-            perfil.Show();
+            PopupUsername.IsOpen = true;
         }
         /// <summary>
         /// Passa a la publicacio anterior
@@ -122,6 +121,28 @@ namespace Y
             llistaIdPublicacio.RemoveAt(0);
             llistaIdPublicacio.Add(idPublicacioActual);
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
+        }
+        /// <summary>
+        /// Obre la finestra de modificar perfil
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PopupBtnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            Vista.Perfil perfil = new(u);
+            perfil.Show();
+            this.Close();
+        }
+        /// <summary>
+        /// Tanca la sessió, obre l'interfaç com un usuari anònim
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PopupBtnSortir_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
     }
 }

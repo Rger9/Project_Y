@@ -243,6 +243,8 @@ namespace Y.Vista
             uNegoci.Update();
             MessageBox.Show("S'han actualitzat les teves dades correctament!");
             this.Close();
+            MainWindow main = new MainWindow(usuari);
+            main.Show();
         }
         /// <summary>
         /// Cancela la modificació de perfil, torna a la finestra principal
@@ -251,6 +253,8 @@ namespace Y.Vista
         /// <param name="e"></param>
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow main = new MainWindow(usuari);
+            main.Show();
             this.Close();
         }
     }

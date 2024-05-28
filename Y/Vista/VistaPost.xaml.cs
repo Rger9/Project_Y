@@ -23,6 +23,7 @@ namespace Y.Vista
     {
         private UsuariModel usuari;
         private PublicacioModel publicacio;
+        private LikeModel like;
         private List<ComentariModel> llistaComentaris;
         private bool placeholderComentari;
         private List<string> contingutComentaris;
@@ -37,17 +38,39 @@ namespace Y.Vista
         public VistaPost(UsuariModel u, PublicacioModel p)
         {
             InitializeComponent();
-            usuari = u;
             BtnComentar.IsEnabled = false;
             placeholderComentari = true;
+            
+            // Donem valor a la publicació, usuari i like
             publicacio = p;
+            usuari = u;
+            like = new LikeModel();
+            like.User_id = usuari.User_id;
+            like.Publicacio_id = publicacio.Publicacio_id;
+
+            // Comprovem si ja existeix el like, i carrega el numero de likes
+            LikeNegoci lNegoci = new LikeNegoci();
+            lNegoci.Like = like;
+            if (!lNegoci.Exists())
+            {
+                LikeFalse.Visibility = Visibility.Visible;
+                LikeTrue.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                LikeFalse.Visibility = Visibility.Hidden;
+                LikeTrue.Visibility = Visibility.Visible;
+            }
+            RecompteLikes();
+
+            // Carreguem els comentaris i la publicació
             ComentariNegoci cNegoci = new ComentariNegoci();
             UsuariNegoci uNegoci = new UsuariNegoci();
             llistaComentaris = cNegoci.GetComentarisPost(p.Publicacio_id);
             CarregarComentaris();
             BlockUsername.Text = uNegoci.GetUsuari(p.User_id).Username + " : ";
             BlockTitol.Text = p.Titol;
-            likesUsuaris = LikesNegoci.GetUsersDB(p.Publicacio_id);
+            likesUsuaris = LikeNegoci.GetUsersDB(p.Publicacio_id);
             //LA LLISTA DELS USUARIS QUE LI HAN DONAT LIKE ESTA A LIKESUSUARIS, CONTE IDS DELS USUARIS
            
             BlockContingut.Text = p.Contingut ;
@@ -148,6 +171,40 @@ namespace Y.Vista
                 BtnComentar.IsEnabled = true;
             }
             else if (IsInitialized)BtnComentar.IsEnabled = false;
+        }
+        /// <summary>
+        /// Dona like a una publicació
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DonarLike(object sender, MouseButtonEventArgs e)
+        {
+            LikeFalse.Visibility = Visibility.Hidden;
+            LikeTrue.Visibility = Visibility.Visible;
+            LikeNegoci lNegoci = new LikeNegoci();
+            lNegoci.Like = like;
+            lNegoci.Inserir();
+            RecompteLikes();
+        }
+        /// <summary>
+        /// Retira el like a una publicació
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TreureLike(object sender, MouseButtonEventArgs e)
+        {
+            LikeFalse.Visibility = Visibility.Visible;
+            LikeTrue.Visibility = Visibility.Hidden;
+            LikeNegoci lNegoci = new LikeNegoci();
+            lNegoci.Like = like;
+            lNegoci.Delete();
+            RecompteLikes();
+        }
+        private void RecompteLikes()
+        {
+            List<int> user_ids = new List<int>();
+            user_ids = LikeNegoci.GetUsersDB(publicacio.Publicacio_id);
+            LikeNumero.Text = user_ids.Count.ToString();
         }
     }
 }

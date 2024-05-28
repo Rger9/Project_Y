@@ -21,7 +21,7 @@ namespace Y.Model
     public partial class PublicacioDB
     {
         /// <summary>
-        /// Insereix una publicaciÃ³ a la base de dades
+        /// Insereix una publicació a la base de dades
         /// </summary>
         /// <param name="p"></param>
         public static void Inserir(PublicacioModel p)
