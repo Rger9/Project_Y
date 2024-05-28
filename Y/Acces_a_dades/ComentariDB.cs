@@ -111,7 +111,7 @@ namespace Y.Model
                         comentari.User_id = reader.GetInt32(1);
                         comentari.Data_c = reader.GetDateTime(3);
                         comentari.Contingut = reader.GetString(4);
-                        llistaComentaris.Add(comentari);
+                        llistaComentaris.Add(ComentariNegoci.GetComentariCopy(comentari));
                     }
                 }
                 reader.Close();

@@ -27,7 +27,7 @@ namespace Y.Model
                 comanda.Parameters.Add("@publicacio_id", MySqlDbType.Int32);
                 comanda.Parameters.Add("@tag_id", MySqlDbType.Int32);
 
-                comanda.Parameters["@publicacio_id"].Value = tp.Tag_id;
+                comanda.Parameters["@publicacio_id"].Value = tp.Publicacio_id;
                 comanda.Parameters["@tag_id"].Value = tp.Tag_id;
 
                 int files_afectades = comanda.ExecuteNonQuery();
@@ -41,7 +41,7 @@ namespace Y.Model
                 Connexio.Desconnectar();
             }
         }
-        public static List<int> GetTagsPublicacio(int post_id)
+        public static List<int> GetTagsIdPublicacio(int post_id)
         {
             string cmdSelect = "SELECT tag_id " +
                                 "FROM tagpublicacio " +
@@ -55,7 +55,7 @@ namespace Y.Model
                 comanda.Parameters["@publicacio_id"].Value = post_id;
 
                 MySqlDataReader reader = comanda.ExecuteReader();
-                if (reader.Read())
+                while (reader.Read())
                 {
                     llistaId.Add(reader.GetInt32(0));
                 }
@@ -70,5 +70,6 @@ namespace Y.Model
             }
             return llistaId;
         }
+       
     }
 }

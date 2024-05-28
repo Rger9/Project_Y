@@ -13,16 +13,19 @@ namespace Y
     public partial class MainWindow : Window
     {
         UsuariModel u = new UsuariModel();
+        bool logged = false;
         List<int> llistaIdPublicacio = new List<int>();
         public MainWindow()
         {
             InitializeComponent();
+            logged = false;
             BtnUsername.Visibility = Visibility.Hidden;
             Carregar();
         }
         public MainWindow(UsuariModel u)
         {
             InitializeComponent();
+            logged = true;
             this.u = u;
             Btn_Perfil.Visibility = Visibility.Hidden;
             BtnUsername.Content = u.Username;
@@ -64,8 +67,13 @@ namespace Y
 
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
-            Vista.Publicar publicar = new Vista.Publicar(u);
-            publicar.Show();
+            if (logged)
+            {
+                Vista.Publicar publicar = new Vista.Publicar(u);
+                publicar.Show();
+                Carregar();
+            }
+            else MessageBox.Show("No pots publicar si no estas logged!");
         }
 
         private void BtnUsername_Click(object sender, RoutedEventArgs e)

@@ -53,5 +53,15 @@ namespace Y.Negoci
         {
             return ComentariDB.GetComentarisPost(postId);
         }
+        public static ComentariModel GetComentariCopy(ComentariModel comentariModel)
+        {
+            ComentariModel cm = new ComentariModel();
+            cm.Comentari_id = comentariModel.Comentari_id;
+            cm.User_id = comentariModel.User_id;
+            cm.Publicacio_id = comentariModel.Publicacio_id;
+            cm.Data_c = comentariModel.Data_c;
+            cm.Contingut = comentariModel.Contingut;
+            return cm;
+        }
     }
 }

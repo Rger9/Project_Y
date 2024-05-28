@@ -41,7 +41,7 @@ namespace Y.Vista
             BlockTitol.Text = p.Titol;
             BlockContingut.Text = p.Contingut;
             
-            //BlockEtiquetes.Text = ACA TOTES LES ETIQUETES
+            BlockEtiquetes.Text = TagpublicacioNegoci.GetTagsTextPublicacio(publicacio.Publicacio_id);
         }
         private void CarregarComentaris()
         {

@@ -53,9 +53,11 @@ namespace Y.Vista
             List<string> tagsList = new List<string>();
             for (int i = 0; i < tags.Length; i++)
             {
-                tagsList.Add(tags[i]);
+                string formatat = TagNegoci.FormatarString(tags[i]);
+                if(!tagsList.Contains(formatat)) tagsList.Add(formatat);
             }
             pNegoci.Inserir(tagsList);
+            MessageBox.Show("El teu post s'ha publicat correctament!");
             this.Close();
         }
 
