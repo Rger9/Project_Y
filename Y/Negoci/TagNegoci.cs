@@ -31,6 +31,10 @@ namespace Y.Negoci
             int id = TagDB.GetTag_Id(tag_name);
             return id;
         }
+        public List<int> ObtenirTotsId()
+        {
+            return TagDB.ObtenirTotsId();
+        }
         public void Inserir()
         {
             try

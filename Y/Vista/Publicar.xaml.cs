@@ -57,7 +57,11 @@ namespace Y.Vista
                 if(!tagsList.Contains(formatat)) tagsList.Add(formatat);
             }
             pNegoci.Inserir(tagsList);
+
+            // NOTIFIQUEM A L'USUARI I OBRIR LA MAIN WINDOW
             MessageBox.Show("El teu post s'ha publicat correctament!");
+            MainWindow main = new MainWindow(usuari);
+            main.Show();
             this.Close();
         }
 
@@ -143,6 +147,8 @@ namespace Y.Vista
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow main = new MainWindow(usuari);
+            main.Show();
             this.Close();
         }
     }
