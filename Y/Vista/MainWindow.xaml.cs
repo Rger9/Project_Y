@@ -40,6 +40,15 @@ namespace Y
             
             // Carreguem el frame amb el post
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
+
+            // Carreguem la llista de tags amb el nom d'aquests
+            TagNegoci tNegoci= new TagNegoci();
+            List<string> llistaTags = new List<string>();
+            foreach (int tagId in tNegoci.ObtenirTotsId())
+            {
+                llistaTags.Add(tNegoci.GetTagDB(tagId).Nom);
+            }
+            ListboxTag.ItemsSource = llistaTags;
         }
         private void BtnSeguent_Click(object sender, RoutedEventArgs e)
         {
@@ -72,6 +81,7 @@ namespace Y
                 Vista.Publicar publicar = new Vista.Publicar(u);
                 publicar.Show();
                 Carregar();
+                this.Close();
             }
             else MessageBox.Show("No pots publicar si no estas logged!");
         }

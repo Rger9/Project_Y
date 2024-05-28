@@ -52,12 +52,14 @@
                 <ImageBrush ImageSource="/Vista/right.png"/>
             </Button.Background>
         </Button>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="854,134,44,367">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-        </ListView>
+        <ListBox Name="ListboxTag" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="852,136,38,359" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="White" BorderThickness="0, 0, 0, 1" Padding="0, 1.5, 0, 4" Width="200" >
+                        <TextBlock Text="{Binding}" Width="700"/>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Window>
