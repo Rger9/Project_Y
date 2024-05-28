@@ -21,7 +21,7 @@
         <TextBox x:Name="TxtBoxCognom" HorizontalAlignment="Left" Margin="339,213,0,0" TextWrapping="Wrap" Text="Cognom" VerticalAlignment="Top" Width="181" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0, 0, 0, 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" GotFocus="TxtBoxCognom_GotFocus" LostFocus="TxtBoxCognom_LostFocus" TextChanged="Escriure"/>
         <TextBox x:Name="TxtBoxCorreu" HorizontalAlignment="Left" Margin="182,253,0,0" TextWrapping="Wrap" Text="Correu" VerticalAlignment="Top" Width="290" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0, 0, 0, 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" TextChanged="Escriure" GotFocus="TxtBoxCorreu_GotFocus" LostFocus="TxtBoxCorreu_LostFocus"/>
         <TextBox x:Name="TxtBoxTelefon" Margin="182,299,178,0" TextWrapping="Wrap" Text="Telèfon" VerticalAlignment="Top" Height="27" Background="{x:Null}" BorderBrush="White" BorderThickness="0, 0, 0, 1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Foreground="White" FontFamily="Dubai Medium" FontSize="16" LostFocus="TxtBoxTelefon_LostFocus" GotFocus="TxtBoxTelefon_GotFocus" TextChanged="Escriure"/>
-        <Image Margin="319,80,262,339" Source="/Vista/logoBlanc_Y.png" Stretch="Fill"/>
+        <Image Margin="319,80,262,339" Source="/Vista/Imatges/logoBlanc_Y.png" Stretch="Fill"/>
         <Button x:Name="BtnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="128,352,0,0" VerticalAlignment="Top" Height="40" Width="181" Background="#FF7C00FF" FontSize="18" BorderBrush="#00707070" Foreground="White" Click="BtnCancelar_Click">
             <Button.Resources>
                 <Style TargetType="Border">
@@ -36,10 +36,10 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <Image HorizontalAlignment="Left" Height="26" Margin="146,176,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/userBlanc.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="98,214,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/id-cardBlanc.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="146,254,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/emailBlanc.png"/>
-        <Image HorizontalAlignment="Left" Height="26" Margin="146,300,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/telephoneBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="146,176,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/Imatges/userBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="98,214,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/Imatges/id-cardBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="146,254,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/Imatges/emailBlanc.png"/>
+        <Image HorizontalAlignment="Left" Height="26" Margin="146,300,0,0" VerticalAlignment="Top" Width="26" Source="/Vista/Imatges/telephoneBlanc.png"/>
 
     </Grid>
 </Window>
