@@ -8,14 +8,16 @@ using Y.Vista;
 namespace Y
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// La finestra principal de l'aplicatiu, on podràs veure posts, comentar, iniciar sessió o modificar perfil i publicar
     /// </summary>
     public partial class MainWindow : Window
     {
         UsuariModel u = new UsuariModel();
         bool logged = false;
         List<int> llistaIdPublicacio = new List<int>();
-
+        /// <summary>
+        /// Finestra inicialitzada quan ets un usuari anònim
+        /// </summary>
         public MainWindow()
         {
             InitializeComponent();
@@ -24,9 +26,9 @@ namespace Y
             Carregar();
         }
         /// <summary>
-        /// executa la main window amb una sessio iniciada
+        /// Finestra inicialitzada amb la sessió iniciada de l'usuari
         /// </summary>
-        /// <param name="u">UsuariModel</param>
+        /// <param name="u">Usuari loguejat</param>
         public MainWindow(UsuariModel u)
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace Y
             Carregar();
         }
         /// <summary>
-        /// metode per carregar la finestra amb les publicacions
+        /// Carregar la finestra amb la vista "VistaPost"
         /// </summary>
         private void Carregar()
         {
@@ -58,7 +60,7 @@ namespace Y
             ListboxTag.ItemsSource = llistaTags;
         }
         /// <summary>
-        /// Metode per anar a la finestra per iniciar sessio
+        /// Obre la finestra Login
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -69,7 +71,7 @@ namespace Y
             this.Close();
         }
         /// <summary>
-        /// metode per publicar
+        /// Obre la finestra de publicar
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -85,17 +87,16 @@ namespace Y
             else MessageBox.Show("No pots publicar si no estas logged!");
         }
         /// <summary>
-        /// Metode per anar a la finestra de perfil
+        /// Obre un popup amb dues opcions, modificar perfil o sortir de la sessió
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void BtnUsername_Click(object sender, RoutedEventArgs e)
         {
-            Vista.Perfil perfil = new(u);
-            perfil.Show();
+            PopupUsername.IsOpen = true;
         }
         /// <summary>
-        /// Metode per passar a la publicacio anterior
+        /// Passa a la publicacio anterior
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -109,7 +110,7 @@ namespace Y
 
         }
         /// <summary>
-        /// Metode per passar a la seguent publicacio
+        /// Passa a la seguent publicacio
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -120,6 +121,28 @@ namespace Y
             llistaIdPublicacio.RemoveAt(0);
             llistaIdPublicacio.Add(idPublicacioActual);
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
+        }
+        /// <summary>
+        /// Obre la finestra de modificar perfil
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PopupBtnModificar_Click(object sender, RoutedEventArgs e)
+        {
+            Vista.Perfil perfil = new(u);
+            perfil.Show();
+            this.Close();
+        }
+        /// <summary>
+        /// Tanca la sessió, obre l'interfaç com un usuari anònim
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PopupBtnSortir_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
         }
     }
 }

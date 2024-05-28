@@ -20,6 +20,8 @@
     <None Remove="Vista\emailBlanc.png" />
     <None Remove="Vista\id-card.png" />
     <None Remove="Vista\id-cardBlanc.png" />
+    <None Remove="Vista\Imatges\cor.png" />
+    <None Remove="Vista\Imatges\corvermell.png" />
     <None Remove="Vista\Imatges\left.png" />
     <None Remove="Vista\Imatges\logo_Y.jpeg" />
     <None Remove="Vista\Imatges\right.png" />
@@ -38,6 +40,8 @@
 
 
   <ItemGroup>
+    <Resource Include="Vista\Imatges\cor.png" />
+    <Resource Include="Vista\Imatges\corvermell.png" />
     <Resource Include="Vista\Imatges\emailBlanc.png" />
     <Resource Include="Vista\Imatges\id-cardBlanc.png" />
     <Resource Include="Vista\Imatges\left.png" />

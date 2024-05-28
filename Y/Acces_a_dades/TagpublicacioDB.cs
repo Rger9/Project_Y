@@ -10,6 +10,9 @@ using Y.AccesADades;
 
 namespace Y.Model
 {
+    /// <summary>
+    /// La classe "TagDB" connecta amb la taula "Tag" de la base de dades, i pot inserir tags i fer varies seleccions   
+    /// </summary>
     public partial class TagpublicacioDB
     {
         /// <summary>
@@ -41,6 +44,11 @@ namespace Y.Model
                 Connexio.Desconnectar();
             }
         }
+        /// <summary>
+        /// Donada una publicacio_id aconsegueix tots els tags adjuntats a la publicació
+        /// </summary>
+        /// <param name="post_id">la publicacio_id</param>
+        /// <returns></returns>
         public static List<int> GetTagsIdPublicacio(int post_id)
         {
             string cmdSelect = "SELECT tag_id " +

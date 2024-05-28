@@ -7,13 +7,15 @@ using Y.Model;
 
 namespace Y.Negoci
 {
+    /// <summary>
+    /// L''objecte UsuariModel, format pel seu id d'usuari, el nom d'usuari, la contrasenya, el nom i cognom de la persona, el seu correu i el seu telefon
+    /// </summary>
     public class UsuariModel
     {
         //Atributs
         private int user_id;
         private string username;
         private string contrasenya;
-        private string description;
         private string nom;
         private string cognom;
         private string correu;
@@ -22,7 +24,6 @@ namespace Y.Negoci
         public int User_id { get; set; }
         public string Username { get; set; }
         public string Contrasenya { get; set; }
-        public string Description { get; set; }
         public string Nom { get; set; }
         public string Cognom { get; set; }
         public string Correu { get; set; }

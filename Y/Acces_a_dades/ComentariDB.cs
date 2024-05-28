@@ -11,6 +11,9 @@ using Y.AccesADades;
 
 namespace Y.Model
 {
+    /// <summary>
+    /// La classe "ComentariDB" connecta amb la taula "Comentari" de la base de dades, i pot inserir comentaris i seleccionar-ne'n
+    /// </summary>
     public partial class ComentariDB
     {
         /// <summary>

@@ -38,10 +38,30 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <Popup x:Name="PopupUsername" PlacementTarget="{Binding ElementName=BtnUsername}" Placement="Bottom" StaysOpen="False">
+            <Border Background="#FF25004C" BorderBrush="Gray" BorderThickness="1" CornerRadius="5">
+                <StackPanel>
+                    <Button Name="PopupBtnModificar" Content="Modificar perfil" Width="220" Margin="5" Background="#FF7C00FF" Foreground="White" FontSize="18" Click="PopupBtnModificar_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <Button Name="PopupBtnSortir" Content="Tancar sessió" Width="200" Margin="5" Background="#FF7C00FF" Foreground="White" FontSize="18" Click="PopupBtnSortir_Click">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </Border>
+        </Popup>
         <StackPanel Margin="34,10,329,16">
             <Frame Name="FramePublicacions" Content="" Height="687" Width="756"/>
         </StackPanel>
-        <ListBox Name="ListboxTag" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="852,136,38,359" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}">
+        <ListBox Name="ListboxTag" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="852,108,37,377" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontSize="18" FontFamily="Segoe UI Semibold">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Border BorderBrush="White" BorderThickness="0, 0, 0, 1" Padding="0, 1.5, 0, 4" Width="200" >
@@ -50,7 +70,7 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Image x:Name="BtnAnterior" Source="/Vista/Imatges/left.png" HorizontalAlignment="Left" Height="68" Margin="894,368,0,0" VerticalAlignment="Top" Width="68" Focusable="True" MouseLeftButtonUp="BtnAnterior_MouseLeftButtonUp" Cursor="Hand"/>
-        <Image x:Name="BtnSeguent" Source="/Vista/Imatges/right.png" HorizontalAlignment="Left" Height="68" Margin="988,368,0,0" VerticalAlignment="Top" Width="68" Focusable="True" MouseLeftButtonUp="BtnSeguent_MouseLeftButtonUp" Cursor="Hand"/>
+        <Image x:Name="BtnAnterior" Source="/Vista/Imatges/left.png" HorizontalAlignment="Left" Height="55" Margin="349,621,0,0" VerticalAlignment="Top" Width="55" Focusable="True" MouseLeftButtonUp="BtnAnterior_MouseLeftButtonUp" Cursor="Hand"/>
+        <Image x:Name="BtnSeguent" Source="/Vista/Imatges/right.png" HorizontalAlignment="Left" Height="55" Margin="431,621,0,0" VerticalAlignment="Top" Width="55" Focusable="True" MouseLeftButtonUp="BtnSeguent_MouseLeftButtonUp" Cursor="Hand"/>
     </Grid>
 </Window>
