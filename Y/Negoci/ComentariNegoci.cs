@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -62,6 +63,18 @@ namespace Y.Negoci
             cm.Data_c = comentariModel.Data_c;
             cm.Contingut = comentariModel.Contingut;
             return cm;
+        }
+        public static string GetTimeAgo(ComentariModel cm)
+        {
+            DateTime ara = DateTime.Now;
+            TimeSpan diferencia = ara - cm.Data_c;
+            //DateTime diferencia = Convert.ToDateTime(ara.Subtract(cm.Data_c));
+            if(diferencia.Days > 365) return "Fa " + Math.Truncate((double)diferencia.Days/365).ToString() + " a";
+            if (diferencia.Month > 0) return "Fa " + diferencia.Month.ToString() + " m";
+            if (diferencia.Day > 0) return "Fa " + diferencia.Day.ToString() + " d";
+            if (diferencia.Hour > 0) return "Fa " + diferencia.Hour.ToString() + " h";
+            if (diferencia.Minute > 0) return "Fa " + diferencia.Minute.ToString() + " min";
+            else return "Fa " + diferencia.Second.ToString() + " sec";
         }
     }
 }
