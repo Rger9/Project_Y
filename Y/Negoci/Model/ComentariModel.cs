@@ -7,6 +7,9 @@ using Y.Model;
 
 namespace Y.Negoci
 {
+    /// <summary>
+    /// L'objecte ComentariModel, format per l'id del comentari, l'id de la persona que comenta, l'id de la publicació comentada, la data del comentari i el contingut
+    /// </summary>
     public class ComentariModel
     {
         //Atributs

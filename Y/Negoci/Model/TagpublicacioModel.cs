@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Y.Negoci
 {
+    /// <summary>
+    /// L'objecte TagpublicacioModel, el qual conté una id de tag associada a una id de publicació
+    /// </summary>
     public class TagpublicacioModel
     {
         //Atributs
