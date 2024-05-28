@@ -11,6 +11,9 @@ using Y.AccesADades;
 
 namespace Y.Model
 {
+    /// <summary>
+    /// La classe "UsuariDB" connecta amb la taula "Usuari" de la base de dades, i pot inserir usuaris, modificar-ne, i fer varies seleccions   
+    /// </summary>
     public partial class UsuariDB
     {
         /// <summary>
@@ -51,6 +54,10 @@ namespace Y.Model
                 Connexio.Desconnectar();
             }
         }
+        /// <summary>
+        /// Sobreescriu totes les dades de l'usuari paràmetre a l'usuari de la base de dades que comparteix "user_id"
+        /// </summary>
+        /// <param name="u">usuari</param>
         public static void UpdatePerfil(UsuariModel u)
         {
             string cmdUpdate = "UPDATE usuari " +
@@ -133,6 +140,11 @@ namespace Y.Model
             }
             return u;
         }
+        /// <summary>
+        /// Obté l'usuari a partir del seu username
+        /// </summary>
+        /// <param name="username">Nom d'usuari</param>
+        /// <returns></returns>
         public static UsuariModel GetUsuari(string username)
         {
             string cmdSelect = "SELECT * " +
@@ -168,6 +180,10 @@ namespace Y.Model
             }
             return u;
         }
+        /// <summary>
+        /// Obté tots els Ids d'usuaris registrats a la base de dades
+        /// </summary>
+        /// <returns>Una llista amb les user_Ids</returns>
         public static List<int> ObtenirTotsId()
         {
             string cmdSelect = "SELECT user_id " +
@@ -199,6 +215,11 @@ namespace Y.Model
             }
             return llistaId;
         }
+        /// <summary>
+        /// Comprova que existeixi l'usuari paràmetre a la base de dades
+        /// </summary>
+        /// <param name="u">Usuari</param>
+        /// <returns>True si existeix, false en cas contrari</returns>
         public static bool Existeix(UsuariModel u)
         {
             bool existeix = true;

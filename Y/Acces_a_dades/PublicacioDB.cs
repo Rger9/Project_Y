@@ -15,6 +15,9 @@ using System.Reflection.PortableExecutable;
 
 namespace Y.Model
 {
+    /// <summary>
+    /// La classe "PublicacioDB" connecta amb la taula "Publicacio" de la base de dades, i pot inserir-hi publicacions i fer diverses seleccions
+    /// </summary>
     public partial class PublicacioDB
     {
         /// <summary>
@@ -91,6 +94,10 @@ namespace Y.Model
             }
             return p;
         }
+        /// <summary>
+        /// Obté totes les Ids de les publicacions a la base de dades
+        /// </summary>
+        /// <returns>Una llista amb totes les Ids</returns>
         public static List<int> ObtenirTotsId()
         {
             Connexio c = new Connexio();
