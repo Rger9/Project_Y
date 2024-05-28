@@ -61,7 +61,7 @@ namespace Y.Negoci
         {
             try
             {
-                if (!Validar()) throw new Exception();
+                // if (!Validar()) throw new Exception();
                 LikeDB.Delete(Like);
             }
             catch

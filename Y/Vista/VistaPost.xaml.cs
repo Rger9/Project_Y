@@ -179,12 +179,21 @@ namespace Y.Vista
         /// <param name="e"></param>
         private void DonarLike(object sender, MouseButtonEventArgs e)
         {
-            LikeFalse.Visibility = Visibility.Hidden;
-            LikeTrue.Visibility = Visibility.Visible;
-            LikeNegoci lNegoci = new LikeNegoci();
-            lNegoci.Like = like;
-            lNegoci.Inserir();
-            RecompteLikes();
+            try
+            {
+                if (usuari.User_id == 0) throw new Exception();
+                LikeFalse.Visibility = Visibility.Hidden;
+                LikeTrue.Visibility = Visibility.Visible;
+                LikeNegoci lNegoci = new LikeNegoci();
+                lNegoci.Like = like;
+                lNegoci.Inserir();
+                RecompteLikes();
+            }
+            catch
+            {
+                MessageBox.Show("Has d'iniciar sessio");
+            }
+
         }
         /// <summary>
         /// Retira el like a una publicació
@@ -193,12 +202,21 @@ namespace Y.Vista
         /// <param name="e"></param>
         private void TreureLike(object sender, MouseButtonEventArgs e)
         {
-            LikeFalse.Visibility = Visibility.Visible;
-            LikeTrue.Visibility = Visibility.Hidden;
-            LikeNegoci lNegoci = new LikeNegoci();
-            lNegoci.Like = like;
-            lNegoci.Delete();
-            RecompteLikes();
+            try
+            {
+                if (usuari.User_id == 0) throw new Exception();
+                LikeFalse.Visibility = Visibility.Visible;
+                LikeTrue.Visibility = Visibility.Hidden;
+                LikeNegoci lNegoci = new LikeNegoci();
+                lNegoci.Like = like;
+                lNegoci.Delete();
+                RecompteLikes();
+            }
+            catch
+            {
+                MessageBox.Show("Has d'iniciar sessio");
+            }
+
         }
         private void RecompteLikes()
         {
