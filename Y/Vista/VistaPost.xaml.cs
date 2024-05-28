@@ -27,6 +27,7 @@ namespace Y.Vista
         private bool placeholderComentari;
         private List<string> contingutComentaris;
         private List<int> likesUsuaris;
+      
         public VistaPost(UsuariModel u, PublicacioModel p)
         {
             InitializeComponent();
@@ -47,6 +48,9 @@ namespace Y.Vista
             
             BlockEtiquetes.Text = TagpublicacioNegoci.GetTagsTextPublicacio(publicacio.Publicacio_id);
         }
+        /// <summary>
+        /// Carregarà els comentaris de la publicació mostrada, i en mostrarà el contingut a la llista
+        /// </summary>
         private void CarregarComentaris()
         {
             UsuariNegoci uNegoci = new UsuariNegoci();
@@ -57,6 +61,11 @@ namespace Y.Vista
             }
             ListBoxComentaris.ItemsSource = contingutComentaris;
         }
+        /// <summary>
+        /// Si l'usuari fa click a la caixa de text mentre mostra el seu text "placeholder", aquest es borrarà i permetrà escriure a l'usuari 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxComentari_GotFocus(object sender, RoutedEventArgs e)
         {
             if (placeholderComentari)
@@ -66,7 +75,11 @@ namespace Y.Vista
                 placeholderComentari = false;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari fa click a qualsevol altre caixa o botó mentre no hi ha escrit res a la caixa de text, aquest mostrarà el seu text "placeholder" amb un color gris
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxComentari_LostFocus(object sender, RoutedEventArgs e)
         {
             if (TxtBoxComentari.Text == string.Empty)
@@ -76,7 +89,11 @@ namespace Y.Vista
                 placeholderComentari = false;
             }
         }
-
+        /// <summary>
+        /// Si l'usuari ha iniciat sessió, construirà un objecte ComentariModel amb el camp de text i l'enviarà a la capa negoci 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnComentar_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -113,7 +130,11 @@ namespace Y.Vista
                 MessageBox.Show("ERROR: Has d'iniciar sessió");
             }
         }
-
+        /// <summary>
+        /// Habilitarà el botó de comentari mentre s'escrigui si la caixa de text no està buida
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TxtBoxComentari_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (IsInitialized && placeholderComentari == false && TxtBoxComentari.Text != string.Empty)

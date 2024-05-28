@@ -7,6 +7,9 @@ using Y.Model;
 
 namespace Y.Negoci
 {
+    /// <summary>
+    /// L'objecte PublicacioModel, formada per l'id de la publicació, l'id de la persona que comenta, la data de la publicació, el títol d'aquesta i el contingut
+    /// </summary>
     public class PublicacioModel
     {
         //Atributs

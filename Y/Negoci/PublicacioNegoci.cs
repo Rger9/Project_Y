@@ -8,6 +8,9 @@ using Y.Model;
 
 namespace Y.Negoci
 {
+    /// <summary>
+    /// La classe "PublicacioNegoci" serà la que validarà els objectes "PublicacioModel", associarà tags a certes publicacions, i la que la vista cridarà per accedir als mètodes d'Accés a dades
+    /// </summary>
     internal class PublicacioNegoci
     {
         //Atributs
@@ -15,6 +18,10 @@ namespace Y.Negoci
         //Propietats
         public PublicacioModel Publicacio { get; set; }
         //Metodes
+        /// <summary>
+        /// Insereix publicacio, associada a llista de Tags
+        /// </summary>
+        /// <param name="tags">Llista de tags</param>
         public void Inserir(List<string> tags)
         {
             try
@@ -30,10 +37,20 @@ namespace Y.Negoci
             }
             
         }
+        /// <summary>
+        /// Obté una publicació donada l'Id d'aquesta
+        /// </summary>
+        /// <param name="id">publicacio_id</param>
+        /// <returns>La publicació</returns>
         public PublicacioModel GetPublicacio(int id)
         {
             return PublicacioDB.GetPublicacio(id);
         }
+        /// <summary>
+        /// Insereix una llista de tags les quals prèviament comprova si ja existeixen, a les taules Tag i Tagpublicacio de la base de dades
+        /// </summary>
+        /// <param name="tags">Llista de tags</param>
+        /// <param name="id_publi">Id de la publicacio</param>
         public void InserirTags(List<string> tags, int id_publi)
         {
             try
@@ -62,6 +79,10 @@ namespace Y.Negoci
             }
             
         }
+        /// <summary>
+        /// Comprova que la publicació sigui vàlida
+        /// </summary>
+        /// <returns>true si és vàlida, false si no</returns>
         public bool Validar()
         {
             if (Publicacio == null) return false;
@@ -71,10 +92,18 @@ namespace Y.Negoci
             if (llistaId.Contains(Publicacio.Publicacio_id)) return true;
             return false;
         }
+        /// <summary>
+        /// Comprova que les propietats de la publicació no tinguin valos incorrectes o nuls
+        /// </summary>
+        /// <returns>True si alguna propietat té un valor erroni, false en cas contrari</returns>
         public bool HasNull()
         {
             return Publicacio.User_id == 0 || Publicacio.Contingut == null || Publicacio.Contingut == "" || Publicacio.Data_p == DateTime.MinValue || Publicacio.Titol == null || Publicacio.Titol == "";
         }
+        /// <summary>
+        /// Obté totes les publicacio_id de la base de dades
+        /// </summary>
+        /// <returns>Llista amb totes les publicacio_id</returns>
         public List<int> ObtenirTotsId()
         {
             return PublicacioDB.ObtenirTotsId();

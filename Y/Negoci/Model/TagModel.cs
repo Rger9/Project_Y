@@ -7,6 +7,9 @@ using Y.Model;
 
 namespace Y.Negoci
 {
+    /// <summary>
+    /// L'objecte TagModel, format pel seu id de tag, i el nom d'aquest
+    /// </summary>
     public class TagModel
     {
         //Atributs

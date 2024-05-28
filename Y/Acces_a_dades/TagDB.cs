@@ -10,6 +10,9 @@ using Y.AccesADades;
 
 namespace Y.Model
 {
+    /// <summary>
+    /// La classe "TagDB" connecta amb la taula "Tag" de la base de dades, i pot inserir tags i fer varies seleccions
+    /// </summary>
     public partial class TagDB
     {
         //TagModel t = new TagModel();
