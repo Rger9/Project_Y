@@ -15,6 +15,7 @@ namespace Y
         UsuariModel u = new UsuariModel();
         bool logged = false;
         List<int> llistaIdPublicacio = new List<int>();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -22,6 +23,10 @@ namespace Y
             BtnUsername.Visibility = Visibility.Hidden;
             Carregar();
         }
+        /// <summary>
+        /// executa la main window amb una sessio iniciada
+        /// </summary>
+        /// <param name="u">UsuariModel</param>
         public MainWindow(UsuariModel u)
         {
             InitializeComponent();
@@ -31,18 +36,20 @@ namespace Y
             BtnUsername.Content = u.Username;
             Carregar();
         }
-
+        /// <summary>
+        /// metode per carregar la finestra amb les publicacions
+        /// </summary>
         private void Carregar()
         {
             // Conseguim tots els id de les publicacions
             PublicacioNegoci pNegoci = new PublicacioNegoci();
             llistaIdPublicacio = pNegoci.ObtenirTotsId();
-            
+
             // Carreguem el frame amb el post
             FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
 
             // Carreguem la llista de tags amb el nom d'aquests
-            TagNegoci tNegoci= new TagNegoci();
+            TagNegoci tNegoci = new TagNegoci();
             List<string> llistaTags = new List<string>();
             foreach (int tagId in tNegoci.ObtenirTotsId())
             {
@@ -50,30 +57,22 @@ namespace Y
             }
             ListboxTag.ItemsSource = llistaTags;
         }
-        private void BtnSeguent_Click(object sender, RoutedEventArgs e)
-        {
-            PublicacioNegoci pNegoci = new PublicacioNegoci();
-            int idPublicacioActual = llistaIdPublicacio.First();
-            llistaIdPublicacio.RemoveAt(0);
-            llistaIdPublicacio.Add(idPublicacioActual);
-            FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
-        }
-        private void BtnAnterior_Click(object sender, RoutedEventArgs e)
-        {
-            PublicacioNegoci pNegoci = new PublicacioNegoci();
-            int ultimPost = llistaIdPublicacio[llistaIdPublicacio.Count - 1];
-            llistaIdPublicacio.RemoveAt(llistaIdPublicacio.Count - 1);
-            llistaIdPublicacio.Insert(0, ultimPost);
-            FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
-        }
-
+        /// <summary>
+        /// Metode per anar a la finestra per iniciar sessio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn_Perfil_Click(object sender, RoutedEventArgs e)
         {
             Vista.Login login = new();
             login.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// metode per publicar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnPublicar_Click(object sender, RoutedEventArgs e)
         {
             if (logged)
@@ -85,11 +84,42 @@ namespace Y
             }
             else MessageBox.Show("No pots publicar si no estas logged!");
         }
-
+        /// <summary>
+        /// Metode per anar a la finestra de perfil
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BtnUsername_Click(object sender, RoutedEventArgs e)
         {
             Vista.Perfil perfil = new(u);
             perfil.Show();
+        }
+        /// <summary>
+        /// Metode per passar a la publicacio anterior
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAnterior_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            PublicacioNegoci pNegoci = new PublicacioNegoci();
+            int ultimPost = llistaIdPublicacio[llistaIdPublicacio.Count - 1];
+            llistaIdPublicacio.RemoveAt(llistaIdPublicacio.Count - 1);
+            llistaIdPublicacio.Insert(0, ultimPost);
+            FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
+
+        }
+        /// <summary>
+        /// Metode per passar a la seguent publicacio
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnSeguent_MouseLeftButtonUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            PublicacioNegoci pNegoci = new PublicacioNegoci();
+            int idPublicacioActual = llistaIdPublicacio.First();
+            llistaIdPublicacio.RemoveAt(0);
+            llistaIdPublicacio.Add(idPublicacioActual);
+            FramePublicacions.NavigationService.Navigate(new VistaPost(u, pNegoci.GetPublicacio(llistaIdPublicacio.First())));
         }
     }
 }
