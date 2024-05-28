@@ -183,6 +183,8 @@ namespace Y.Vista
             UsuariNegoci uNegoci = new UsuariNegoci();
             uNegoci.Usuari = usuari;
             uNegoci.Update();
+            MessageBox.Show("S'han actualitzat les teves dades correctament!");
+            this.Close();
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)

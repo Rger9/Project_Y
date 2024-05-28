@@ -46,16 +46,23 @@ namespace Y.Vista
             p.User_id = usuari.User_id;
             PublicacioNegoci pNegoci = new PublicacioNegoci();
             pNegoci.Publicacio = p;
-            pNegoci.Inserir();
+            
 
             // AFEGIM TAGS
             string[] tags = TxtBoxEtiqueta.Text.Split(", ");
             List<string> tagsList = new List<string>();
             for (int i = 0; i < tags.Length; i++)
             {
-                tagsList.Add(tags[i]);
+                string formatat = TagNegoci.FormatarString(tags[i]);
+                if(!tagsList.Contains(formatat)) tagsList.Add(formatat);
             }
-            // pNegoci.Inserir(tagsList);
+            pNegoci.Inserir(tagsList);
+
+            // NOTIFIQUEM A L'USUARI I OBRIR LA MAIN WINDOW
+            MessageBox.Show("El teu post s'ha publicat correctament!");
+            MainWindow main = new MainWindow(usuari);
+            main.Show();
+            this.Close();
         }
 
         private void TxtBoxTitol_GotFocus(object sender, RoutedEventArgs e)
@@ -63,7 +70,7 @@ namespace Y.Vista
             if (placeholderTitol)
             {
                 TxtBoxTitol.Text = string.Empty;
-                TxtBoxTitol.Foreground = Brushes.Black;
+                TxtBoxTitol.Foreground = Brushes.White;
                 placeholderTitol = false;
             }
             ComprovarButton();
@@ -75,7 +82,7 @@ namespace Y.Vista
             if (TxtBoxTitol.Text == string.Empty)
             {
                 TxtBoxTitol.Text = "TÍTOL";
-                TxtBoxTitol.Foreground = Brushes.Gray;
+                TxtBoxTitol.Foreground = Brushes.LightGray;
                 placeholderTitol = true;
             }
         }
@@ -85,7 +92,7 @@ namespace Y.Vista
             if (placeholderContingut)
             {
                 TxtBoxCos.Text = string.Empty;
-                TxtBoxCos.Foreground = Brushes.Black;
+                TxtBoxCos.Foreground = Brushes.White;
                 placeholderContingut = false;
             }
             ComprovarButton();
@@ -97,7 +104,7 @@ namespace Y.Vista
             if (TxtBoxCos.Text == string.Empty)
             {
                 TxtBoxCos.Text = "Escriu la teva publicació aquí";
-                TxtBoxCos.Foreground = Brushes.Gray;
+                TxtBoxCos.Foreground = Brushes.LightGray;
                 placeholderContingut = true;
             }
         }
@@ -107,7 +114,7 @@ namespace Y.Vista
             if (placeholderEtiquetes)
             {
                 TxtBoxEtiqueta.Text = string.Empty;
-                TxtBoxEtiqueta.Foreground = Brushes.Black;
+                TxtBoxEtiqueta.Foreground = Brushes.White;
                 placeholderEtiquetes = false;
             }
             ComprovarButton();
@@ -119,7 +126,7 @@ namespace Y.Vista
             if (TxtBoxEtiqueta.Text == string.Empty)
             {
                 TxtBoxEtiqueta.Text = "etiqueta1, etiqueta2, etiqueta3...";
-                TxtBoxEtiqueta.Foreground = Brushes.Gray;
+                TxtBoxEtiqueta.Foreground = Brushes.LightGray;
                 placeholderEtiquetes = true;
             }
         }
@@ -140,6 +147,8 @@ namespace Y.Vista
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow main = new MainWindow(usuari);
+            main.Show();
             this.Close();
         }
     }

@@ -31,6 +31,10 @@ namespace Y.Negoci
             int id = TagDB.GetTag_Id(tag_name);
             return id;
         }
+        public List<int> ObtenirTotsId()
+        {
+            return TagDB.ObtenirTotsId();
+        }
         public void Inserir()
         {
             try
@@ -51,7 +55,7 @@ namespace Y.Negoci
         }
         public bool HasNull()
         {
-            return tag.Nom == null || tag.Nom == "";
+            return Tag.Nom == null || Tag.Nom == "";
         }
         public static bool Existeix(string nom)
         {
@@ -64,6 +68,7 @@ namespace Y.Negoci
         }
         public static string FormatarString(string tag_name)
         {
+            if (tag_name == null) return "";
             return tag_name.Substring(0, 1).ToUpper() + tag_name.Substring(1).ToLower();
         }
     }
