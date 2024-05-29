@@ -79,7 +79,7 @@ INSERT INTO publicacio (user_id, data_p, titol, contingut)
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
 	VALUES('1', '1', '2024-05-13 12:00:00', 'Radical');
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
-	VALUES('4', '1', '2024-05-29 23:30:53', 'EDIT: Continua sense funcionar siusplau auxili');
+	VALUES('4', '1', '2024-05-28 23:30:53', 'EDIT: Continua sense funcionar siusplau auxili');
 
 -- INSERT INICIAL A LA TAULA "Tags"
 INSERT INTO tag (nom)

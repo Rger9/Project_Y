@@ -86,7 +86,7 @@ namespace Y.Vista
             contingutComentaris = new List<string>();
             foreach (ComentariModel comentari in llistaComentaris)
             {
-                contingutComentaris.Add(uNegoci.GetUsuari(comentari.User_id).Username + " " + ComentariNegoci.GetTimeAgo(comentari) + ": " + comentari.Contingut);
+                contingutComentaris.Add(uNegoci.GetUsuari(comentari.User_id).Username + " (" + ComentariNegoci.GetTimeAgo(comentari).ToLower() + ") : " + comentari.Contingut);
             }
             ListBoxComentaris.ItemsSource = contingutComentaris;
         }
