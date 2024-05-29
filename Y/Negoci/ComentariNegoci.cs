@@ -99,11 +99,11 @@ namespace Y.Negoci
             TimeSpan diferencia = ara - cm.Data_c;
             //DateTime diferencia = Convert.ToDateTime(ara.Subtract(cm.Data_c));
             if(diferencia.Days > 365) return "Fa " + Math.Truncate((double)diferencia.Days/365).ToString() + " a";
-            if (diferencia.Month > 0) return "Fa " + diferencia.Month.ToString() + " m";
-            if (diferencia.Day > 0) return "Fa " + diferencia.Day.ToString() + " d";
-            if (diferencia.Hour > 0) return "Fa " + diferencia.Hour.ToString() + " h";
-            if (diferencia.Minute > 0) return "Fa " + diferencia.Minute.ToString() + " min";
-            else return "Fa " + diferencia.Second.ToString() + " sec";
+            if (diferencia.Days > 30) return "Fa " + Math.Truncate((double)diferencia.Days / 30).ToString() + " m";
+            if (diferencia.Days > 1) return "Fa " + Math.Truncate((double)diferencia.Days).ToString() + " d";
+            if (diferencia.Hours > 1) return "Fa " + Math.Truncate((double)diferencia.Hours).ToString() + " h";
+            if (diferencia.Minutes > 1) return "Fa " + Math.Truncate((double)diferencia.Minutes).ToString() + " min";
+            else return "Fa " + diferencia.Seconds.ToString() + " sec";
         }
     }
 }
