@@ -218,6 +218,9 @@ namespace Y.Vista
             }
 
         }
+        /// <summary>
+        /// Realitza el recompte de like d'una publicació i el guarda al txtbox on es mostra
+        /// </summary>
         private void RecompteLikes()
         {
             List<int> user_ids = new List<int>();
