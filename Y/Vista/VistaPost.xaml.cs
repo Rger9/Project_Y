@@ -72,7 +72,8 @@ namespace Y.Vista
             BlockTitol.Text = p.Titol;
             likesUsuaris = LikeNegoci.GetUsersDB(p.Publicacio_id);
             //LA LLISTA DELS USUARIS QUE LI HAN DONAT LIKE ESTA A LIKESUSUARIS, CONTE IDS DELS USUARIS
-           //FER COSES AQUI
+            //FER COSES AQUI
+            BlockDateTime.Text = ComentariNegoci.GetTimeAgo(p.Data_p);
             BlockContingut.Text = p.Contingut ;
             
             BlockEtiquetes.Text = TagpublicacioNegoci.GetTagsTextPublicacio(publicacio.Publicacio_id);
@@ -86,7 +87,7 @@ namespace Y.Vista
             contingutComentaris = new List<string>();
             foreach (ComentariModel comentari in llistaComentaris)
             {
-                contingutComentaris.Add(uNegoci.GetUsuari(comentari.User_id).Username + " (" + ComentariNegoci.GetTimeAgo(comentari).ToLower() + ") : " + comentari.Contingut);
+                contingutComentaris.Add(uNegoci.GetUsuari(comentari.User_id).Username + " (" + ComentariNegoci.GetTimeAgo(comentari.Data_c).ToLower() + ") : " + comentari.Contingut);
             }
             ListBoxComentaris.ItemsSource = contingutComentaris;
         }
