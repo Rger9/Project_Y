@@ -1,0 +1,113 @@
+\doxysection{Y.\+Model.\+Tag\+DB Class Reference}
+\hypertarget{class_y_1_1_model_1_1_tag_d_b}{}\label{class_y_1_1_model_1_1_tag_d_b}\index{Y.Model.TagDB@{Y.Model.TagDB}}
+
+
+La classe "{}\+Tag\+DB"{} connecta amb la taula "{}\+Tag"{} de la base de dades, i pot inserir tags i fer varies seleccions.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_y_1_1_model_1_1_tag_d_b_a48cacd4e85ca5b103d9bf0d654c3c467}{Inserir}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} t)
+\begin{DoxyCompactList}\small\item\em Afegeix un tag a la taulda "{}\+Tag"{} de la base de dades "{}\+Db\+\_\+\+Y"{}. \end{DoxyCompactList}\item 
+static int \mbox{\hyperlink{class_y_1_1_model_1_1_tag_d_b_aa4d5998aa4a1683ad289f8bad7a6dc3b}{Get\+Tag\+\_\+\+Id}} (string nom)
+\begin{DoxyCompactList}\small\item\em Consegueix el id d\textquotesingle{}un Tag a partir del nom d\textquotesingle{}aquest. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} \mbox{\hyperlink{class_y_1_1_model_1_1_tag_d_b_aa6509a5da6d29177722d5717c229e9cc}{Get\+Tag}} (int id)
+\begin{DoxyCompactList}\small\item\em Consegueix el tag a partir de l\textquotesingle{}id d\textquotesingle{}aquest. \end{DoxyCompactList}\item 
+static List$<$ int $>$ \mbox{\hyperlink{class_y_1_1_model_1_1_tag_d_b_a5af2cfd07830dcf1f65c4b576f5a0ffb}{Obtenir\+Tots\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Consegueix una llista de tots els Tags existents. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Tag\+DB"{} connecta amb la taula "{}\+Tag"{} de la base de dades, i pot inserir tags i fer varies seleccions. 
+
+Definition at line \mbox{\hyperlink{_tag_d_b_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_tag_d_b_8cs_source}{Tag\+DB.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_model_1_1_tag_d_b_aa6509a5da6d29177722d5717c229e9cc}\label{class_y_1_1_model_1_1_tag_d_b_aa6509a5da6d29177722d5717c229e9cc} 
+\index{Y.Model.TagDB@{Y.Model.TagDB}!GetTag@{GetTag}}
+\index{GetTag@{GetTag}!Y.Model.TagDB@{Y.Model.TagDB}}
+\doxysubsubsection{\texorpdfstring{GetTag()}{GetTag()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} Y.\+Model.\+Tag\+DB.\+Get\+Tag (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Consegueix el tag a partir de l\textquotesingle{}id d\textquotesingle{}aquest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Id del Tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tag
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_d_b_8cs_source_l00075}{75}} of file \mbox{\hyperlink{_tag_d_b_8cs_source}{Tag\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_tag_d_b_aa4d5998aa4a1683ad289f8bad7a6dc3b}\label{class_y_1_1_model_1_1_tag_d_b_aa4d5998aa4a1683ad289f8bad7a6dc3b} 
+\index{Y.Model.TagDB@{Y.Model.TagDB}!GetTag\_Id@{GetTag\_Id}}
+\index{GetTag\_Id@{GetTag\_Id}!Y.Model.TagDB@{Y.Model.TagDB}}
+\doxysubsubsection{\texorpdfstring{GetTag\_Id()}{GetTag\_Id()}}
+{\footnotesize\ttfamily static int Y.\+Model.\+Tag\+DB.\+Get\+Tag\+\_\+\+Id (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Consegueix el id d\textquotesingle{}un Tag a partir del nom d\textquotesingle{}aquest. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom del Tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L\textquotesingle{}ID del Tag
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_d_b_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_tag_d_b_8cs_source}{Tag\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_tag_d_b_a48cacd4e85ca5b103d9bf0d654c3c467}\label{class_y_1_1_model_1_1_tag_d_b_a48cacd4e85ca5b103d9bf0d654c3c467} 
+\index{Y.Model.TagDB@{Y.Model.TagDB}!Inserir@{Inserir}}
+\index{Inserir@{Inserir}!Y.Model.TagDB@{Y.Model.TagDB}}
+\doxysubsubsection{\texorpdfstring{Inserir()}{Inserir()}}
+{\footnotesize\ttfamily static void Y.\+Model.\+Tag\+DB.\+Inserir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}}}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Afegeix un tag a la taulda "{}\+Tag"{} de la base de dades "{}\+Db\+\_\+\+Y"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em t} & El Tag a inserir\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_tag_d_b_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_tag_d_b_8cs_source}{Tag\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_tag_d_b_a5af2cfd07830dcf1f65c4b576f5a0ffb}\label{class_y_1_1_model_1_1_tag_d_b_a5af2cfd07830dcf1f65c4b576f5a0ffb} 
+\index{Y.Model.TagDB@{Y.Model.TagDB}!ObtenirTotsId@{ObtenirTotsId}}
+\index{ObtenirTotsId@{ObtenirTotsId}!Y.Model.TagDB@{Y.Model.TagDB}}
+\doxysubsubsection{\texorpdfstring{ObtenirTotsId()}{ObtenirTotsId()}}
+{\footnotesize\ttfamily static List$<$ int $>$ Y.\+Model.\+Tag\+DB.\+Obtenir\+Tots\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Consegueix una llista de tots els Tags existents. 
+
+\begin{DoxyReturn}{Returns}
+Llista de Ids
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_d_b_8cs_source_l00107}{107}} of file \mbox{\hyperlink{_tag_d_b_8cs_source}{Tag\+DB.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Acces\+\_\+a\+\_\+dades/Tag\+DB.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,254 @@
+\doxysection{Main\+Window.\+g.\+cs}
+\hypertarget{_main_window_8g_8cs_source}{}\label{_main_window_8g_8cs_source}\index{obj/Debug/net8.0-\/windows/Vista/MainWindow.g.cs@{obj/Debug/net8.0-\/windows/Vista/MainWindow.g.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00001}00001\ \textcolor{preprocessor}{\#pragma\ checksum\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}\ "{}\{ff1816ec-\/aa5e-\/4d10-\/87f7-\/6f4963833460\}"{}\ "{}3471D8030687D4C3629096BB88E65835806AF5EF"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00002}00002\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00003}00003\ \textcolor{comment}{//\ <auto-\/generated>}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00004}00004\ \textcolor{comment}{//\ \ \ \ \ Este\ código\ fue\ generado\ por\ una\ herramienta.}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00005}00005\ \textcolor{comment}{//\ \ \ \ \ Versión\ de\ runtime:4.0.30319.42000}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00006}00006\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00007}00007\ \textcolor{comment}{//\ \ \ \ \ Los\ cambios\ en\ este\ archivo\ podrían\ causar\ un\ comportamiento\ incorrecto\ y\ se\ perderán\ si}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00008}00008\ \textcolor{comment}{//\ \ \ \ \ se\ vuelve\ a\ generar\ el\ código.}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00009}00009\ \textcolor{comment}{//\ </auto-\/generated>}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00010}00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }Microsoft.Windows.Themes;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00013}00013\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00014}00014\ \textcolor{keyword}{using\ }System.Diagnostics;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00015}00015\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00016}00016\ \textcolor{keyword}{using\ }System.Windows.Automation;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00017}00017\ \textcolor{keyword}{using\ }System.Windows.Controls;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00018}00018\ \textcolor{keyword}{using\ }System.Windows.Controls.Primitives;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00019}00019\ \textcolor{keyword}{using\ }System.Windows.Controls.Ribbon;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00020}00020\ \textcolor{keyword}{using\ }System.Windows.Data;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00021}00021\ \textcolor{keyword}{using\ }System.Windows.Documents;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00022}00022\ \textcolor{keyword}{using\ }System.Windows.Ink;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00023}00023\ \textcolor{keyword}{using\ }System.Windows.Input;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00024}00024\ \textcolor{keyword}{using\ }System.Windows.Markup;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00025}00025\ \textcolor{keyword}{using\ }System.Windows.Media;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00026}00026\ \textcolor{keyword}{using\ }System.Windows.Media.Animation;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00027}00027\ \textcolor{keyword}{using\ }System.Windows.Media.Effects;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00028}00028\ \textcolor{keyword}{using\ }System.Windows.Media.Imaging;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00029}00029\ \textcolor{keyword}{using\ }System.Windows.Media.Media3D;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00030}00030\ \textcolor{keyword}{using\ }System.Windows.Media.TextFormatting;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00031}00031\ \textcolor{keyword}{using\ }System.Windows.Navigation;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00032}00032\ \textcolor{keyword}{using\ }System.Windows.Shapes;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00033}00033\ \textcolor{keyword}{using\ }System.Windows.Shell;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00034}00034\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y}{Y}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00037}00037\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_y}{Y}}\ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00038}00038\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00039}00039\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00043}\mbox{\hyperlink{class_y_1_1_main_window}{00043}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{class_y_1_1_main_window}{MainWindow}}\ :\ System.Windows.Window,\ System.Windows.Markup.IComponentConnector\ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00046}00046\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 7\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ \mbox{\hyperlink{class_y_1_1_main_window}{Y.MainWindow}}\ WindowMain;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00050}00050\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00051}00051\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00054}00054\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 10\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Grid\ MainGrid;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00058}00058\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00059}00059\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00062}00062\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 20\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Button\ Btn\_Perfil;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00066}00066\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00067}00067\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00070}00070\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 27\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Button\ BtnPublicar;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00074}00074\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00075}00075\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00078}00078\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 34\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Button\ BtnUsername;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00082}00082\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00083}00083\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00086}00086\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 41\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Primitives.Popup\ PopupUsername;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00090}00090\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00091}00091\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00094}00094\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 44\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Button\ PopupBtnModificar;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00098}00098\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00099}00099\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00102}00102\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 51\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Button\ PopupBtnSortir;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00106}00106\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00107}00107\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00110}00110\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 62\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Frame\ FramePublicacions;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00114}00114\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00115}00115\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00118}00118\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 64\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.ListBox\ ListboxTag;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00122}00122\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00123}00123\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00126}00126\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 73\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Image\ BtnAnterior;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00130}00130\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00131}00131\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00134}00134\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ 74\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1823:AvoidUnusedPrivateFields"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keyword}{internal}\ System.Windows.Controls.Image\ BtnSeguent;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00138}00138\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00139}00139\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \_contentLoaded;}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ [System.Diagnostics.DebuggerNonUserCodeAttribute()]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ [System.CodeDom.Compiler.GeneratedCodeAttribute(\textcolor{stringliteral}{"{}PresentationBuildTasks"{}},\ \textcolor{stringliteral}{"{}8.0.4.0"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00148}\mbox{\hyperlink{class_y_1_1_main_window_ae173a957844dc1e9e57a627a801f3c32}{00148}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_ae173a957844dc1e9e57a627a801f3c32}{InitializeComponent}}()\ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_contentLoaded)\ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ System.Uri\ resourceLocater\ =\ \textcolor{keyword}{new}\ System.Uri(\textcolor{stringliteral}{"{}/Y;component/vista/mainwindow.xaml"{}},\ System.UriKind.Relative);}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00155}00155\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 1\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ System.Windows.Application.LoadComponent(\textcolor{keyword}{this},\ resourceLocater);}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00158}00158\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00159}00159\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ [System.Diagnostics.DebuggerNonUserCodeAttribute()]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ [System.CodeDom.Compiler.GeneratedCodeAttribute(\textcolor{stringliteral}{"{}PresentationBuildTasks"{}},\ \textcolor{stringliteral}{"{}8.0.4.0"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Never)]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Design"{}},\ \textcolor{stringliteral}{"{}CA1033:InterfaceMethodsShouldBeCallableByChildTypes"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Maintainability"{}},\ \textcolor{stringliteral}{"{}CA1502:AvoidExcessiveComplexity"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute(\textcolor{stringliteral}{"{}Microsoft.Performance"{}},\ \textcolor{stringliteral}{"{}CA1800:DoNotCastUnnecessarily"{}})]}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ System.Windows.Markup.IComponentConnector.Connect(\textcolor{keywordtype}{int}\ connectionId,\ \textcolor{keywordtype}{object}\ target)\ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (connectionId)}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ this.WindowMain\ =\ ((\mbox{\hyperlink{namespace_y}{Y}}.\mbox{\hyperlink{class_y_1_1_main_window}{MainWindow}})(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ this.MainGrid\ =\ ((System.Windows.Controls.Grid)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ this.Btn\_Perfil\ =\ ((System.Windows.Controls.Button)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00180}00180\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 20\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ this.Btn\_Perfil.Click\ +=\ \textcolor{keyword}{new}\ System.Windows.RoutedEventHandler(this.\mbox{\hyperlink{class_y_1_1_main_window_a5f821d4cd276de0f5cda89fc13a3d85a}{Btn\_Perfil\_Click}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00183}00183\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00184}00184\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnPublicar\ =\ ((System.Windows.Controls.Button)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00189}00189\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 27\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnPublicar.Click\ +=\ \textcolor{keyword}{new}\ System.Windows.RoutedEventHandler(this.\mbox{\hyperlink{class_y_1_1_main_window_af5a7bd906d25d687815a08b8a3f8f8dc}{BtnPublicar\_Click}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00192}00192\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00193}00193\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnUsername\ =\ ((System.Windows.Controls.Button)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00198}00198\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 34\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnUsername.Click\ +=\ \textcolor{keyword}{new}\ System.Windows.RoutedEventHandler(this.\mbox{\hyperlink{class_y_1_1_main_window_abb7c692243762769699f628572392525}{BtnUsername\_Click}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00201}00201\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00202}00202\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ this.PopupUsername\ =\ ((System.Windows.Controls.Primitives.Popup)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ this.PopupBtnModificar\ =\ ((System.Windows.Controls.Button)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00210}00210\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 44\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ this.PopupBtnModificar.Click\ +=\ \textcolor{keyword}{new}\ System.Windows.RoutedEventHandler(this.\mbox{\hyperlink{class_y_1_1_main_window_a46c3e316122af9de3030c8c4539d8f8c}{PopupBtnModificar\_Click}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00213}00213\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00214}00214\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ this.PopupBtnSortir\ =\ ((System.Windows.Controls.Button)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00219}00219\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 51\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ this.PopupBtnSortir.Click\ +=\ \textcolor{keyword}{new}\ System.Windows.RoutedEventHandler(this.\mbox{\hyperlink{class_y_1_1_main_window_a1305622d40919b591ad72b20e4ec2591}{PopupBtnSortir\_Click}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00222}00222\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00223}00223\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ this.FramePublicacions\ =\ ((System.Windows.Controls.Frame)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 10:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ this.ListboxTag\ =\ ((System.Windows.Controls.ListBox)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 11:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnAnterior\ =\ ((System.Windows.Controls.Image)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00234}00234\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 73\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnAnterior.MouseLeftButtonUp\ +=\ \textcolor{keyword}{new}\ System.Windows.Input.MouseButtonEventHandler(this.\mbox{\hyperlink{class_y_1_1_main_window_a8f3a1f7d88fd5c8e2cbe7a98ec225ca4}{BtnAnterior\_MouseLeftButtonUp}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00237}00237\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00238}00238\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 12:}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnSeguent\ =\ ((System.Windows.Controls.Image)(target));}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00243}00243\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ 74\ "{}..\(\backslash\)..\(\backslash\)..\(\backslash\)..\(\backslash\)Vista\(\backslash\)MainWindow.xaml"{}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ this.BtnSeguent.MouseLeftButtonUp\ +=\ \textcolor{keyword}{new}\ System.Windows.Input.MouseButtonEventHandler(this.\mbox{\hyperlink{class_y_1_1_main_window_ab4964f477c87280e2fb54aabb4834866}{BtnSeguent\_MouseLeftButtonUp}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00246}00246\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ default}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00247}00247\ \textcolor{preprocessor}{\ \ \ \ \ \ \ \ \ \ \ \ \#line\ hidden}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ this.\_contentLoaded\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00252}00252\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00253}00253\ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8g_8cs_source_l00254}00254\ }
+
+\end{DoxyCode}

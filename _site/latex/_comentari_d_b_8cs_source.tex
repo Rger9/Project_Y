@@ -1,0 +1,123 @@
+\doxysection{Comentari\+DB.\+cs}
+\hypertarget{_comentari_d_b_8cs_source}{}\label{_comentari_d_b_8cs_source}\index{Acces\_a\_dades/ComentariDB.cs@{Acces\_a\_dades/ComentariDB.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y}{Y}};}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_negoci}{Y.Negoci}};}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }MySql.Data.MySqlClient;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_acces_a_dades}{Y.AccesADades}};}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00012}\mbox{\hyperlink{namespace_y}{00012}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_y_1_1_model}{Y.Model}}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00017}\mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b}{00017}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b}{ComentariDB}}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00023}\mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_a426bbcdba6fa663e01bd26f51a6ceb9d}{00023}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_a426bbcdba6fa663e01bd26f51a6ceb9d}{Inserir}}(\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}\ c)}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ cmdInsert\ =\ \textcolor{stringliteral}{"{}INSERT\ INTO\ Comentari(user\_id,\ publicacio\_id,\ data\_c,\ contingut)\ "{}}\ +}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}VALUES(@user\_id,\ @publicacio\_id,\ @data\_c,\ @contingut)"{}};}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329}{Connectar}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MySqlCommand\ comanda\ =\ \textcolor{keyword}{new}\ MySqlCommand(cmdInsert,\ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4}{Connection}});}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters.Add(\textcolor{stringliteral}{"{}@user\_id"{}},\ MySqlDbType.Int32);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters.Add(\textcolor{stringliteral}{"{}@publicacio\_id"{}},\ MySqlDbType.Int32);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters.Add(\textcolor{stringliteral}{"{}@data\_c"{}},\ MySqlDbType.DateTime);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters.Add(\textcolor{stringliteral}{"{}@contingut"{}},\ MySqlDbType.VarChar,\ 300);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters[\textcolor{stringliteral}{"{}@user\_id"{}}].Value\ =\ c.User\_id;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters[\textcolor{stringliteral}{"{}@publicacio\_id"{}}].Value\ =\ c.Publicacio\_id;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters[\textcolor{stringliteral}{"{}@data\_c"{}}].Value\ =\ c.Data\_c;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters[\textcolor{stringliteral}{"{}@contingut"{}}].Value\ =\ c.Contingut;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ files\_afectades\ =\ comanda.ExecuteNonQuery();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}ERROR\ AL\ INSERIR\ A\ LA\ BASE\ DE\ DADES\ 'PUBLICACIÓ'\ "{}});}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f}{Desconnectar}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00057}\mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_af0bd5b72e21245f2f7e8250814dc5a08}{00057}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}\ \mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_af0bd5b72e21245f2f7e8250814dc5a08}{GetComentari}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ cmdSelect\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ "{}}\ +}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}FROM\ comentari\ "{}}\ +}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{"{}WHERE\ comentari\_id\ =\ @comentari\_id"{}};}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}\ c\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MySqlCommand\ comanda\ =\ \textcolor{keyword}{new}\ MySqlCommand(cmdSelect,\ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4}{Connection}});}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters.Add(\textcolor{stringliteral}{"{}@comentari\_id"{}},\ MySqlDbType.Int32);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters[\textcolor{stringliteral}{"{}@comentari\_id"{}}].Value\ =\ id;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329}{Connectar}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MySqlDataReader\ reader\ =\ comanda.ExecuteReader();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader.Read())}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.User\_id\ =\ reader.GetInt32(1);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.Publicacio\_id\ =\ reader.GetInt32(2);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.Data\_c\ =\ reader.GetDateTime(3);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ c.Contingut\ =\ reader.GetString(4);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reader.Close();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}ERROR:\ No\ s'ha\ trobat\ un\ comentari\ amb\ la\ ID\ indicada"{}});}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f}{Desconnectar}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ c;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00095}\mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_aae9aa9eea3bce99a9145e0601002ac64}{00095}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<ComentariModel>\ \mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_aae9aa9eea3bce99a9145e0601002ac64}{GetComentarisPost}}(\textcolor{keywordtype}{int}\ postId)}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ cmdSelect\ =\ \textcolor{stringliteral}{"{}SELECT\ *\ "{}}\ +}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}FROM\ comentari\ "{}}\ +}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \$\textcolor{stringliteral}{"{}WHERE\ publicacio\_id\ =\ @publicacio\_id"{}};}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ List<ComentariModel>\ llistaComentaris\ =\ \textcolor{keyword}{new}\ List<ComentariModel>();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}\ comentari\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329}{Connectar}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MySqlCommand\ comanda\ =\ \textcolor{keyword}{new}\ MySqlCommand(cmdSelect,\ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4}{Connection}});}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters.Add(\textcolor{stringliteral}{"{}@publicacio\_id"{}},\ MySqlDbType.Int32);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comanda.Parameters[\textcolor{stringliteral}{"{}@publicacio\_id"{}}].Value\ =\ postId;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MySqlDataReader\ reader\ =\ comanda.ExecuteReader();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (reader.HasRows)}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (reader.Read())}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.Comentari\_id\ =\ reader.GetInt32(0);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.User\_id\ =\ reader.GetInt32(1);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.Data\_c\ =\ reader.GetDateTime(3);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.Contingut\ =\ reader.GetString(4);}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ llistaComentaris.Add(\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci}{ComentariNegoci}}.\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_a6b8afb23291eb7d050472c557e959143}{GetComentariCopy}}(comentari));}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ reader.Close();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\$\textcolor{stringliteral}{"{}ERROR:\ No\ hi\ ha\ comentaris\ amb\ la\ publicació\_id\ \{postId\}"{}});}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{finally}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}.\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f}{Desconnectar}}();}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ llistaComentaris;}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_comentari_d_b_8cs_source_l00134}00134\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['escriure_0',['Escriure',['../class_y_1_1_vista_1_1_login.html#abb201c14aa51149be95544660a8c438e',1,'Y.Vista.Login.Escriure()'],['../class_y_1_1_vista_1_1_perfil.html#a2cc4349a33da29f0ce7e8d8528f3684a',1,'Y.Vista.Perfil.Escriure()'],['../class_y_1_1_vista_1_1_publicar.html#a64dc3b625ef350ca30674ba61ff8a20a',1,'Y.Vista.Publicar.Escriure()'],['../class_y_1_1_vista_1_1_register.html#ade03db2e1af8c0ffc9a3ff9cd48d87ba',1,'Y.Vista.Register.Escriure(object sender, System.Windows.Controls.TextChangedEventArgs e)'],['../class_y_1_1_vista_1_1_register.html#a3ae54a984d1dad9ff5e130324f3ef2ac',1,'Y.Vista.Register.Escriure(object sender, RoutedEventArgs e)']]],
+  ['existeix_1',['Existeix',['../class_y_1_1_model_1_1_usuari_d_b.html#a4b77e9b048345c12d80e6770ce27b681',1,'Y.Model.UsuariDB.Existeix()'],['../class_y_1_1_negoci_1_1_tag_negoci.html#a5694408e9045df5aeda1d48fa4d629b4',1,'Y.Negoci.TagNegoci.Existeix(string nom)'],['../class_y_1_1_negoci_1_1_tag_negoci.html#adb96b4bd42a4a0de180551709e332f50',1,'Y.Negoci.TagNegoci.Existeix(TagModel tag)']]],
+  ['exists_2',['Exists',['../class_y_1_1_model_1_1_like_d_b.html#a3d686cb322518aded5c95b9cb69bed57',1,'Y.Model.LikeDB.Exists()'],['../class_y_1_1_negoci_1_1_like_negoci.html#a8d6685084aa560b2c4a0772ccfed529c',1,'Y.Negoci.LikeNegoci.Exists()']]]
+];

@@ -1,0 +1,75 @@
+\doxysection{Like\+Negoci.\+cs}
+\hypertarget{_like_negoci_8cs_source}{}\label{_like_negoci_8cs_source}\index{Negoci/LikeNegoci.cs@{Negoci/LikeNegoci.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_model}{Y.Model}};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_acces_a_dades}{Y.AccesADades}};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_y_1_1_negoci}{Y.Negoci}}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00014}\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{00014}}\ \ \ \ \ \textcolor{keyword}{internal}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Atributs}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}\ like;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Propietats}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}\ Like\ \{\ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ like;\ \}\ \textcolor{keyword}{set}\ \{\ like\ =\ value;\ ;\}\ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Metodes}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00026}\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a6d19b8b827b6608075bfb7d2cf23c471}{00026}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ List<int>\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a6d19b8b827b6608075bfb7d2cf23c471}{GetUsersDB}}(\textcolor{keywordtype}{int}\ publicacio\_id)}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b}{LikeDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a10a480fc370c25c1c4e4c5dac33d0021}{GetUsers}}(publicacio\_id);}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00035}\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a0021592f02c56337fddec6adf573c1e6}{00035}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a0021592f02c56337fddec6adf573c1e6}{GetLikesCopy}}(\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}\ l)}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}\ like\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}();}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ like.Publicacio\_id\ =\ l.Publicacio\_id;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ like.User\_id\ =\ l.User\_id;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ like;}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00045}\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a1d93abd998584cf35ffde7a74f8ac261}{00045}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a1d93abd998584cf35ffde7a74f8ac261}{Inserir}}()}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_afef262fc4ce896ca05efcc3d2a98ed85}{Validar}}())\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception();}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b}{LikeDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a724c025443a678389d003f7379c396f8}{Inserir}}(Like);}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}ERROR\ AL\ VALIDAR/INSERIR\ LIKE\ A\ LA\ BASE\ DE\ DADES"{}});}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00060}\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_ab6dfe0302d8510dd05271b29827b86b6}{00060}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_ab6dfe0302d8510dd05271b29827b86b6}{Delete}}()}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ (!Validar())\ throw\ new\ Exception();}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b}{LikeDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a8143751652c14029abed65e6b6f99b9f}{Delete}}(Like);}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}ERROR\ AL\ VALIDAR/BORRAR\ LIKE\ A\ LA\ BASE\ DE\ DADES"{}});}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00076}\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a8d6685084aa560b2c4a0772ccfed529c}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a8d6685084aa560b2c4a0772ccfed529c}{Exists}}()}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b}{LikeDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a3d686cb322518aded5c95b9cb69bed57}{Exists}}(Like);}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00084}\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_afef262fc4ce896ca05efcc3d2a98ed85}{00084}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_afef262fc4ce896ca05efcc3d2a98ed85}{Validar}}()}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Like\ is\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Like.Publicacio\_id\ ==\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(Like.User\_id\ ==\ 0)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_y_1_1_model_1_1_publicacio_d_b}{PublicacioDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_publicacio_d_b_a4e5ea375c8584022102e9726eca8d843}{ObtenirTotsId}}().Contains(Like.Publicacio\_id))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!\mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b}{UsuariDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b_ac8556a3f7f26ed17812cd610f8f6360a}{ObtenirTotsId}}().Contains(Like.User\_id))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b}{LikeDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a10a480fc370c25c1c4e4c5dac33d0021}{GetUsers}}(Like.Publicacio\_id).Contains(Like.User\_id))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00094}00094\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_like_negoci_8cs_source_l00095}00095\ \}}
+
+\end{DoxyCode}

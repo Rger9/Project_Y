@@ -1,0 +1,182 @@
+\doxysection{Y.\+Negoci.\+Like\+Negoci Class Reference}
+\hypertarget{class_y_1_1_negoci_1_1_like_negoci}{}\label{class_y_1_1_negoci_1_1_like_negoci}\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+
+
+La classe "{}\+Likes\+Negoci"{} serà la que validarà els objectes "{}\+Like\+Model"{} i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a1d93abd998584cf35ffde7a74f8ac261}{Inserir}} ()
+\begin{DoxyCompactList}\small\item\em Insereix un like a la base de dades. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_ab6dfe0302d8510dd05271b29827b86b6}{Delete}} ()
+\begin{DoxyCompactList}\small\item\em Elimina un like de la base de dades. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a8d6685084aa560b2c4a0772ccfed529c}{Exists}} ()
+\begin{DoxyCompactList}\small\item\em Comprova si existeix un like a la base de dades. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_afef262fc4ce896ca05efcc3d2a98ed85}{Validar}} ()
+\begin{DoxyCompactList}\small\item\em Valida si les dades del like son correctes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static List$<$ int $>$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a6d19b8b827b6608075bfb7d2cf23c471}{Get\+Users\+DB}} (int publicacio\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Donara una llista dels usuaris que ha donat like a una publicacio. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a0021592f02c56337fddec6adf573c1e6}{Get\+Likes\+Copy}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} l)
+\begin{DoxyCompactList}\small\item\em Copia l\textquotesingle{}objecte Like\+Model paràmetre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_aa3553c0c40cd06224b6e0d1cb9eb5d54}{Like}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a04371deb08f29f8dfa87ea826fe0facf}{like}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Likes\+Negoci"{} serà la que validarà els objectes "{}\+Like\+Model"{} i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades. 
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_ab6dfe0302d8510dd05271b29827b86b6}\label{class_y_1_1_negoci_1_1_like_negoci_ab6dfe0302d8510dd05271b29827b86b6} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!Delete@{Delete}}
+\index{Delete@{Delete}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily void Y.\+Negoci.\+Like\+Negoci.\+Delete (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Elimina un like de la base de dades. 
+
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00060}{60}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_a8d6685084aa560b2c4a0772ccfed529c}\label{class_y_1_1_negoci_1_1_like_negoci_a8d6685084aa560b2c4a0772ccfed529c} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!Exists@{Exists}}
+\index{Exists@{Exists}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Like\+Negoci.\+Exists (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprova si existeix un like a la base de dades. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_a0021592f02c56337fddec6adf573c1e6}\label{class_y_1_1_negoci_1_1_like_negoci_a0021592f02c56337fddec6adf573c1e6} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!GetLikesCopy@{GetLikesCopy}}
+\index{GetLikesCopy@{GetLikesCopy}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{GetLikesCopy()}{GetLikesCopy()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} Y.\+Negoci.\+Like\+Negoci.\+Get\+Likes\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}}}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Copia l\textquotesingle{}objecte Like\+Model paràmetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & Like original\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+like còpia
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_a6d19b8b827b6608075bfb7d2cf23c471}\label{class_y_1_1_negoci_1_1_like_negoci_a6d19b8b827b6608075bfb7d2cf23c471} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!GetUsersDB@{GetUsersDB}}
+\index{GetUsersDB@{GetUsersDB}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{GetUsersDB()}{GetUsersDB()}}
+{\footnotesize\ttfamily static List$<$ int $>$ Y.\+Negoci.\+Like\+Negoci.\+Get\+Users\+DB (\begin{DoxyParamCaption}\item[{int}]{publicacio\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Donara una llista dels usuaris que ha donat like a una publicacio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em publicacio\+\_\+id} & publicacio\+\_\+id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+llista d\textquotesingle{}usuari\+\_\+ids
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_a1d93abd998584cf35ffde7a74f8ac261}\label{class_y_1_1_negoci_1_1_like_negoci_a1d93abd998584cf35ffde7a74f8ac261} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!Inserir@{Inserir}}
+\index{Inserir@{Inserir}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{Inserir()}{Inserir()}}
+{\footnotesize\ttfamily void Y.\+Negoci.\+Like\+Negoci.\+Inserir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Insereix un like a la base de dades. 
+
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_afef262fc4ce896ca05efcc3d2a98ed85}\label{class_y_1_1_negoci_1_1_like_negoci_afef262fc4ce896ca05efcc3d2a98ed85} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!Validar@{Validar}}
+\index{Validar@{Validar}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{Validar()}{Validar()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Like\+Negoci.\+Validar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Valida si les dades del like son correctes. 
+
+\begin{DoxyReturn}{Returns}
+True si son correctes, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00084}{84}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_a04371deb08f29f8dfa87ea826fe0facf}\label{class_y_1_1_negoci_1_1_like_negoci_a04371deb08f29f8dfa87ea826fe0facf} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!like@{like}}
+\index{like@{like}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{like}{like}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} Y.\+Negoci.\+Like\+Negoci.\+like\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_like_negoci_aa3553c0c40cd06224b6e0d1cb9eb5d54}\label{class_y_1_1_negoci_1_1_like_negoci_aa3553c0c40cd06224b6e0d1cb9eb5d54} 
+\index{Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}!Like@{Like}}
+\index{Like@{Like}!Y.Negoci.LikeNegoci@{Y.Negoci.LikeNegoci}}
+\doxysubsubsection{\texorpdfstring{Like}{Like}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} Y.\+Negoci.\+Like\+Negoci.\+Like\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_like_negoci_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_like_negoci_8cs_source}{Like\+Negoci.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Negoci/Like\+Negoci.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,186 @@
+\doxysection{Y.\+Negoci.\+Publicacio\+Negoci Class Reference}
+\hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci}{}\label{class_y_1_1_negoci_1_1_publicacio_negoci}\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+
+
+La classe "{}\+Publicacio\+Negoci"{} serà la que validarà els objectes "{}\+Publicacio\+Model"{}, associarà tags a certes publicacions, i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_acde133b1ab5dfe36c16c468a3b313ce0}{Inserir}} (List$<$ string $>$ tags)
+\begin{DoxyCompactList}\small\item\em Insereix publicacio, associada a llista de Tags. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{Publicacio\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_af7e4cf8a28c437e0e1fac84a298f6a06}{Get\+Publicacio}} (int id)
+\begin{DoxyCompactList}\small\item\em Obté una publicació donada l\textquotesingle{}Id d\textquotesingle{}aquesta. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_ab7baacf144313d1dab4bc35a0fe7561e}{Inserir\+Tags}} (List$<$ string $>$ tags, int id\+\_\+publi)
+\begin{DoxyCompactList}\small\item\em Insereix una llista de tags les quals prèviament comprova si ja existeixen, a les taules Tag i Tagpublicacio de la base de dades. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_a699a1133d6fdb8c581b35b6e58d271b9}{Validar}} ()
+\begin{DoxyCompactList}\small\item\em Comprova que la publicació sigui vàlida. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_af53c6cc938ad4233e811597663a694d5}{Has\+Null}} ()
+\begin{DoxyCompactList}\small\item\em Comprova que les propietats de la publicació no tinguin valos incorrectes o nuls. \end{DoxyCompactList}\item 
+List$<$ int $>$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_abefb06db1f9b71beb8358a8841575651}{Obtenir\+Tots\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Obté totes les publicacio\+\_\+id de la base de dades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{Publicacio\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_abc4c01f3a6153739cb67532134aa0199}{Publicacio}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{Publicacio\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_a3aae5bdb4a6c26c931fbbca6c4e4c5ae}{publicacio}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Publicacio\+Negoci"{} serà la que validarà els objectes "{}\+Publicacio\+Model"{}, associarà tags a certes publicacions, i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades. 
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_af7e4cf8a28c437e0e1fac84a298f6a06}\label{class_y_1_1_negoci_1_1_publicacio_negoci_af7e4cf8a28c437e0e1fac84a298f6a06} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!GetPublicacio@{GetPublicacio}}
+\index{GetPublicacio@{GetPublicacio}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{GetPublicacio()}{GetPublicacio()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{Publicacio\+Model}} Y.\+Negoci.\+Publicacio\+Negoci.\+Get\+Publicacio (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Obté una publicació donada l\textquotesingle{}Id d\textquotesingle{}aquesta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & publicacio\+\_\+id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La publicació
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_af53c6cc938ad4233e811597663a694d5}\label{class_y_1_1_negoci_1_1_publicacio_negoci_af53c6cc938ad4233e811597663a694d5} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!HasNull@{HasNull}}
+\index{HasNull@{HasNull}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{HasNull()}{HasNull()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Publicacio\+Negoci.\+Has\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprova que les propietats de la publicació no tinguin valos incorrectes o nuls. 
+
+\begin{DoxyReturn}{Returns}
+True si alguna propietat té un valor erroni, false en cas contrari
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00099}{99}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_acde133b1ab5dfe36c16c468a3b313ce0}\label{class_y_1_1_negoci_1_1_publicacio_negoci_acde133b1ab5dfe36c16c468a3b313ce0} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!Inserir@{Inserir}}
+\index{Inserir@{Inserir}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{Inserir()}{Inserir()}}
+{\footnotesize\ttfamily void Y.\+Negoci.\+Publicacio\+Negoci.\+Inserir (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{tags }\end{DoxyParamCaption})}
+
+
+
+Insereix publicacio, associada a llista de Tags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tags} & Llista de tags\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_ab7baacf144313d1dab4bc35a0fe7561e}\label{class_y_1_1_negoci_1_1_publicacio_negoci_ab7baacf144313d1dab4bc35a0fe7561e} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!InserirTags@{InserirTags}}
+\index{InserirTags@{InserirTags}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{InserirTags()}{InserirTags()}}
+{\footnotesize\ttfamily void Y.\+Negoci.\+Publicacio\+Negoci.\+Inserir\+Tags (\begin{DoxyParamCaption}\item[{List$<$ string $>$}]{tags,  }\item[{int}]{id\+\_\+publi }\end{DoxyParamCaption})}
+
+
+
+Insereix una llista de tags les quals prèviament comprova si ja existeixen, a les taules Tag i Tagpublicacio de la base de dades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tags} & Llista de tags\\
+\hline
+{\em id\+\_\+publi} & Id de la publicacio\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_abefb06db1f9b71beb8358a8841575651}\label{class_y_1_1_negoci_1_1_publicacio_negoci_abefb06db1f9b71beb8358a8841575651} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!ObtenirTotsId@{ObtenirTotsId}}
+\index{ObtenirTotsId@{ObtenirTotsId}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{ObtenirTotsId()}{ObtenirTotsId()}}
+{\footnotesize\ttfamily List$<$ int $>$ Y.\+Negoci.\+Publicacio\+Negoci.\+Obtenir\+Tots\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obté totes les publicacio\+\_\+id de la base de dades. 
+
+\begin{DoxyReturn}{Returns}
+Llista amb totes les publicacio\+\_\+id
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00107}{107}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_a699a1133d6fdb8c581b35b6e58d271b9}\label{class_y_1_1_negoci_1_1_publicacio_negoci_a699a1133d6fdb8c581b35b6e58d271b9} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!Validar@{Validar}}
+\index{Validar@{Validar}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{Validar()}{Validar()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Publicacio\+Negoci.\+Validar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprova que la publicació sigui vàlida. 
+
+\begin{DoxyReturn}{Returns}
+true si és vàlida, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00086}{86}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_a3aae5bdb4a6c26c931fbbca6c4e4c5ae}\label{class_y_1_1_negoci_1_1_publicacio_negoci_a3aae5bdb4a6c26c931fbbca6c4e4c5ae} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!publicacio@{publicacio}}
+\index{publicacio@{publicacio}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{publicacio}{publicacio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{Publicacio\+Model}} Y.\+Negoci.\+Publicacio\+Negoci.\+publicacio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_publicacio_negoci_abc4c01f3a6153739cb67532134aa0199}\label{class_y_1_1_negoci_1_1_publicacio_negoci_abc4c01f3a6153739cb67532134aa0199} 
+\index{Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}!Publicacio@{Publicacio}}
+\index{Publicacio@{Publicacio}!Y.Negoci.PublicacioNegoci@{Y.Negoci.PublicacioNegoci}}
+\doxysubsubsection{\texorpdfstring{Publicacio}{Publicacio}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{Publicacio\+Model}} Y.\+Negoci.\+Publicacio\+Negoci.\+Publicacio\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_publicacio_negoci_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_publicacio_negoci_8cs_source}{Publicacio\+Negoci.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Negoci/Publicacio\+Negoci.\+cs\end{DoxyCompactItemize}
