@@ -12,9 +12,9 @@ namespace Y
     /// </summary>
     public partial class MainWindow : Window
     {
-        UsuariModel u = new UsuariModel();
-        bool logged = false;
-        List<int> llistaIdPublicacio = new List<int>();
+        UsuariModel u;
+        bool logged;
+        List<int> llistaIdPublicacio;
         /// <summary>
         /// Finestra inicialitzada quan ets un usuari anònim
         /// </summary>
@@ -22,6 +22,7 @@ namespace Y
         {
             InitializeComponent();
             logged = false;
+            u = new UsuariModel();
             BtnUsername.Visibility = Visibility.Hidden;
             Carregar();
         }

@@ -242,9 +242,9 @@ namespace Y.Vista
             uNegoci.Usuari = usuari;
             uNegoci.Update();
             MessageBox.Show("S'han actualitzat les teves dades correctament!");
-            this.Close();
             MainWindow main = new MainWindow(usuari);
             main.Show();
+            this.Close();
         }
         /// <summary>
         /// Cancela la modificació de perfil, torna a la finestra principal
