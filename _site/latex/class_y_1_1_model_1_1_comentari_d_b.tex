@@ -1,0 +1,94 @@
+\doxysection{Y.\+Model.\+Comentari\+DB Class Reference}
+\hypertarget{class_y_1_1_model_1_1_comentari_d_b}{}\label{class_y_1_1_model_1_1_comentari_d_b}\index{Y.Model.ComentariDB@{Y.Model.ComentariDB}}
+
+
+La classe "{}\+Comentari\+DB"{} connecta amb la taula "{}\+Comentari"{} de la base de dades, i pot inserir comentaris i seleccionar-\/ne\textquotesingle{}n.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_a426bbcdba6fa663e01bd26f51a6ceb9d}{Inserir}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} c)
+\begin{DoxyCompactList}\small\item\em Insereix un comentari a la base de dades. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} \mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_af0bd5b72e21245f2f7e8250814dc5a08}{Get\+Comentari}} (int id)
+\begin{DoxyCompactList}\small\item\em A partí de l\textquotesingle{}ID d\textquotesingle{}un comentari el retorna. \end{DoxyCompactList}\item 
+static List$<$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} $>$ \mbox{\hyperlink{class_y_1_1_model_1_1_comentari_d_b_aae9aa9eea3bce99a9145e0601002ac64}{Get\+Comentaris\+Post}} (int post\+Id)
+\begin{DoxyCompactList}\small\item\em Retorna tots els comentaris de certa publicació, indicada per la seva Id. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Comentari\+DB"{} connecta amb la taula "{}\+Comentari"{} de la base de dades, i pot inserir comentaris i seleccionar-\/ne\textquotesingle{}n. 
+
+Definition at line \mbox{\hyperlink{_comentari_d_b_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_comentari_d_b_8cs_source}{Comentari\+DB.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_model_1_1_comentari_d_b_af0bd5b72e21245f2f7e8250814dc5a08}\label{class_y_1_1_model_1_1_comentari_d_b_af0bd5b72e21245f2f7e8250814dc5a08} 
+\index{Y.Model.ComentariDB@{Y.Model.ComentariDB}!GetComentari@{GetComentari}}
+\index{GetComentari@{GetComentari}!Y.Model.ComentariDB@{Y.Model.ComentariDB}}
+\doxysubsubsection{\texorpdfstring{GetComentari()}{GetComentari()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} Y.\+Model.\+Comentari\+DB.\+Get\+Comentari (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A partí de l\textquotesingle{}ID d\textquotesingle{}un comentari el retorna. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & ID del comentari\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+el comentari
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_d_b_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_comentari_d_b_8cs_source}{Comentari\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_comentari_d_b_aae9aa9eea3bce99a9145e0601002ac64}\label{class_y_1_1_model_1_1_comentari_d_b_aae9aa9eea3bce99a9145e0601002ac64} 
+\index{Y.Model.ComentariDB@{Y.Model.ComentariDB}!GetComentarisPost@{GetComentarisPost}}
+\index{GetComentarisPost@{GetComentarisPost}!Y.Model.ComentariDB@{Y.Model.ComentariDB}}
+\doxysubsubsection{\texorpdfstring{GetComentarisPost()}{GetComentarisPost()}}
+{\footnotesize\ttfamily static List$<$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} $>$ Y.\+Model.\+Comentari\+DB.\+Get\+Comentaris\+Post (\begin{DoxyParamCaption}\item[{int}]{post\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retorna tots els comentaris de certa publicació, indicada per la seva Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em post\+Id} & Id de la publicació\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Tots els comentaris de la publicació
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_d_b_8cs_source_l00095}{95}} of file \mbox{\hyperlink{_comentari_d_b_8cs_source}{Comentari\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_comentari_d_b_a426bbcdba6fa663e01bd26f51a6ceb9d}\label{class_y_1_1_model_1_1_comentari_d_b_a426bbcdba6fa663e01bd26f51a6ceb9d} 
+\index{Y.Model.ComentariDB@{Y.Model.ComentariDB}!Inserir@{Inserir}}
+\index{Inserir@{Inserir}!Y.Model.ComentariDB@{Y.Model.ComentariDB}}
+\doxysubsubsection{\texorpdfstring{Inserir()}{Inserir()}}
+{\footnotesize\ttfamily static void Y.\+Model.\+Comentari\+DB.\+Inserir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}}}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insereix un comentari a la base de dades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & El comentari\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_comentari_d_b_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_comentari_d_b_8cs_source}{Comentari\+DB.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Acces\+\_\+a\+\_\+dades/Comentari\+DB.\+cs\end{DoxyCompactItemize}

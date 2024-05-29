@@ -1,0 +1,115 @@
+\doxysection{Y.\+Model.\+Like\+DB Class Reference}
+\hypertarget{class_y_1_1_model_1_1_like_d_b}{}\label{class_y_1_1_model_1_1_like_d_b}\index{Y.Model.LikeDB@{Y.Model.LikeDB}}
+
+
+La classe "{}\+Like\+DB"{} connecta amb la taula "{}\+Likes"{} de la base de dades, i pot inserir likes, eliminar-\/ne\textquotesingle{}n i obtenir els usuaris que han fet like a certa publicació  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a724c025443a678389d003f7379c396f8}{Inserir}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} l)
+\begin{DoxyCompactList}\small\item\em Insereix un like a la base de dades. \end{DoxyCompactList}\item 
+static List$<$ int $>$ \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a10a480fc370c25c1c4e4c5dac33d0021}{Get\+Users}} (int id)
+\begin{DoxyCompactList}\small\item\em Obté una llista d\textquotesingle{}usuaris que hagin donat like a una publicació \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a8143751652c14029abed65e6b6f99b9f}{Delete}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} l)
+\begin{DoxyCompactList}\small\item\em Elimina un like de la base de dades. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_y_1_1_model_1_1_like_d_b_a3d686cb322518aded5c95b9cb69bed57}{Exists}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}} l)
+\begin{DoxyCompactList}\small\item\em Comprova si l\textquotesingle{}objecte Like\+Model existeix a la base de dades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Like\+DB"{} connecta amb la taula "{}\+Likes"{} de la base de dades, i pot inserir likes, eliminar-\/ne\textquotesingle{}n i obtenir els usuaris que han fet like a certa publicació 
+
+Definition at line \mbox{\hyperlink{_like_d_b_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_like_d_b_8cs_source}{Like\+DB.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_model_1_1_like_d_b_a8143751652c14029abed65e6b6f99b9f}\label{class_y_1_1_model_1_1_like_d_b_a8143751652c14029abed65e6b6f99b9f} 
+\index{Y.Model.LikeDB@{Y.Model.LikeDB}!Delete@{Delete}}
+\index{Delete@{Delete}!Y.Model.LikeDB@{Y.Model.LikeDB}}
+\doxysubsubsection{\texorpdfstring{Delete()}{Delete()}}
+{\footnotesize\ttfamily static void Y.\+Model.\+Like\+DB.\+Delete (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}}}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Elimina un like de la base de dades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & like\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_like_d_b_8cs_source_l00091}{91}} of file \mbox{\hyperlink{_like_d_b_8cs_source}{Like\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_like_d_b_a3d686cb322518aded5c95b9cb69bed57}\label{class_y_1_1_model_1_1_like_d_b_a3d686cb322518aded5c95b9cb69bed57} 
+\index{Y.Model.LikeDB@{Y.Model.LikeDB}!Exists@{Exists}}
+\index{Exists@{Exists}!Y.Model.LikeDB@{Y.Model.LikeDB}}
+\doxysubsubsection{\texorpdfstring{Exists()}{Exists()}}
+{\footnotesize\ttfamily static bool Y.\+Model.\+Like\+DB.\+Exists (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}}}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Comprova si l\textquotesingle{}objecte Like\+Model existeix a la base de dades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si existeix, fals altrament
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_like_d_b_8cs_source_l00121}{121}} of file \mbox{\hyperlink{_like_d_b_8cs_source}{Like\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_like_d_b_a10a480fc370c25c1c4e4c5dac33d0021}\label{class_y_1_1_model_1_1_like_d_b_a10a480fc370c25c1c4e4c5dac33d0021} 
+\index{Y.Model.LikeDB@{Y.Model.LikeDB}!GetUsers@{GetUsers}}
+\index{GetUsers@{GetUsers}!Y.Model.LikeDB@{Y.Model.LikeDB}}
+\doxysubsubsection{\texorpdfstring{GetUsers()}{GetUsers()}}
+{\footnotesize\ttfamily static List$<$ int $>$ Y.\+Model.\+Like\+DB.\+Get\+Users (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obté una llista d\textquotesingle{}usuaris que hagin donat like a una publicació 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & publicacio\+\_\+id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+llista d\textquotesingle{}ids de usuari
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_like_d_b_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_like_d_b_8cs_source}{Like\+DB.\+cs}}.
+
+\Hypertarget{class_y_1_1_model_1_1_like_d_b_a724c025443a678389d003f7379c396f8}\label{class_y_1_1_model_1_1_like_d_b_a724c025443a678389d003f7379c396f8} 
+\index{Y.Model.LikeDB@{Y.Model.LikeDB}!Inserir@{Inserir}}
+\index{Inserir@{Inserir}!Y.Model.LikeDB@{Y.Model.LikeDB}}
+\doxysubsubsection{\texorpdfstring{Inserir()}{Inserir()}}
+{\footnotesize\ttfamily static void Y.\+Model.\+Like\+DB.\+Inserir (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{Like\+Model}}}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Insereix un like a la base de dades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em l} & like\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_like_d_b_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_like_d_b_8cs_source}{Like\+DB.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Acces\+\_\+a\+\_\+dades/Like\+DB.\+cs\end{DoxyCompactItemize}

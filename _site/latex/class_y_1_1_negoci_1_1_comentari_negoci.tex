@@ -1,0 +1,214 @@
+\doxysection{Y.\+Negoci.\+Comentari\+Negoci Class Reference}
+\hypertarget{class_y_1_1_negoci_1_1_comentari_negoci}{}\label{class_y_1_1_negoci_1_1_comentari_negoci}\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+
+
+La classe "{}\+Comentari\+Negoci"{} serà la que validarà els objectes "{}\+Comentari\+Model"{} i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_a11c42d3724b4b56dc69001488cdbe30b}{Inserir}} ()
+\begin{DoxyCompactList}\small\item\em Si el comentari és vàlid, l\textquotesingle{}inserirà a la base de dades. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_ac1f542f6cfe519e522c6dfaf50562f9d}{Validar}} ()
+\begin{DoxyCompactList}\small\item\em Comprova que els comentaris siguin vàlids. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_a4f0ce20b5459bceb6d361d23e8692e3a}{Has\+Null}} ()
+\begin{DoxyCompactList}\small\item\em Comprova si alguna de les Propietats dels comentaris és errònea o nula. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} $>$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_ae0564443b1434e26579cab9335edf2f7}{Get\+Comentaris\+Post}} (int post\+Id)
+\begin{DoxyCompactList}\small\item\em Aconsegueix una llista amb tots els comentaris d\textquotesingle{}una certa publicació \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_ad4707d724beeeec7970cd610a790db48}{Get\+Comentari\+DB}} (int id)
+\begin{DoxyCompactList}\small\item\em Obté el comentari a partir del seu id. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_a6b8afb23291eb7d050472c557e959143}{Get\+Comentari\+Copy}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} comentari\+Model)
+\begin{DoxyCompactList}\small\item\em Fa una còpia d\textquotesingle{}un comentari paràmetre. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_af3ef73710d14964dead0cb871859a562}{Get\+Time\+Ago}} (Date\+Time data)
+\begin{DoxyCompactList}\small\item\em Obte un string amb la diferencia de temps entre l\textquotesingle{}actual i l\textquotesingle{}entrat per paràmetre. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_a3dffdf503357fdebab46e96629d10b80}{Comentari}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_ad3916c9c1db95e0fbb902dd47b72bb18}{comentari}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Comentari\+Negoci"{} serà la que validarà els objectes "{}\+Comentari\+Model"{} i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades. 
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_a6b8afb23291eb7d050472c557e959143}\label{class_y_1_1_negoci_1_1_comentari_negoci_a6b8afb23291eb7d050472c557e959143} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!GetComentariCopy@{GetComentariCopy}}
+\index{GetComentariCopy@{GetComentariCopy}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{GetComentariCopy()}{GetComentariCopy()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} Y.\+Negoci.\+Comentari\+Negoci.\+Get\+Comentari\+Copy (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}}}]{comentari\+Model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Fa una còpia d\textquotesingle{}un comentari paràmetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em comentari\+Model} & Comentari\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La còpia del paràmetre
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00086}{86}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_ad4707d724beeeec7970cd610a790db48}\label{class_y_1_1_negoci_1_1_comentari_negoci_ad4707d724beeeec7970cd610a790db48} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!GetComentariDB@{GetComentariDB}}
+\index{GetComentariDB@{GetComentariDB}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{GetComentariDB()}{GetComentariDB()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} Y.\+Negoci.\+Comentari\+Negoci.\+Get\+Comentari\+DB (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obté el comentari a partir del seu id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & comentari\+\_\+id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+comentari
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_ae0564443b1434e26579cab9335edf2f7}\label{class_y_1_1_negoci_1_1_comentari_negoci_ae0564443b1434e26579cab9335edf2f7} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!GetComentarisPost@{GetComentarisPost}}
+\index{GetComentarisPost@{GetComentarisPost}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{GetComentarisPost()}{GetComentarisPost()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} $>$ Y.\+Negoci.\+Comentari\+Negoci.\+Get\+Comentaris\+Post (\begin{DoxyParamCaption}\item[{int}]{post\+Id }\end{DoxyParamCaption})}
+
+
+
+Aconsegueix una llista amb tots els comentaris d\textquotesingle{}una certa publicació 
+
+
+\begin{DoxyParams}{Parameters}
+{\em post\+Id} & id de la publicacio\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una llista amb els comentaris
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_af3ef73710d14964dead0cb871859a562}\label{class_y_1_1_negoci_1_1_comentari_negoci_af3ef73710d14964dead0cb871859a562} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!GetTimeAgo@{GetTimeAgo}}
+\index{GetTimeAgo@{GetTimeAgo}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{GetTimeAgo()}{GetTimeAgo()}}
+{\footnotesize\ttfamily static string Y.\+Negoci.\+Comentari\+Negoci.\+Get\+Time\+Ago (\begin{DoxyParamCaption}\item[{Date\+Time}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obte un string amb la diferencia de temps entre l\textquotesingle{}actual i l\textquotesingle{}entrat per paràmetre. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & diferent a Date\+Time.\+Min\+Value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00101}{101}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_a4f0ce20b5459bceb6d361d23e8692e3a}\label{class_y_1_1_negoci_1_1_comentari_negoci_a4f0ce20b5459bceb6d361d23e8692e3a} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!HasNull@{HasNull}}
+\index{HasNull@{HasNull}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{HasNull()}{HasNull()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Comentari\+Negoci.\+Has\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprova si alguna de les Propietats dels comentaris és errònea o nula. 
+
+\begin{DoxyReturn}{Returns}
+true si té una propietat errònea o nula, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00068}{68}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_a11c42d3724b4b56dc69001488cdbe30b}\label{class_y_1_1_negoci_1_1_comentari_negoci_a11c42d3724b4b56dc69001488cdbe30b} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!Inserir@{Inserir}}
+\index{Inserir@{Inserir}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{Inserir()}{Inserir()}}
+{\footnotesize\ttfamily void Y.\+Negoci.\+Comentari\+Negoci.\+Inserir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Si el comentari és vàlid, l\textquotesingle{}inserirà a la base de dades. 
+
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_ac1f542f6cfe519e522c6dfaf50562f9d}\label{class_y_1_1_negoci_1_1_comentari_negoci_ac1f542f6cfe519e522c6dfaf50562f9d} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!Validar@{Validar}}
+\index{Validar@{Validar}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{Validar()}{Validar()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Comentari\+Negoci.\+Validar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprova que els comentaris siguin vàlids. 
+
+\begin{DoxyReturn}{Returns}
+true si són vàlids, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_ad3916c9c1db95e0fbb902dd47b72bb18}\label{class_y_1_1_negoci_1_1_comentari_negoci_ad3916c9c1db95e0fbb902dd47b72bb18} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!comentari@{comentari}}
+\index{comentari@{comentari}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{comentari}{comentari}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} Y.\+Negoci.\+Comentari\+Negoci.\+comentari\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_comentari_negoci_a3dffdf503357fdebab46e96629d10b80}\label{class_y_1_1_negoci_1_1_comentari_negoci_a3dffdf503357fdebab46e96629d10b80} 
+\index{Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}!Comentari@{Comentari}}
+\index{Comentari@{Comentari}!Y.Negoci.ComentariNegoci@{Y.Negoci.ComentariNegoci}}
+\doxysubsubsection{\texorpdfstring{Comentari}{Comentari}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{Comentari\+Model}} Y.\+Negoci.\+Comentari\+Negoci.\+Comentari\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_comentari_negoci_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_comentari_negoci_8cs_source}{Comentari\+Negoci.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Negoci/Comentari\+Negoci.\+cs\end{DoxyCompactItemize}

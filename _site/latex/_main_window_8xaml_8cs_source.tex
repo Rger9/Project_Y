@@ -1,0 +1,106 @@
+\doxysection{Main\+Window.\+xaml.\+cs}
+\hypertarget{_main_window_8xaml_8cs_source}{}\label{_main_window_8xaml_8cs_source}\index{Vista/MainWindow.xaml.cs@{Vista/MainWindow.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }MySql.Data.MySqlClient;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y}{Y}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_acces_a_dades}{Y.AccesADades}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_negoci}{Y.Negoci}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_vista}{Y.Vista}};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_y}{Y}}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00009}00009\ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{class_y_1_1_main_window}{MainWindow}}\ :\ Window}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ u\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ logged\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ List<int>\ llistaIdPublicacio\ =\ \textcolor{keyword}{new}\ List<int>();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00021}\mbox{\hyperlink{class_y_1_1_main_window_a81ab038870bdba29a9b1290750c91edf}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_y_1_1_main_window_a81ab038870bdba29a9b1290750c91edf}{MainWindow}}()}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_main_window_ae173a957844dc1e9e57a627a801f3c32}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ logged\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ BtnUsername.Visibility\ =\ Visibility.Hidden;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_main_window_aaad8732ed34f0fdc696378c4a3ab2f54}{Carregar}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00032}\mbox{\hyperlink{class_y_1_1_main_window_a9b628fa07526c1cb3f9f620482cb3214}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_y_1_1_main_window_a9b628fa07526c1cb3f9f620482cb3214}{MainWindow}}(\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ u)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_main_window_ae173a957844dc1e9e57a627a801f3c32}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ logged\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ this.u\ =\ u;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ Btn\_Perfil.Visibility\ =\ Visibility.Hidden;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ BtnUsername.Content\ =\ u.Username;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_main_window_aaad8732ed34f0fdc696378c4a3ab2f54}{Carregar}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00044}\mbox{\hyperlink{class_y_1_1_main_window_aaad8732ed34f0fdc696378c4a3ab2f54}{00044}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_aaad8732ed34f0fdc696378c4a3ab2f54}{Carregar}}()}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Conseguim\ tots\ els\ id\ de\ les\ publicacions}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci}{PublicacioNegoci}}\ pNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci}{PublicacioNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ llistaIdPublicacio\ =\ pNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_abefb06db1f9b71beb8358a8841575651}{ObtenirTotsId}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Carreguem\ el\ frame\ amb\ el\ post}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ FramePublicacions.NavigationService.Navigate(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post}{VistaPost}}(u,\ pNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_af7e4cf8a28c437e0e1fac84a298f6a06}{GetPublicacio}}(llistaIdPublicacio.First())));}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Carreguem\ la\ llista\ de\ tags\ amb\ el\ nom\ d'aquests}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci}{TagNegoci}}\ tNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci}{TagNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ List<string>\ llistaTags\ =\ \textcolor{keyword}{new}\ List<string>();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\textcolor{keywordtype}{int}\ tagId\ \textcolor{keywordflow}{in}\ tNegoci.ObtenirTotsId())}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ llistaTags.Add(tNegoci.GetTagDB(tagId).Nom);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ ListboxTag.ItemsSource\ =\ llistaTags;}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00067}\mbox{\hyperlink{class_y_1_1_main_window_a5f821d4cd276de0f5cda89fc13a3d85a}{00067}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_a5f821d4cd276de0f5cda89fc13a3d85a}{Btn\_Perfil\_Click}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_login}{Vista.Login}}\ login\ =\ \textcolor{keyword}{new}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ login.Show();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00078}\mbox{\hyperlink{class_y_1_1_main_window_af5a7bd906d25d687815a08b8a3f8f8dc}{00078}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_af5a7bd906d25d687815a08b8a3f8f8dc}{BtnPublicar\_Click}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (logged)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_publicar}{Vista.Publicar}}\ publicar\ =\ \textcolor{keyword}{new}\ Vista.\mbox{\hyperlink{class_y_1_1_vista_1_1_publicar_af3116405e16068e80b7a48d9dffd3f24}{Publicar}}(u);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ publicar.Show();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_main_window_aaad8732ed34f0fdc696378c4a3ab2f54}{Carregar}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ MessageBox.Show(\textcolor{stringliteral}{"{}No\ pots\ publicar\ si\ no\ estas\ logged!"{}});}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00094}\mbox{\hyperlink{class_y_1_1_main_window_abb7c692243762769699f628572392525}{00094}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_abb7c692243762769699f628572392525}{BtnUsername\_Click}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ PopupUsername.IsOpen\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00103}\mbox{\hyperlink{class_y_1_1_main_window_a8f3a1f7d88fd5c8e2cbe7a98ec225ca4}{00103}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_a8f3a1f7d88fd5c8e2cbe7a98ec225ca4}{BtnAnterior\_MouseLeftButtonUp}}(\textcolor{keywordtype}{object}\ sender,\ System.Windows.Input.MouseButtonEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci}{PublicacioNegoci}}\ pNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci}{PublicacioNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ ultimPost\ =\ llistaIdPublicacio[llistaIdPublicacio.Count\ -\/\ 1];}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ llistaIdPublicacio.RemoveAt(llistaIdPublicacio.Count\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ llistaIdPublicacio.Insert(0,\ ultimPost);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ FramePublicacions.NavigationService.Navigate(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post}{VistaPost}}(u,\ pNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_af7e4cf8a28c437e0e1fac84a298f6a06}{GetPublicacio}}(llistaIdPublicacio.First())));}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00110}00110\ }
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00117}\mbox{\hyperlink{class_y_1_1_main_window_ab4964f477c87280e2fb54aabb4834866}{00117}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_ab4964f477c87280e2fb54aabb4834866}{BtnSeguent\_MouseLeftButtonUp}}(\textcolor{keywordtype}{object}\ sender,\ System.Windows.Input.MouseButtonEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci}{PublicacioNegoci}}\ pNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci}{PublicacioNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ idPublicacioActual\ =\ llistaIdPublicacio.First();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ llistaIdPublicacio.RemoveAt(0);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ llistaIdPublicacio.Add(idPublicacioActual);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ FramePublicacions.NavigationService.Navigate(\textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post}{VistaPost}}(u,\ pNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_negoci_af7e4cf8a28c437e0e1fac84a298f6a06}{GetPublicacio}}(llistaIdPublicacio.First())));}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00130}\mbox{\hyperlink{class_y_1_1_main_window_a46c3e316122af9de3030c8c4539d8f8c}{00130}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_a46c3e316122af9de3030c8c4539d8f8c}{PopupBtnModificar\_Click}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_perfil}{Vista.Perfil}}\ perfil\ =\ \textcolor{keyword}{new}(u);}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ perfil.Show();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00141}\mbox{\hyperlink{class_y_1_1_main_window_a1305622d40919b591ad72b20e4ec2591}{00141}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_main_window_a1305622d40919b591ad72b20e4ec2591}{PopupBtnSortir\_Click}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_main_window}{MainWindow}}\ main\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_main_window_a81ab038870bdba29a9b1290750c91edf}{MainWindow}}();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ main.Show();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ this.Close();}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00147}00147\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_window_8xaml_8cs_source_l00148}00148\ \}}
+
+\end{DoxyCode}

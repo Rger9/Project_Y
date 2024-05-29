@@ -1,0 +1,56 @@
+\doxysection{Connexio.\+cs}
+\hypertarget{_connexio_8cs_source}{}\label{_connexio_8cs_source}\index{Acces\_a\_dades/Connexio.cs@{Acces\_a\_dades/Connexio.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }MySql.Data.MySqlClient;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Data.Common;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }MySql.Data.MySqlClient;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00011}\mbox{\hyperlink{namespace_y_1_1_acces_a_dades}{00011}}\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_y_1_1_acces_a_dades}{Y.AccesADades}}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00016}\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio}{Connexio}}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ ip\ =\ \textcolor{stringliteral}{"{}localhost"{}};}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ nom\ =\ \textcolor{stringliteral}{"{}Db\_y"{}};}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ user\ =\ \textcolor{stringliteral}{"{}root"{}};}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ password\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ port\ =\ 3306;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ MySqlConnection\ connection\ =\ \textcolor{keyword}{new}\ MySqlConnection(\$\textcolor{stringliteral}{"{}Server=\{ip\};Database=\{nom\};Uid=\{user\};Password=\{password\};Port=\{port\};"{}});}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00027}\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4}{00027}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ MySqlConnection\ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4}{Connection}}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ connection;\ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{\ connection\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00036}\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329}{00036}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ MySqlConnection\ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329}{Connectar}}()}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ connectionString\ =\ \$\textcolor{stringliteral}{"{}Server=\{ip\};Database=\{nom\};Uid=\{user\};Password=\{password\};Port=\{port\};"{}};}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ connection\ =\ \textcolor{keyword}{new}\ MySqlConnection(connectionString);}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ connection.Open();}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ ex)}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Error\ al\ obrir\ la\ BD:\ "{}}\ +\ ex.Message);}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ connection;}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00053}\mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f}{00053}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f}{Desconnectar}}()}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!connection.IsDisposed)}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ connection.Close();}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}La\ connexio\ no\ sha\ tancat\ pq\ no\ estava\ oberta"{}});}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_connexio_8cs_source_l00063}00063\ \}}
+
+\end{DoxyCode}

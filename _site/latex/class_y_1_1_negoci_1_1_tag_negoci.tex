@@ -1,0 +1,257 @@
+\doxysection{Y.\+Negoci.\+Tag\+Negoci Class Reference}
+\hypertarget{class_y_1_1_negoci_1_1_tag_negoci}{}\label{class_y_1_1_negoci_1_1_tag_negoci}\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+
+
+La classe "{}\+Tag\+Negoci"{} serà la que validarà els objectes "{}\+Tag\+Model"{}, els formati amb un nom correcte i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_aacdb8cbca2acfe78efd29e599e9cac3a}{Get\+Tag\+DB}} (int id)
+\begin{DoxyCompactList}\small\item\em Obté un Tag a partir del seu Id. \end{DoxyCompactList}\item 
+List$<$ int $>$ \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_a09268271f965d90d8b5c707a0ad0f3ba}{Obtenir\+Tots\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Obté tots els tags que s\textquotesingle{}han utilitzat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_a84c327fc596ee0114076f748dc117241}{Inserir}} ()
+\begin{DoxyCompactList}\small\item\em Insereix el tag a la base de dades. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_a2aa454fb19578d4917623679a8279e8e}{Validar}} ()
+\begin{DoxyCompactList}\small\item\em Comprova si el Tag és vàlid. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_a3408ba0ac32430a1d0e464998378b461}{Has\+Null}} ()
+\begin{DoxyCompactList}\small\item\em Comprova si Tag té propietats nules o incorrectes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_adb96b4bd42a4a0de180551709e332f50}{Existeix}} (\mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} tag)
+\begin{DoxyCompactList}\small\item\em Comprova si l\textquotesingle{}objecte tag existeix a la base de dades. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_acc9df1392b4fe3817a3846533c57c289}{Get\+Tag\+\_\+id}} (string tag\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Obté un tag\+\_\+id a partir del seu nom. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_a5694408e9045df5aeda1d48fa4d629b4}{Existeix}} (string nom)
+\begin{DoxyCompactList}\small\item\em Comprova si el nom del tag existeix a la base de dades. \end{DoxyCompactList}\item 
+static string \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_a61307ec9558859a0b0e94aa6285fe8e5}{Formatar\+String}} (string tag\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Reescriu el nom del tag de manera que la primera lletra sigui majúscula, i la resta minúscula. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_af121f490ae82db88cf6bac177d7721ab}{Tag}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_negoci_a67b4d83ff44b6cc66a28f806e8541b4c}{tag}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Tag\+Negoci"{} serà la que validarà els objectes "{}\+Tag\+Model"{}, els formati amb un nom correcte i la que la vista cridarà per accedir als mètodes d\textquotesingle{}Accés a dades. 
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_a5694408e9045df5aeda1d48fa4d629b4}\label{class_y_1_1_negoci_1_1_tag_negoci_a5694408e9045df5aeda1d48fa4d629b4} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!Existeix@{Existeix}}
+\index{Existeix@{Existeix}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{Existeix()}{Existeix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static bool Y.\+Negoci.\+Tag\+Negoci.\+Existeix (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Comprova si el nom del tag existeix a la base de dades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nom} & Nom del tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si existeix, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00092}{92}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_adb96b4bd42a4a0de180551709e332f50}\label{class_y_1_1_negoci_1_1_tag_negoci_adb96b4bd42a4a0de180551709e332f50} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!Existeix@{Existeix}}
+\index{Existeix@{Existeix}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{Existeix()}{Existeix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Tag\+Negoci.\+Existeix (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}}}]{tag }\end{DoxyParamCaption})}
+
+
+
+Comprova si l\textquotesingle{}objecte tag existeix a la base de dades. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag} & tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True si existeix, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00102}{102}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_a61307ec9558859a0b0e94aa6285fe8e5}\label{class_y_1_1_negoci_1_1_tag_negoci_a61307ec9558859a0b0e94aa6285fe8e5} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!FormatarString@{FormatarString}}
+\index{FormatarString@{FormatarString}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{FormatarString()}{FormatarString()}}
+{\footnotesize\ttfamily static string Y.\+Negoci.\+Tag\+Negoci.\+Formatar\+String (\begin{DoxyParamCaption}\item[{string}]{tag\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reescriu el nom del tag de manera que la primera lletra sigui majúscula, i la resta minúscula. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag\+\_\+name} & Nom del tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El mateix nom formatat
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00111}{111}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_acc9df1392b4fe3817a3846533c57c289}\label{class_y_1_1_negoci_1_1_tag_negoci_acc9df1392b4fe3817a3846533c57c289} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!GetTag\_id@{GetTag\_id}}
+\index{GetTag\_id@{GetTag\_id}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{GetTag\_id()}{GetTag\_id()}}
+{\footnotesize\ttfamily static int Y.\+Negoci.\+Tag\+Negoci.\+Get\+Tag\+\_\+id (\begin{DoxyParamCaption}\item[{string}]{tag\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Obté un tag\+\_\+id a partir del seu nom. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tag\+\_\+name} & Nom del tag\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+tag\+\_\+id
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_aacdb8cbca2acfe78efd29e599e9cac3a}\label{class_y_1_1_negoci_1_1_tag_negoci_aacdb8cbca2acfe78efd29e599e9cac3a} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!GetTagDB@{GetTagDB}}
+\index{GetTagDB@{GetTagDB}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{GetTagDB()}{GetTagDB()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} Y.\+Negoci.\+Tag\+Negoci.\+Get\+Tag\+DB (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Obté un Tag a partir del seu Id. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & tag\+\_\+id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El Tag
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_a3408ba0ac32430a1d0e464998378b461}\label{class_y_1_1_negoci_1_1_tag_negoci_a3408ba0ac32430a1d0e464998378b461} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!HasNull@{HasNull}}
+\index{HasNull@{HasNull}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{HasNull()}{HasNull()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Tag\+Negoci.\+Has\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprova si Tag té propietats nules o incorrectes. 
+
+\begin{DoxyReturn}{Returns}
+True si té algun valor malament, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00083}{83}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_a84c327fc596ee0114076f748dc117241}\label{class_y_1_1_negoci_1_1_tag_negoci_a84c327fc596ee0114076f748dc117241} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!Inserir@{Inserir}}
+\index{Inserir@{Inserir}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{Inserir()}{Inserir()}}
+{\footnotesize\ttfamily void Y.\+Negoci.\+Tag\+Negoci.\+Inserir (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Insereix el tag a la base de dades. 
+
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_a09268271f965d90d8b5c707a0ad0f3ba}\label{class_y_1_1_negoci_1_1_tag_negoci_a09268271f965d90d8b5c707a0ad0f3ba} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!ObtenirTotsId@{ObtenirTotsId}}
+\index{ObtenirTotsId@{ObtenirTotsId}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{ObtenirTotsId()}{ObtenirTotsId()}}
+{\footnotesize\ttfamily List$<$ int $>$ Y.\+Negoci.\+Tag\+Negoci.\+Obtenir\+Tots\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obté tots els tags que s\textquotesingle{}han utilitzat. 
+
+\begin{DoxyReturn}{Returns}
+Llista de tots els tag\+\_\+id
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_a2aa454fb19578d4917623679a8279e8e}\label{class_y_1_1_negoci_1_1_tag_negoci_a2aa454fb19578d4917623679a8279e8e} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!Validar@{Validar}}
+\index{Validar@{Validar}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{Validar()}{Validar()}}
+{\footnotesize\ttfamily bool Y.\+Negoci.\+Tag\+Negoci.\+Validar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comprova si el Tag és vàlid. 
+
+\begin{DoxyReturn}{Returns}
+True si és valid, false si no
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_a67b4d83ff44b6cc66a28f806e8541b4c}\label{class_y_1_1_negoci_1_1_tag_negoci_a67b4d83ff44b6cc66a28f806e8541b4c} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!tag@{tag}}
+\index{tag@{tag}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{tag}{tag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} Y.\+Negoci.\+Tag\+Negoci.\+tag\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_y_1_1_negoci_1_1_tag_negoci_af121f490ae82db88cf6bac177d7721ab}\label{class_y_1_1_negoci_1_1_tag_negoci_af121f490ae82db88cf6bac177d7721ab} 
+\index{Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}!Tag@{Tag}}
+\index{Tag@{Tag}!Y.Negoci.TagNegoci@{Y.Negoci.TagNegoci}}
+\doxysubsubsection{\texorpdfstring{Tag}{Tag}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_y_1_1_negoci_1_1_tag_model}{Tag\+Model}} Y.\+Negoci.\+Tag\+Negoci.\+Tag\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Definition at line \mbox{\hyperlink{_tag_negoci_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_tag_negoci_8cs_source}{Tag\+Negoci.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Negoci/Tag\+Negoci.\+cs\end{DoxyCompactItemize}

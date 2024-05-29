@@ -1,0 +1,58 @@
+\doxysection{Usuari\+Negoci.\+cs}
+\hypertarget{_usuari_negoci_8cs_source}{}\label{_usuari_negoci_8cs_source}\index{Negoci/UsuariNegoci.cs@{Negoci/UsuariNegoci.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_model}{Y.Model}};}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_y_1_1_negoci}{Y.Negoci}}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00014}\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci}{00014}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci}{UsuariNegoci}}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00015}00015\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Atributs}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ usuari;}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Propietats}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ Usuari}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ \{\ \textcolor{keywordflow}{return}\ usuari;\ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}\ \{\ usuari\ =\ value;\ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//Metodes}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00030}\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_afdfa468046c1457276779d0ce9728100}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_afdfa468046c1457276779d0ce9728100}{GetUsuari}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id})}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b}{UsuariDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b_aecf60c1e7f61c8eb760f60214f4b39d7}{GetUsuari}}(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00039}\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_a975b398d672e7b74bb048af38ca3bff1}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_a975b398d672e7b74bb048af38ca3bff1}{GetUsuari}}(\textcolor{keywordtype}{string}\ username)}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b}{UsuariDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b_aecf60c1e7f61c8eb760f60214f4b39d7}{GetUsuari}}(username);}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00046}\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_ab2b26b492f7c7ecd15a792f48dea2f24}{00046}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_ab2b26b492f7c7ecd15a792f48dea2f24}{Inserir}}()}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_a7865669553ba564b290e85a63d70d209}{Validar}}())\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception();}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b}{UsuariDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b_a108cd11e847af87e23d5eb4f599834f7}{Inserir}}(Usuari);}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}ERROR\ AL\ VALIDAR/INSERIR\ USUARI\ A\ LA\ BASE\ DE\ DADES"{}});}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00061}\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_aa21d9ae22a416e3847a4554da636ce3f}{00061}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_aa21d9ae22a416e3847a4554da636ce3f}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b}{UsuariDB}}.\mbox{\hyperlink{class_y_1_1_model_1_1_usuari_d_b_aa7ef7090d989baa6b427c5536b455f7c}{UpdatePerfil}}(Usuari);}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00069}\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_a7865669553ba564b290e85a63d70d209}{00069}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_a7865669553ba564b290e85a63d70d209}{Validar}}()}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Usuari.Username\ ==\ \textcolor{stringliteral}{"{}"{}}\ ||\ \ Usuari.Contrasenya\ ==\ \textcolor{stringliteral}{"{}"{}}\ \ ||\ Usuari.Nom\ ==\ \textcolor{stringliteral}{"{}"{}}\ \ ||\ Usuari.Correu\ ==\ \textcolor{stringliteral}{"{}"{}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00074}00074\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_usuari_negoci_8cs_source_l00075}00075\ \}}
+
+\end{DoxyCode}

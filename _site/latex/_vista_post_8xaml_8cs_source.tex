@@ -1,0 +1,194 @@
+\doxysection{Vista\+Post.\+xaml.\+cs}
+\hypertarget{_vista_post_8xaml_8cs_source}{}\label{_vista_post_8xaml_8cs_source}\index{Vista/VistaPost.xaml.cs@{Vista/VistaPost.xaml.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Text;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Threading.Tasks;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }System.Windows;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }System.Windows.Controls;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }System.Windows.Data;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Windows.Documents;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }System.Windows.Input;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }System.Windows.Media;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00012}00012\ \textcolor{keyword}{using\ }System.Windows.Media.Imaging;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00013}00013\ \textcolor{keyword}{using\ }System.Windows.Navigation;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00014}00014\ \textcolor{keyword}{using\ }System.Windows.Shapes;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00015}00015\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_y_1_1_negoci}{Y.Negoci}};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00017}00017\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_y_1_1_vista}{Y.Vista}}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00018}00018\ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }VistaPost\ :\ Page}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00023}00023\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ usuari;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{PublicacioModel}}\ publicacio;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}\ like;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<ComentariModel>\ llistaComentaris;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00028}00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ placeholderComentari;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<string>\ contingutComentaris;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<int>\ likesUsuaris;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00031}00031\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00037}00037\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00038}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ac78b9d35fef0ce72f2d0f813a10e43aa}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ac78b9d35fef0ce72f2d0f813a10e43aa}{VistaPost}}(\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_model}{UsuariModel}}\ u,\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_publicacio_model}{PublicacioModel}}\ p)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a4081932e1c351eca12a54ac6ee9e0dad}{InitializeComponent}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ BtnComentar.IsEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ placeholderComentari\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Donem\ valor\ a\ la\ publicació,\ usuari\ i\ like}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ publicacio\ =\ p;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ usuari\ =\ u;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ like\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_model}{LikeModel}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ like.User\_id\ =\ usuari.User\_id;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ like.Publicacio\_id\ =\ publicacio.Publicacio\_id;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Comprovem\ si\ ja\ existeix\ el\ like,\ i\ carrega\ el\ numero\ de\ likes}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}\ lNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ lNegoci.Like\ =\ like;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!lNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a8d6685084aa560b2c4a0772ccfed529c}{Exists}}())}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeFalse.Visibility\ =\ Visibility.Visible;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeTrue.Visibility\ =\ Visibility.Hidden;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeFalse.Visibility\ =\ Visibility.Hidden;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeTrue.Visibility\ =\ Visibility.Visible;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ad3a3950dd2f8e6e7d8dbc2f7c8f82723}{RecompteLikes}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Carreguem\ els\ comentaris\ i\ la\ publicació}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci}{ComentariNegoci}}\ cNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci}{ComentariNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci}{UsuariNegoci}}\ uNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci}{UsuariNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ llistaComentaris\ =\ cNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_ae0564443b1434e26579cab9335edf2f7}{GetComentarisPost}}(p.Publicacio\_id);}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a70947af2757fe4cc8907a80275d76128}{CarregarComentaris}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ BlockUsername.Text\ =\ uNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci_afdfa468046c1457276779d0ce9728100}{GetUsuari}}(p.User\_id).Username\ +\ \textcolor{stringliteral}{"{}\ :\ "{}};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ BlockTitol.Text\ =\ p.Titol;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ likesUsuaris\ =\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}.\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a6d19b8b827b6608075bfb7d2cf23c471}{GetUsersDB}}(p.Publicacio\_id);}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//LA\ LLISTA\ DELS\ USUARIS\ QUE\ LI\ HAN\ DONAT\ LIKE\ ESTA\ A\ LIKESUSUARIS,\ CONTE\ IDS\ DELS\ USUARIS}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//FER\ COSES\ AQUI}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ BlockDateTime.Text\ =\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci}{ComentariNegoci}}.\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_af3ef73710d14964dead0cb871859a562}{GetTimeAgo}}(p.Data\_p);}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ BlockContingut.Text\ =\ p.Contingut\ ;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ BlockEtiquetes.Text\ =\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_tagpublicacio_negoci}{TagpublicacioNegoci}}.\mbox{\hyperlink{class_y_1_1_negoci_1_1_tagpublicacio_negoci_aeed0651fae10c6f15e1359817e6f5a2d}{GetTagsTextPublicacio}}(publicacio.Publicacio\_id);}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00084}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a70947af2757fe4cc8907a80275d76128}{00084}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a70947af2757fe4cc8907a80275d76128}{CarregarComentaris}}()}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci}{UsuariNegoci}}\ uNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_usuari_negoci}{UsuariNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ contingutComentaris\ =\ \textcolor{keyword}{new}\ List<string>();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}\ comentari\ \textcolor{keywordflow}{in}\ llistaComentaris)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ contingutComentaris.Add(uNegoci.GetUsuari(comentari.User\_id).Username\ +\ \textcolor{stringliteral}{"{}\ ("{}}\ +\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci}{ComentariNegoci}}.\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_af3ef73710d14964dead0cb871859a562}{GetTimeAgo}}(comentari.Data\_c).ToLower()\ +\ \textcolor{stringliteral}{"{})\ :\ "{}}\ +\ comentari.Contingut);}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ ListBoxComentaris.ItemsSource\ =\ contingutComentaris;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00099}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ace8685dbc0e7227b7f832b60db65dd2e}{00099}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ace8685dbc0e7227b7f832b60db65dd2e}{TxtBoxComentari\_GotFocus}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (placeholderComentari)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TxtBoxComentari.Text\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TxtBoxComentari.Foreground\ =\ Brushes.White;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ placeholderComentari\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00113}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ad98991eb7480b883aa56e9607f16acc7}{00113}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ad98991eb7480b883aa56e9607f16acc7}{TxtBoxComentari\_LostFocus}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (TxtBoxComentari.Text\ ==\ \textcolor{keywordtype}{string}.Empty)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TxtBoxComentari.Text\ =\ \textcolor{stringliteral}{"{}Comenta\ aqui"{}};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TxtBoxComentari.Foreground\ =\ Brushes.LightGray;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ placeholderComentari\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00127}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a37b57a8233a7c3560d7b6e2298365a28}{00127}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a37b57a8233a7c3560d7b6e2298365a28}{BtnComentar\_Click}}(\textcolor{keywordtype}{object}\ sender,\ RoutedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (usuari.User\_id\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Construïr\ el\ objecte\ "{}comentari"{}}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}\ comentari\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_model}{ComentariModel}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.User\_id\ =\ usuari.User\_id;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.Publicacio\_id\ =\ publicacio.Publicacio\_id;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.Data\_c\ =\ DateTime.Now;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentari.Contingut\ =\ TxtBoxComentari.Text;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00143}00143\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Construïr\ "{}comentariNegoci"{},\ i\ igualem\ el\ seu\ atribut\ al\ comentari}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci}{ComentariNegoci}}\ comentariNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci}{ComentariNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentariNegoci.Comentari\ =\ comentari;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ comentariNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_comentari_negoci_a11c42d3724b4b56dc69001488cdbe30b}{Inserir}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00148}00148\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Afegir\ a\ la\ llista\ de\ comentaris\ i\ recarregar-\/los}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ llistaComentaris.Add(comentari);}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a70947af2757fe4cc8907a80275d76128}{CarregarComentaris}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Buidar\ la\ caixa\ per\ comentari\ i\ deshabilitar\ el\ botó}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ TxtBoxComentari.Text\ =\ \textcolor{keywordtype}{string}.Empty;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BtnComentar.IsEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}ERROR:\ Has\ d'iniciar\ sessió"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00168}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a42db0fd28b2dc3066d2e9e249839dd1f}{00168}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_a42db0fd28b2dc3066d2e9e249839dd1f}{TxtBoxComentari\_TextChanged}}(\textcolor{keywordtype}{object}\ sender,\ TextChangedEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsInitialized\ \&\&\ placeholderComentari\ ==\ \textcolor{keyword}{false}\ \&\&\ TxtBoxComentari.Text\ !=\ \textcolor{keywordtype}{string}.Empty)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ BtnComentar.IsEnabled\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (IsInitialized)BtnComentar.IsEnabled\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00181}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_aa522f990a44827162055d7fcb7d71434}{00181}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_aa522f990a44827162055d7fcb7d71434}{DonarLike}}(\textcolor{keywordtype}{object}\ sender,\ MouseButtonEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (usuari.User\_id\ ==\ 0)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeFalse.Visibility\ =\ Visibility.Hidden;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeTrue.Visibility\ =\ Visibility.Visible;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}\ lNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lNegoci.Like\ =\ like;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a1d93abd998584cf35ffde7a74f8ac261}{Inserir}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ad3a3950dd2f8e6e7d8dbc2f7c8f82723}{RecompteLikes}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Has\ d'iniciar\ sessio"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00204}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_abf14ca15f01e41e3ade015dac61495df}{00204}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_abf14ca15f01e41e3ade015dac61495df}{TreureLike}}(\textcolor{keywordtype}{object}\ sender,\ MouseButtonEventArgs\ e)}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (usuari.User\_id\ ==\ 0)\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ Exception();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeFalse.Visibility\ =\ Visibility.Visible;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LikeTrue.Visibility\ =\ Visibility.Hidden;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}\ lNegoci\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lNegoci.Like\ =\ like;}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lNegoci.\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_ab6dfe0302d8510dd05271b29827b86b6}{Delete}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ad3a3950dd2f8e6e7d8dbc2f7c8f82723}{RecompteLikes}}();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ MessageBox.Show(\textcolor{stringliteral}{"{}Has\ d'iniciar\ sessio"{}});}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00220}00220\ }
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00225}\mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ad3a3950dd2f8e6e7d8dbc2f7c8f82723}{00225}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_y_1_1_vista_1_1_vista_post_ad3a3950dd2f8e6e7d8dbc2f7c8f82723}{RecompteLikes}}()}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00226}00226\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ List<int>\ user\_ids\ =\ \textcolor{keyword}{new}\ List<int>();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00228}00228\ \ \ \ \ \ \ \ \ \ \ \ \ user\_ids\ =\ \mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci}{LikeNegoci}}.\mbox{\hyperlink{class_y_1_1_negoci_1_1_like_negoci_a6d19b8b827b6608075bfb7d2cf23c471}{GetUsersDB}}(publicacio.Publicacio\_id);}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \ \ \ \ LikeNumero.Text\ =\ user\_ids.Count.ToString();}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00231}00231\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_vista_post_8xaml_8cs_source_l00232}00232\ \}}
+
+\end{DoxyCode}

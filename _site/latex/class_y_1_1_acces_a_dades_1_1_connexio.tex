@@ -1,0 +1,160 @@
+\doxysection{Y.\+Acces\+ADades.\+Connexio Class Reference}
+\hypertarget{class_y_1_1_acces_a_dades_1_1_connexio}{}\label{class_y_1_1_acces_a_dades_1_1_connexio}\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+
+
+La classe "{}\+Connexio"{} permet a l\textquotesingle{}aplicació connectar i desconnectar amb la base de dades.  
+
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static My\+Sql\+Connection \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329}{Connectar}} ()
+\begin{DoxyCompactList}\small\item\em Crea una connexió amb la base de dades. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f}{Desconnectar}} ()
+\begin{DoxyCompactList}\small\item\em Si l\textquotesingle{}aplicació es troba connectada a la base da dades, la desconnecta. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static My\+Sql\+Connection \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4}{Connection}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em La propietat del My\+Sql\+Connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a4ca303ddb9d2d28a9da1553c810b4ea1}{ip}} = "{}localhost"{}
+\item 
+static string \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a7b63752dd815b75ebb0ebe291c706cbd}{nom}} = "{}Db\+\_\+y"{}
+\item 
+static string \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_af34e14902fe17aa82713af2f04b00036}{user}} = "{}root"{}
+\item 
+static string \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_acb83b6c20a09beec7555d515eca7f8f7}{password}} = "{}"{}
+\item 
+static int \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a8ef39b01394613936742918db19193fb}{port}} = 3306
+\item 
+static My\+Sql\+Connection \mbox{\hyperlink{class_y_1_1_acces_a_dades_1_1_connexio_a577e2f770f78cb1e69a4ca7b2a652d54}{connection}} = new My\+Sql\+Connection(\$"{}Server=\{ip\};atabase=\{nom\};Uid=\{user\};Password=\{password\};Port=\{port\};"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La classe "{}\+Connexio"{} permet a l\textquotesingle{}aplicació connectar i desconnectar amb la base de dades. 
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329}\label{class_y_1_1_acces_a_dades_1_1_connexio_ac161795f187e403366eaf433c9342329} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!Connectar@{Connectar}}
+\index{Connectar@{Connectar}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{Connectar()}{Connectar()}}
+{\footnotesize\ttfamily static My\+Sql\+Connection Y.\+Acces\+ADades.\+Connexio.\+Connectar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Crea una connexió amb la base de dades. 
+
+\begin{DoxyReturn}{Returns}
+Retorna un objecte My\+Sql\+Connection 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f}\label{class_y_1_1_acces_a_dades_1_1_connexio_ad073783007a42bdaf490ce953e4a881f} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!Desconnectar@{Desconnectar}}
+\index{Desconnectar@{Desconnectar}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{Desconnectar()}{Desconnectar()}}
+{\footnotesize\ttfamily static void Y.\+Acces\+ADades.\+Connexio.\+Desconnectar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Si l\textquotesingle{}aplicació es troba connectada a la base da dades, la desconnecta. 
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_a577e2f770f78cb1e69a4ca7b2a652d54}\label{class_y_1_1_acces_a_dades_1_1_connexio_a577e2f770f78cb1e69a4ca7b2a652d54} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!connection@{connection}}
+\index{connection@{connection}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{connection}{connection}}
+{\footnotesize\ttfamily My\+Sql\+Connection Y.\+Acces\+ADades.\+Connexio.\+connection = new My\+Sql\+Connection(\$"{}Server=\{ip\};atabase=\{nom\};Uid=\{user\};Password=\{password\};Port=\{port\};"{})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_a4ca303ddb9d2d28a9da1553c810b4ea1}\label{class_y_1_1_acces_a_dades_1_1_connexio_a4ca303ddb9d2d28a9da1553c810b4ea1} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!ip@{ip}}
+\index{ip@{ip}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{ip}{ip}}
+{\footnotesize\ttfamily string Y.\+Acces\+ADades.\+Connexio.\+ip = "{}localhost"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_a7b63752dd815b75ebb0ebe291c706cbd}\label{class_y_1_1_acces_a_dades_1_1_connexio_a7b63752dd815b75ebb0ebe291c706cbd} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!nom@{nom}}
+\index{nom@{nom}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{nom}{nom}}
+{\footnotesize\ttfamily string Y.\+Acces\+ADades.\+Connexio.\+nom = "{}Db\+\_\+y"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_acb83b6c20a09beec7555d515eca7f8f7}\label{class_y_1_1_acces_a_dades_1_1_connexio_acb83b6c20a09beec7555d515eca7f8f7} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!password@{password}}
+\index{password@{password}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily string Y.\+Acces\+ADades.\+Connexio.\+password = "{}"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_a8ef39b01394613936742918db19193fb}\label{class_y_1_1_acces_a_dades_1_1_connexio_a8ef39b01394613936742918db19193fb} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!port@{port}}
+\index{port@{port}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily int Y.\+Acces\+ADades.\+Connexio.\+port = 3306\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_af34e14902fe17aa82713af2f04b00036}\label{class_y_1_1_acces_a_dades_1_1_connexio_af34e14902fe17aa82713af2f04b00036} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!user@{user}}
+\index{user@{user}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{user}{user}}
+{\footnotesize\ttfamily string Y.\+Acces\+ADades.\+Connexio.\+user = "{}root"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4}\label{class_y_1_1_acces_a_dades_1_1_connexio_a57dc07722df0592c569844b8d0d0ddc4} 
+\index{Y.AccesADades.Connexio@{Y.AccesADades.Connexio}!Connection@{Connection}}
+\index{Connection@{Connection}!Y.AccesADades.Connexio@{Y.AccesADades.Connexio}}
+\doxysubsubsection{\texorpdfstring{Connection}{Connection}}
+{\footnotesize\ttfamily My\+Sql\+Connection Y.\+Acces\+ADades.\+Connexio.\+Connection\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+La propietat del My\+Sql\+Connection. 
+
+
+
+Definition at line \mbox{\hyperlink{_connexio_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_connexio_8cs_source}{Connexio.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Acces\+\_\+a\+\_\+dades/Connexio.\+cs\end{DoxyCompactItemize}
