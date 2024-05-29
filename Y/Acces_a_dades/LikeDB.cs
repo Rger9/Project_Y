@@ -135,6 +135,7 @@ namespace Y.Model
                     l.Publicacio_id = reader.GetInt32(0);
                     l.User_id = reader.GetInt32(1);
                 }
+                else existeix = false; 
                 if (l.Publicacio_id == 0 || l.User_id == 0)
                 {
                     existeix = false;

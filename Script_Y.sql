@@ -18,8 +18,8 @@ CREATE OR REPLACE TABLE Publicacio(
     publicacio_id int AUTO_INCREMENT,
     user_id int NOT NULL,
     data_p DateTime NOT NULL,
-    titol varchar(30) NOT NULL,
-    contingut varchar(300) NOT NULL,
+    titol varchar(50) NOT NULL,
+    contingut varchar(3000) NOT NULL,
     CONSTRAINT PK_Publicacio PRIMARY KEY(publicacio_id, user_id),
     CONSTRAINT FK_Publicacio_Usuari FOREIGN KEY(user_id)
     REFERENCES Usuari(user_id)

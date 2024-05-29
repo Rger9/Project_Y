@@ -72,7 +72,7 @@ namespace Y.Vista
             BlockTitol.Text = p.Titol;
             likesUsuaris = LikeNegoci.GetUsersDB(p.Publicacio_id);
             //LA LLISTA DELS USUARIS QUE LI HAN DONAT LIKE ESTA A LIKESUSUARIS, CONTE IDS DELS USUARIS
-           
+           //FER COSES AQUI
             BlockContingut.Text = p.Contingut ;
             
             BlockEtiquetes.Text = TagpublicacioNegoci.GetTagsTextPublicacio(publicacio.Publicacio_id);

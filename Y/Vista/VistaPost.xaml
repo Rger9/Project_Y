@@ -30,10 +30,12 @@
                 </Style>
             </Button.Resources>
         </Button>
+        <TextBlock x:Name="BlockDateTime" HorizontalAlignment="Left" Margin="41,10,0,0" TextWrapping="Wrap" Text="DateTime :" VerticalAlignment="Top" Background="#19FFFFFF" Foreground="White" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Semibold" Width="166"/>
         <TextBlock x:Name="BlockUsername" HorizontalAlignment="Left" Margin="41,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" Width="166" Background="#19FFFFFF" Foreground="White" FontSize="24" TextAlignment="Right" FontFamily="Segoe UI Semibold"><Run Text="Username"/><Run Language="es-es" Text=" :"/></TextBlock>
         <TextBlock x:Name="LikeNumero" HorizontalAlignment="Left" Margin="693,311,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="39" Foreground="White" FontSize="24" Grid.IsSharedSizeScope="True"><Run Language="es-es" Text="103"/><LineBreak/><Run Language="es-es"/></TextBlock>
         <Image x:Name="LikeFalse" Margin="644,314,72,324" Source="/Vista/Imatges/cor.png" MouseLeftButtonUp="DonarLike" />
         <Image x:Name="LikeTrue" Margin="644,318,72,328" Source="/Vista/Imatges/corvermell.png"  MouseLeftButtonUp="TreureLike"/>
+        
 
 
     </Grid>

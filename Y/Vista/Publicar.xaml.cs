@@ -49,7 +49,7 @@ namespace Y.Vista
             // AFEGIM PUBLICACIO
             PublicacioModel p = new PublicacioModel();
             p.Titol = TxtBoxTitol.Text;
-            p.Contingut = TxtBoxTitol.Text;
+            p.Contingut = TxtBoxCos.Text;
             p.Data_p = DateTime.Now;
             p.User_id = usuari.User_id;
             PublicacioNegoci pNegoci = new PublicacioNegoci();
