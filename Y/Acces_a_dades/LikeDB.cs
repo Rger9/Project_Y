@@ -113,6 +113,11 @@ namespace Y.Model
                 Connexio.Desconnectar();
             }
         }
+        /// <summary>
+        /// Comprova si l'objecte LikeModel existeix a la base de dades
+        /// </summary>
+        /// <param name="l"></param>
+        /// <returns>true si existeix, fals altrament</returns>
         public static bool Exists(LikeModel l)
         {
             string cmdSelect = "SELECT * " +

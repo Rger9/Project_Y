@@ -276,17 +276,26 @@ namespace Y.Vista
             uNegoci.Usuari = u;
             uNegoci.Inserir();
             MessageBox.Show($"S'ha registrat a l'usuari {u.Username} amb èxit!");
+            u = uNegoci.GetUsuari(u.Username);
             MainWindow main = new MainWindow(u);
             main.Show();
             this.Close();
         }
-
+        /// <summary>
+        /// Cada cop que escriu comprova que tots els camps estiguin plens per a posar enabled
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Escriure(object sender, System.Windows.Controls.TextChangedEventArgs e)
         {
             if (IsInitialized)
                 ComprovarButton();
         }
-
+        /// <summary>
+        /// Cada cop que escriu comprova que tots els camps estiguin plens per a posar enabled
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Escriure(object sender, RoutedEventArgs e)
         {
             if (IsInitialized)

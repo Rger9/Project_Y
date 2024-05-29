@@ -56,7 +56,7 @@ namespace Y.Model
             }
         }
         /// <summary>
-        /// A partir de la ID d'una publicaació, busca dita publicació a la base de dades i la retorna
+        /// A partir de la ID d'una publicaacio, busca dita publicacio a la base de dades i la retorna
         /// </summary>
         /// <param name="id">ID de la publicació a cercar</param>
         /// <returns>La publicació</returns>
@@ -95,7 +95,7 @@ namespace Y.Model
             return p;
         }
         /// <summary>
-        /// Obté totes les Ids de les publicacions a la base de dades
+        /// Obte totes les Ids de les publicacions a la base de dades
         /// </summary>
         /// <returns>Una llista amb totes les Ids</returns>
         public static List<int> ObtenirTotsId()

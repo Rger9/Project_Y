@@ -93,10 +93,15 @@ namespace Y.Negoci
             cm.Contingut = comentariModel.Contingut;
             return cm;
         }
-        public static string GetTimeAgo(ComentariModel cm)
+        /// <summary>
+        /// Obte un string amb la diferencia de temps entre l'actual i l'entrat per paràmetre
+        /// </summary>
+        /// <param name="data">diferent a DateTime.MinValue</param>
+        /// <returns></returns>
+        public static string GetTimeAgo(DateTime data)
         {
             DateTime ara = DateTime.Now;
-            TimeSpan diferencia = ara - cm.Data_c;
+            TimeSpan diferencia = ara - data;
             //DateTime diferencia = Convert.ToDateTime(ara.Subtract(cm.Data_c));
             if(diferencia.Days > 365) return "Fa " + Math.Truncate((double)diferencia.Days/365).ToString() + " a";
             if (diferencia.Days > 30) return "Fa " + Math.Truncate((double)diferencia.Days / 30).ToString() + " m";

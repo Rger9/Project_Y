@@ -21,7 +21,9 @@ namespace Y.AccesADades
         private static string password = "";
         private static int port = 3306;
         private static MySqlConnection connection = new MySqlConnection($"Server={ip};Database={nom};Uid={user};Password={password};Port={port};");
-
+        /// <summary>
+        /// La propietat del MySqlConnection
+        /// </summary>
         public static MySqlConnection Connection
         {
             get { return connection; }
