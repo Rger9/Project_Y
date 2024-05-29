@@ -73,13 +73,13 @@ INSERT INTO usuari (username, contrasenya, nom, cognom, correu, telefon)
 
 -- INSERT INICIAL A LA TAULA "publicacio"
 INSERT INTO publicacio (user_id, data_p, titol, contingut)
-	VALUES('4', '20240513[09:12:00]', 'Quina desgracia!', "Estava avui tan tranquila a casa parlant de la roba que em vaig comprar al shein quan de sobte... Se m'ha caigut el suc de prèssec dins el portàtil!! Ja no em funciona gent, algun consell siusplau? :(");
+	VALUES('4', '2024-05-13 09:12:00', 'Quina desgracia!', "Estava avui tan tranquila a casa parlant de la roba que em vaig comprar al shein quan de sobte... Se m'ha caigut el suc de prèssec dins el portàtil!! Ja no em funciona gent, algun consell siusplau? :(");
 
 -- INSERT INICIAL A LA TAULA "comentari"
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
-	VALUES('1', '1', '20240513[12:00:00]', 'Radical');
+	VALUES('1', '1', '2024-05-13 12:00:00', 'Radical');
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
-	VALUES('4', '1', '20240529[23:30:53]', 'EDIT: Continua sense funcionar siusplau auxili');
+	VALUES('4', '1', '2024-05-29 23:30:53', 'EDIT: Continua sense funcionar siusplau auxili');
 
 -- INSERT INICIAL A LA TAULA "Tags"
 INSERT INTO tag (nom)
