@@ -74,12 +74,18 @@ INSERT INTO usuari (username, contrasenya, nom, cognom, correu, telefon)
 -- INSERT INICIAL A LA TAULA "publicacio"
 INSERT INTO publicacio (user_id, data_p, titol, contingut)
 	VALUES('4', '2024-05-13 09:12:00', 'Quina desgracia!', "Estava avui tan tranquila a casa parlant de la roba que em vaig comprar al shein quan de sobte... Se m'ha caigut el suc de prèssec dins el portàtil!! Ja no em funciona gent, algun consell siusplau? :(");
+INSERT INTO publicacio (user_id, data_p, titol, contingut)
+	VALUES('3', '2024-05-28 13:50:00', 'Jo tambe...', "A mi tambe em sap greu @cparra. Un dia estava tan tranquil al bar de la UDG quan de sobte... BAM! Va aparèixer en Roger i em va tirar el MEU cafe (1.5 euros) per sobre. En Deprius es va riure de mi. No puc mes amb aixo...");
 
 -- INSERT INICIAL A LA TAULA "comentari"
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
 	VALUES('1', '1', '2024-05-13 12:00:00', 'Radical');
 INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
 	VALUES('4', '1', '2024-05-28 23:30:53', 'EDIT: Continua sense funcionar siusplau auxili');
+INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
+	VALUES('2', '2', '2024-05-30 10:00:00', 'Mentida, jo no em vaig riure de tu');
+INSERT INTO comentari (user_id, publicacio_id, data_c, contingut)
+	VALUES('1', '2', '2024-05-30 10:05:00', 'JAJAJAJAJJAJAJAJAJAJAJAJAJAJAJJA');
 
 -- INSERT INICIAL A LA TAULA "Tags"
 INSERT INTO tag (nom)
@@ -88,12 +94,22 @@ INSERT INTO tag (nom)
 	VALUES("Fantasia");
 INSERT INTO tag(nom)
 	VALUES("Terror");
+INSERT INTO tag(nom)
+	VALUES("Tristor");
+INSERT INTO tag(nom)
+	VALUES("Rabia");
 
 -- INSERT INICIAL A LA TAULA "Tagpublicacio"
 INSERT INTO tagpublicacio (publicacio_id, tag_id)
 	VALUES(1, 1);
 INSERT INTO tagpublicacio (publicacio_id, tag_id)
 	VALUES(1, 3);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(1, 2);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(2, 4);
+INSERT INTO tagpublicacio (publicacio_id, tag_id)
+	VALUES(2, 5);
 
 -- INSERT INICIAL A LA TAULA "Likes"
 INSERT INTO likes (publicacio_id, user_id)

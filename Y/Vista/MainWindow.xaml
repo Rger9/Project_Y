@@ -59,7 +59,7 @@
             </Border>
         </Popup>
         <StackPanel Margin="34,10,329,16">
-            <Frame x:Name="FramePublicacions" Content="" Height="687" Width="756"/>
+            <Frame x:Name="FramePublicacions" Content="" Height="687" Width="756" NavigationUIVisibility="Hidden"/>
         </StackPanel>
         <ListBox Name="ListboxTag" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="843,108,35,150" Background="{x:Null}" Foreground="White" BorderBrush="{x:Null}" FontSize="18" FontFamily="Segoe UI Semibold">
             <ListBox.ItemTemplate>
